@@ -20,4 +20,17 @@ void main() {
   myName5 = "Tu Nombre";
   print(myName5);
   
+  //Interpolación Simple
+  String myName= "Fernando";
+  print("Hola $myName");
+  
+  //Interpolación con método
+  String myName6= "Fernando";
+  print("Hola ${myName6.toUpperCase()}");
+  
+  //Interpolación de Strings con Expresiones
+  const x = 1;
+  const y = 1;
+  print("Hola ${x + y}");
+  
 }
