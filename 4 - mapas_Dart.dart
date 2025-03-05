@@ -10,10 +10,13 @@ void main() {
       2: 'ditto/back.png'
     }
   };
-  
+     
   print(pokemon);
-  print('Name: ${ pokemon['name']}');
-  print('Name: ${ pokemon['sprites']}');
+  print('Name: ${pokemon['name']}');
+  print('HP: ${pokemon['hp']}');
+  print('Is Alive: ${pokemon['isAlive']}');
+  print('Abilities: ${pokemon['abilities']}');
+  print('Sprites: ${pokemon['sprites']}');
   
   print('Back: ${ pokemon['sprites'][2] }');
   print('Front: ${ pokemon['sprites'][1] }');
