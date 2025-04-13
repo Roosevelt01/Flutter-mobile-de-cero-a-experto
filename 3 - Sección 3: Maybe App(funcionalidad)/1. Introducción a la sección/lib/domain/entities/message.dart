@@ -1,7 +1,7 @@
 
 // Definición de la enumeración 'FromWho' para identificar al remitente del mensaje.
 enum FromWho {
-  mine, // Indica que el mensaje fue enviado por el usuario actual.
+  me, // Indica que el mensaje fue enviado por el usuario actual.
   hers, // Indica que el mensaje fue enviado por otra persona.
 }
 
