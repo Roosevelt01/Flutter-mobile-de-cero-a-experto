@@ -1,4 +1,9 @@
+// Archivo: lib/presentation/screens/chat/chat_screen.dart
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:yes_no_app/domain/entities/message.dart';
+import 'package:yes_no_app/presentation/providers/chat_provider.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
@@ -14,8 +19,7 @@ class ChatScreen extends StatelessWidget {
           padding: EdgeInsets.all(4.0),
           child: CircleAvatar(
             backgroundImage: NetworkImage(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzyDzGUOkGUhw1tLvonMzkSk4XSa4f4aVtmEo6fyKOSoKE4jFiUH0V5MeY_B2RZRCMuPI&usqp=CAU',
-            ),
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzyDzGUOkGUhw1tLvonMzkSk4XSa4f4aVtmEo6fyKOSoKE4jFiUH0V5MeY_B2RZRCMuPI&usqp=CAU'),
           ),
         ),
         title: const Text('Alejandro'),
@@ -29,6 +33,7 @@ class ChatScreen extends StatelessWidget {
 class _ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final chatProvider = context.watch<ChatProvider>();
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -36,15 +41,17 @@ class _ChatView extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 100,
+                itemCount: chatProvider.messages.length,
+                physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return (index % 2 == 0)
+                  final message = chatProvider.messages[index];
+                  return (message.fromWho == FromWho.hers)
                       ? const HerMessageBubble()
-                      : const MyMessageBubble();
+                      /*Paso 4: Pasar el objeto Message a MyMessageBubble*/
+                      : MyMessageBubble(message: message);
                 },
               ),
             ),
-            //Caja de texto para escribir mensajes.
             const MessageFieldBox(),
           ],
         ),
