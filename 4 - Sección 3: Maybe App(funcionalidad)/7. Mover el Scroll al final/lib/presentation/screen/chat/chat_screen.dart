@@ -1,3 +1,5 @@
+// Archivo: lib/presentation/screens/chat/chat_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yes_no_app/domain/entities/message.dart';
@@ -14,12 +16,12 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const Padding(
-                padding: EdgeInsets.all(4.0),
-                child: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzyDzGUOkGUhw1tLvonMzkSk4XSa4f4aVtmEo6fyKOSoKE4jFiUH0V5MeY_B2RZRCMuPI&usqp=CAU'),
-                ),
-            ),
+          padding: EdgeInsets.all(4.0),
+          child: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzyDzGUOkGUhw1tLvonMzkSk4XSa4f4aVtmEo6fyKOSoKE4jFiUH0V5MeY_B2RZRCMuPI&usqp=CAU'),
+          ),
+        ),
         title: const Text('Alejandro'),
         centerTitle: false,
       ),
@@ -29,25 +31,24 @@ class ChatScreen extends StatelessWidget {
 }
 
 class _ChatView extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final chatProvider = context.watch<ChatProvider>();
-        return SafeArea(
+    return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             Expanded(
               child: ListView.builder(
-                controller:  chatProvider.chatScrollController,//Paso 2
-                  itemCount: chatProvider.messagesList.length,
-                  physics: const BouncingScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    final message =chatProvider.messagesList[index];
-                    return (message.fromWho == FromWho.hers)
-                        ? const HerMessageBubble()
-                        : MyMessageBubble(message: message);                            
+                controller: chatProvider.chatScrollController,/*Paso 3: Asignar el ScrollController al ListView*/
+                itemCount: chatProvider.messages.length,
+                physics: const BouncingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  final message = chatProvider.messages[index];
+                  return (message.fromWho == FromWho.hers)
+                      ? const HerMessageBubble()
+                      : MyMessageBubble(message: message);
                 },
               ),
             ),
