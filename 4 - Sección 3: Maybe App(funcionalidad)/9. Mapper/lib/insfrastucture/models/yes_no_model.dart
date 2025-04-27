@@ -17,7 +17,8 @@ class YesNoModel {
         image: json['image'],
       );
 
-  // Paso 9: Método para convertir el YesNoModel a la entidad Message
+  
+  // Ya no lo ocupamos
   Message toMessageEntity() => Message(
         text: this.answer == 'yes' ? 'Sí' : (this.answer == 'no' ? 'No' : 'Tal vez'),
         fromWho: FromWho.hers,
