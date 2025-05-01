@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart'; // Importa el paquete provider
 import 'package:tiktok/presentation/providers/discover_provider.dart'; // Importa DiscoverProvider
