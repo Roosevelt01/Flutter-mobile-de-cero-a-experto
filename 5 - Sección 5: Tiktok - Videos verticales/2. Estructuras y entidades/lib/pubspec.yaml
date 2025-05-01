@@ -27,3 +27,18 @@ flutter:
 
   assets:
     - assets/videos/ #Recién agregado
+
+lib/
+├── main.dart                 # Punto de entrada de la aplicación, configura MaterialApp y tema
+├── theme/
+│   └── app_theme.dart        # Clase AppTheme que define el ThemeData (tema oscuro, Material 3)
+├── domain/
+│   └── entities/
+│       └── video_post.dart   # Definición de la entidad VideoPost (modelo de video)
+├── data/
+│   └── local_video_posts.dart # Lista simulada de videos (videoPosts) con mapas de datos
+├── assets/
+│   └── videos/
+│       ├── 1.mp4             # Videos locales usados en la app
+│       ├── 2.mp4
+│       └── ...               # Más videos
