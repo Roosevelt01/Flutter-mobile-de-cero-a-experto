@@ -8,7 +8,7 @@ class VideoScrollableView extends StatelessWidget {
     super.key,
     required this.videos,
   });
- d
+ 
   @override
   Widget build(BuildContext context) {
     return PageView(
