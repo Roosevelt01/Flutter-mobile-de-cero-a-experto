@@ -55,7 +55,6 @@ class _FullscreenPlayerState extends State<FullscreenPlayer> {
             controller.play();
           },
 
-
           child: AspectRatio(
             aspectRatio: controller.value.aspectRatio,
             child: Stack(
@@ -76,6 +75,7 @@ class _FullscreenPlayerState extends State<FullscreenPlayer> {
             ),
           ),
         );
+        
       },
     );
   }
