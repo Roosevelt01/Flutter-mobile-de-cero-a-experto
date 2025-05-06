@@ -1,5 +1,3 @@
-// orden 2
-
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok/domain/entities/video_post.dart';
@@ -15,10 +13,9 @@ class VideoButtons extends StatelessWidget {
     return Column(
       children: [      
         _CustomIconButton(value: video.likes, iconColor: Colors.red, iconData: Icons.favorite),
-        const SizedBox(height: 20), // Recién agregado 
+        const SizedBox(height: 20), 
         _CustomIconButton(value: video.views, iconData: Icons.remove_red_eye_outlined),
-        const SizedBox(height: 20), // Recién agregado 
-        // Recién agregado 
+        const SizedBox(height: 20), 
         SpinPerfect(
           infinite: true,
           duration: const Duration(seconds: 10),
@@ -49,7 +46,7 @@ class _CustomIconButton extends StatelessWidget {
           icon:Icon(iconData, color: color, size: 30,)
         ),
         
-        if(value > 0) // Recién agregado 
+        if(value > 0)
         Text(HumanFormats.humanreadbleNumber(value.toDouble())),
       ],    
     );
