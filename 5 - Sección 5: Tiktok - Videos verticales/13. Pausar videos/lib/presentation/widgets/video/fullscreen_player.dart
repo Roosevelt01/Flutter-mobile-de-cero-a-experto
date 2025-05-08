@@ -74,24 +74,3 @@ class _FullscreenPlayerState extends State<FullscreenPlayer> {
     );
   }
 }
-
- 
-class _VideoCaption extends StatelessWidget {
-  final String caption;
-  
-  const _VideoCaption({
-    super.key,
-    required this.caption,
-  });
-  
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final titleStyle = Theme.of(context).textTheme.titleLarge;
-
-    return SizedBox(
-      width: size.width * 0.6,
-      child: Text(caption, maxLines: 2, style: titleStyle),      
-    );
-  }
-}
