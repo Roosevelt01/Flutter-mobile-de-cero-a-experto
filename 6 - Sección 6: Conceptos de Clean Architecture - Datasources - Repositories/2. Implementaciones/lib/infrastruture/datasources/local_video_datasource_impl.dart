@@ -14,4 +14,10 @@ class LocalVideoDatasourceImpl implements VideoPostsDatasource {
     throw UnimplementedError();
   }
 
+  @override
+  Future<List<VideoPost>> getTrendingVideosByPage(int page) async {
+    // Simulación de delay de red/operación asíncrona
+    await Future.delayed(const Duration(seconds: 2));
+  }
+
 }
