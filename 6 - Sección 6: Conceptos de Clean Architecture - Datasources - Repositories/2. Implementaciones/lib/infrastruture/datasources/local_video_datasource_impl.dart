@@ -18,6 +18,9 @@ class LocalVideoDatasourceImpl implements VideoPostsDatasource {
   Future<List<VideoPost>> getTrendingVideosByPage(int page) async {
     // Simulación de delay de red/operación asíncrona
     await Future.delayed(const Duration(seconds: 2));
+    
+    // Transformación de datos locales a entidades del dominio
+    final List<VideoPost> newVideos = videoPosts.map(
+    (video) => LocalVideoModel.fromJson(video).toEntity()
   }
-
 }
