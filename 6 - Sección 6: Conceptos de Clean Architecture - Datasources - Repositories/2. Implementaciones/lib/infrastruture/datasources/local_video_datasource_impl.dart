@@ -28,6 +28,7 @@ class LocalVideoDatasourceImpl implements VideoPostsDatasource {
       (video) => LocalVideoModel.fromJson(video).toEntity()
     ).toList(); // Convierte el resultado del map (un Iterable) de nuevo a una List<VideoPost>.
 
-    throw UnimplementedError(); // Placeholder temporal
+    // Retorna la lista de entidades VideoPost
+    return newVideos;
   }
 }
