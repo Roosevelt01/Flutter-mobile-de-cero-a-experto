@@ -9,7 +9,7 @@ import 'package:tiktok/shared/data/local_video_posts.dart'; // Importa los datos
 class LocalVideoDatasourceImpl implements VideoPostsDatasource {
 
   @override
-  Future<List<String>> getFavoriteVideosByUser(String userId) {
+  Future<List<VideoPost>> getFavoriteVideosByUser(String userId) {
     // Implementación pendiente (Paso 3)
     throw UnimplementedError(); // Placeholder temporal
   }
