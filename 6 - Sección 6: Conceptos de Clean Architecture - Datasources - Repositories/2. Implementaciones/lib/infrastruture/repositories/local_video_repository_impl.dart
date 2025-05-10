@@ -8,5 +8,17 @@ import 'package:tiktok/domain/entities/video_post.dart';
 import 'package:tiktok/domain/repositories/video_pots_repository.dart';
 
 class VideoPostsRepositoryImpl implements VideoPostRepository {
-  
+  // Datasource inyectado como dependencia
+  final VideoPostsDatasource videoPostsDatasource;
+
+  // Constructor que requiere un VideoPostsDatasource concreto
+  VideoPostsRepository({
+    required this.videoPostsDatasource  // Inyección de dependencia obligatoria
+  });
+
+  @override
+  Future<List<VideoPost>> getFavoriteVideosByUser(String userId) {
+    throw UnimplementedError();  // Lanza excepción si se intenta usar
+  }
+
 }
