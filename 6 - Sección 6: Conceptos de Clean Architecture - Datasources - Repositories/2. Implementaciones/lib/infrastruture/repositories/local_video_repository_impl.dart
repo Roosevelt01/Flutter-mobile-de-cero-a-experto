@@ -21,4 +21,10 @@ class VideoPostsRepositoryImpl implements VideoPostRepository {
     throw UnimplementedError();  // Lanza excepción si se intenta usar
   }
 
+  @override
+  Future<List<VideoPost>> getTrendingVideosByPage(int userId) {
+    // Delega la operación al datasource inyectado
+    return videoPostsDatasource.getTrendingVideosByPage(userId);  // Proxy pattern
+  }
+
 }
