@@ -7,6 +7,6 @@ import 'package:tiktok/domain/entities/video_post.dart';
 // Importa la interfaz del repositorio desde el dominio
 import 'package:tiktok/domain/repositories/video_pots_repository.dart';
 
-class VideoPostsRepository implements VideoPostRepository {
+class VideoPostsRepositoryImpl implements VideoPostRepository {
   
 }
