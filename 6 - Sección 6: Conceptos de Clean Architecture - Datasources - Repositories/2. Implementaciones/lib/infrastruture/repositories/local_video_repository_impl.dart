@@ -1,12 +1,12 @@
-// lib/infrastructure/repositories/video_posts_repository_impl.dart
 
-import 'package:tiktok/domain/datasource/video_post_datasource.dart'; // La interfaz del Data Source
-import 'package:tiktok/domain/entities/video_post.dart'; // La entidad de Dominio
-// import 'package:tiktok/domain/repositories/video_post_repository.dart'; // Asumiendo la interfaz del Repositorio
 
-// Declara la clase e indica la interfaz que implementa (según el código provisto)
-// Nota: Idealmente, implementaría una interfaz VideoPostRepository separada del Dominio.
-class VideoPostsRepositoryImpl implements VideoPostsDatasource { // O VideoPostRepository
+// Importa la interfaz del datasource desde el dominio
+import 'package:tiktok/domain/datasource/video_post_datasource.dart';
+// Importa la entidad VideoPost del dominio
+import 'package:tiktok/domain/entities/video_post.dart';
+// Importa la interfaz del repositorio desde el dominio
+import 'package:tiktok/domain/repositories/video_pots_repository.dart';
 
-  // Las dependencias y métodos se añadirán a continuación
+class VideoPostsRepository implements VideoPostRepository {
+  
 }
