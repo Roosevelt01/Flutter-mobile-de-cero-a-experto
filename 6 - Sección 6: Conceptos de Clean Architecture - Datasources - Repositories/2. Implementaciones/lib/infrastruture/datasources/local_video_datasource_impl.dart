@@ -22,5 +22,8 @@ class LocalVideoDatasourceImpl implements VideoPostsDatasource {
     // Transformación de datos locales a entidades del dominio
     final List<VideoPost> newVideos = videoPosts.map(
     (video) => LocalVideoModel.fromJson(video).toEntity()
+    ).toList();
+
+    return newVideos;
   }
 }
