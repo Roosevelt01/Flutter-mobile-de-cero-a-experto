@@ -17,6 +17,9 @@ class DiscoverProvider extends ChangeNotifier {
   });
 
   Future<void> loadNextPage() async {
+    // Paso 3: Solicitar al repositorio los videos de la página 1
+    final newVideos = await videosRepository.getTrendingVideosByPage(1);
+
     videos.addAll(newVideos);
     initialLoading = false;
     notifyListeners();
