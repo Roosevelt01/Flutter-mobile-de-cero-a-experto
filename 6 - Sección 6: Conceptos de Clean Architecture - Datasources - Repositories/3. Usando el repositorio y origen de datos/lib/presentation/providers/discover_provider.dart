@@ -11,6 +11,11 @@ class DiscoverProvider extends ChangeNotifier {
   bool initialLoading = true;
   List<VideoPost> videos = [];
 
+  // Paso 2: Constructor que recibe el repositorio como dependencia
+  DiscoverProvider({
+    required this.videosRepository,
+  });
+
   Future<void> loadNextPage() async {
     videos.addAll(newVideos);
     initialLoading = false;
