@@ -24,10 +24,10 @@ class AppTheme {
   // Permite inicializar AppTheme con un color seleccionado opcional.
   AppTheme({
     this.selectedColor = 0,
-  }):assert(selectedColor > 0, "Selected color must be greater than 0"),
-    assert(selectedColor < colorList.length, 
+  }):assert(selectedColor > 0, "Selected color must be greater than 0"),// Aserción 1
+    assert(selectedColor < colorList.length, // Aserción 2
       "Selected color must be less or uqual than ${colorList.length-1}");
-
+    
   // Método que devuelve un objeto ThemeData configurado con el tema actual.
   // ThemeData es la clase principal de Flutter para definir propiedades de tema.
   ThemeData getTheme() => ThemeData(
