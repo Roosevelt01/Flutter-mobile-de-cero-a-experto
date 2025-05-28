@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 6).getTheme(),
-      home: const HomeScreen() //Paso 3
-    );
+      home: const HomeScreen() // Paso 3: Establece HomeScreen como la pantalla inicial
+    );// Fin de MaterialApp
   }
 }
