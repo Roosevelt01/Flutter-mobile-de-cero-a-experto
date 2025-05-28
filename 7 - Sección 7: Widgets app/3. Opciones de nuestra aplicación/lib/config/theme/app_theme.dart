@@ -25,8 +25,9 @@ class AppTheme {
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,
     colorSchemeSeed: colorList[selectedColor],
-    //Paso 4
+    // Paso 4: Configuración global de AppBarTheme
     appBarTheme: const AppBarTheme(
+      // Alinea el título a la izquierda (por defecto en iOS es centrado)
       centerTitle: false,
     ),
   );
