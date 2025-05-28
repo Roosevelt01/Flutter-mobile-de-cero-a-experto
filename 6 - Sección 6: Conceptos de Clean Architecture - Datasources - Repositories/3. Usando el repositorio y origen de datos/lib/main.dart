@@ -7,6 +7,37 @@ import 'package:tiktok/presentation/providers/discover_provider.dart';
 import 'package:tiktok/presentation/screen/discover/discover_screen.dart';
 import 'package:tiktok/theme/app_theme.dart';
 
+<<<<<<< HEAD
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // Paso 4: Crear la instancia del repositorio con la implementación local del datasource
+    final videoPostReposity = VideoPostsRepository(
+      videoPostsDatasource: LocalVideoDatasourceImpl(),
+    );
+
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          lazy: false,
+          //Paso 5 videosRepository: videoPostReposity
+          create: (_) => DiscoverProvider(videosRepository: videoPostReposity)..loadNextPage()
+        ),
+      ],
+      child: MaterialApp(
+        title: 'TikTok',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme().getTheme(),
+        home: const DiscoverScreen()
+      ),
+    );
+  }
+}
+=======
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -36,3 +67,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+>>>>>>> 52bfdd38efd51cec58a8ffdb16fc54a758f9153b
