@@ -31,5 +31,4 @@ class AppTheme {
       centerTitle: false,
     ),
   );
-
 }
