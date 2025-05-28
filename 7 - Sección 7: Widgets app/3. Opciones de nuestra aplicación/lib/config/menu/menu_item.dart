@@ -1,4 +1,3 @@
-//Paso 1
 import 'package:flutter/material.dart';
 
 // Paso 1: Definición de la clase MenuItem
