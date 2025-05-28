@@ -19,3 +19,14 @@ class MainApp extends StatelessWidget {
     );// Fin de MaterialApp
   }
 }
+
+
+MaterialApp
+├─ Theme (from AppTheme)
+│  ├─ colorSchemeSeed: deepPurple
+│  └─ appBarTheme: centerTitle=false
+└─ HomeScreen
+   └─ Scaffold
+      └─ AppBar
+         ├─ title: Text
+         └─ (hereda estilos de Theme)
