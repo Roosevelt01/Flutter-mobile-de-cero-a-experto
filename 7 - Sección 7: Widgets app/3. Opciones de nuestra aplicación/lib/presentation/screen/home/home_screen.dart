@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//Paso 2
 
+// Paso 2: Define la estructura de la pantalla de inicio como un widget sin estado.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter + Material 3"),
-      )
-    );
+      )// Fin de AppBar
+    ); // Fin de Scaffold
   }
 }
