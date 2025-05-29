@@ -15,20 +15,22 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// Paso 2
+// Paso 2: Definición de la clase _HomeView
 class _HomeView extends StatelessWidget {
- const _HomeView();
+ const _HomeView();// Constructor constante para _HomeView
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: appMenuItems.length,
-      itemBuilder: (context, index) {
+    return ListView.builder( // Widget para construir listas de forma eficiente
+      itemCount: appMenuItems.length, // Número total de elementos en la lista
+      itemBuilder: (context, index) { // Función constructora para cada elemento de la lista
+        // Obtiene el MenuItem correspondiente al índice actual
         final menuItem = appMenuItems[index];
         
+        // Usa el widget CustomListTitle para cada elemento
         return _CustomListTitle(menuItem: menuItem);
       },
-    );
+    ); //ListView.builder
   }
 }
 
