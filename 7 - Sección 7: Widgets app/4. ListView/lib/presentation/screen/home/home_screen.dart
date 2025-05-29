@@ -34,23 +34,30 @@ class _HomeView extends StatelessWidget {
   }
 }
 
-//Paso 3
+// Paso 3: Definición de la clase _CustomListTitle
 class _CustomListTitle extends StatelessWidget {
+  // Propiedad para recibir el MenuItem
+  final MenuItem menuItem;
+
+  // Constructor constante que requiere el MenuItem
   const _CustomListTitle({
     required this.menuItem,
   });
-
-  final MenuItem menuItem;
-
+    
   @override
   Widget build(BuildContext context) {
+    // Accede a la paleta de colores del tema
     final colors = Theme.of(context).colorScheme;
     
-    return ListTile(
-      leading: Icon(menuItem.icon,color:colors.primary),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
-      title: Text(menuItem.title),
-      subtitle: Text(menuItem.subTitle),
+    return ListTile(// Widget especializado para elementos de lista
+      leading: Icon(menuItem.icon,color:colors.primary), // Icono a la izquierda
+      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary), // Icono a la derecha
+      title: Text(menuItem.title), // Título principal del elemento
+      subtitle: Text(menuItem.subTitle), // Subtítulo o descripción
+      onTap: () {
+        // TODO: Navegar a otra pantalla
+        // Este es un marcador de posición para futuras implementaciones de navegación.
+      },
     );
   }
 }
