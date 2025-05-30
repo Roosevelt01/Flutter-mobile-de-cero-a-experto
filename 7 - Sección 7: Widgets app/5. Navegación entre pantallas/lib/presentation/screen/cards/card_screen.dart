@@ -8,7 +8,7 @@ class CardsScreen extends StatelessWidget {
   Widget build(BuildContext context) {// Renombramos la clase a CardsScreen
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cards Screen'),
+        title: const Text('Cards Screen'),// Cambiamos el título
       ),//Appbar
       body: const Placeholder(),
     );//Scafold
