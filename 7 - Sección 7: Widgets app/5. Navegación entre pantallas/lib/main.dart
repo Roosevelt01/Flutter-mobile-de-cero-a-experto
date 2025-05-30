@@ -19,8 +19,10 @@ class MainApp extends StatelessWidget {
       home: const HomeScreen(),
       // Paso 4: Definición de rutas nombradas
       routes: {
-        'buttons': (context) => const ButtonsScreen(),// Ruta para la pantalla de botones
-        'cards': (context) => const CardsScreen(),// Ruta para la pantalla de tarjetas
+        // Ruta para la pantalla de botones
+        'buttons': (context) => const ButtonsScreen(),
+        // Ruta para la pantalla de tarjetas
+        'cards': (context) => const CardsScreen(),
       }
     );
   }
