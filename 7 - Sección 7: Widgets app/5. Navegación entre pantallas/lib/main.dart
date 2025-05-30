@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 1).getTheme(),
       home: const HomeScreen(),
-      //Paso 4
+      // Paso 4: Definición de rutas nombradas
       routes: {
         'buttons': (context) => const ButtonsScreen(),
         'cards': (context) => const CardsScreen(),
