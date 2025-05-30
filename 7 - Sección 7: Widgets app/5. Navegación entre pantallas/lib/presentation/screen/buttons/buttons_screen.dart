@@ -9,8 +9,8 @@ class ButtonsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Buttons Screen'),
-      ),
+      ),//Appbar
       body: const Placeholder(),
-    );
+    );//Scafold
   }
 }
