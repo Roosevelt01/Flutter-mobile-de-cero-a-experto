@@ -50,6 +50,7 @@ class _CustomListTitle extends StatelessWidget {
 
       // Paso 3: Implementación de la navegación con rutas nombradas
       onTap: () {
+        // Navega a la ruta cuyo nombre coincide con menuItem.link
         Navigator.pushNamed(context, menuItem.link);
       },
 
