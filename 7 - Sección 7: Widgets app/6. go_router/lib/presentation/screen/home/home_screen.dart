@@ -50,8 +50,8 @@ class _CustomListTitle extends StatelessWidget {
       subtitle: Text(menuItem.subTitle),
 
       onTap: () {
-        //Paso 5
-        context.push(menuItem.link);
+        // Paso 5: Usando la extensión 'go_router' en el BuildContext
+        context.push(menuItem.link);// Navegación usando el path de la ruta
       },
 
     );
