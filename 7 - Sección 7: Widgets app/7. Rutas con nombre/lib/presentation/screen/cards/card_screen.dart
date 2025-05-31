@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CardsScreen extends StatelessWidget {
-  static const String name = 'cards_screen';//Paso 5
+  // Paso 3: Definición del nombre estático de la ruta para CardsScreen
+  static const String name = 'cards_screen';
 
   const CardsScreen({super.key});
 
