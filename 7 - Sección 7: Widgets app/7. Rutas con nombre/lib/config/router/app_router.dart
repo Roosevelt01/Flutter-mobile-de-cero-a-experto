@@ -12,14 +12,14 @@ final appRouter = GoRouter(
     ),
 
     GoRoute(
-      path: '/',
+      path: '/buttons',
       // Paso 5: Asigna el nombre estático a la ruta de botones
       name: ButtonsScreen.name,
       builder: (context, state) => const ButtonsScreen()
     ),
     
     GoRoute(
-      path: '/',
+      path: '/cards',
       // Paso 6: Asigna el nombre estático a la ruta de tarjetas
       name: CardsScreen.name,
       builder: (context, state) => const CardsScreen()
