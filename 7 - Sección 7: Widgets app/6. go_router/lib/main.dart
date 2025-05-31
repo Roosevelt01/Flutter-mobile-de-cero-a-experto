@@ -10,9 +10,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Parte 3    
-    return MaterialApp.router(
-      routerConfig: appRouter,
+    // Parte 3: Conexión de GoRouter a MaterialApp    
+    return MaterialApp.router( // Usamos MaterialApp.router en lugar de MaterialApp
+      routerConfig: appRouter, // Asignamos nuestra instancia de GoRouter aquí
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 1).getTheme(),
     );
