@@ -1,9 +1,8 @@
-//Paso 1
-
 import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatelessWidget {
-  static const String name = 'buttons_screen';//Paso 3
+  // Paso 2: Definición del nombre estático de la ruta para ButtonsScreen
+  static const String name = 'buttons_screen';
 
   const ButtonsScreen({super.key});
 
