@@ -31,63 +31,77 @@ class _ButtonsView extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
 
-    return SizedBox(//Paso 7
-      width: double.infinity,//Paso 8
-      child: Padding(//Paso 4
+    return SizedBox(// Paso 4: Se envuelve el contenido en un SizedBox
+      //Paso 5: El SizedBox toma el ancho máximo disponible
+      child: Padding(// Paso 6: Se añade un Padding alrededor del Wrap
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-        child: Wrap(
-          spacing: 10,//Paso 6
-          alignment: WrapAlignment.center,//Paso 9
+        child: Wrap(// Contenedor que organiza los botones
+          //Paso 7: Espaciado horizontal entre los elementos del Wrap
+          spacing: 10,
+          // <-- Paso 8: Alineación central de los elementos en el Wrap
+          alignment: WrapAlignment.center,
           children: [
-            ElevatedButton(//Paso 3
-              onPressed: () {},child: const Text('Elevated'),
+
+            //Paso 9: Primer botón de ejemplo
+            ElevatedButton(
+              onPressed: () {},// Callback vacío, el botón es funcional
+              child: const Text('Elevated'),
             ),
 
-            ElevatedButton(//Paso 5
-              onPressed: null,child: const Text('Elevated disabled'),
+            //Paso 10: Botón Elevado Deshabilitado
+            ElevatedButton(
+              onPressed: null, // Si onPressed es null, el botón se deshabilita
+              child: const Text('Elevated disabled'),
             ),
 
-            ElevatedButton.icon(//Paso 6
+            // Paso 11 (cont.): Constructor de botón con icono
+            ElevatedButton.icon(
               onPressed: (){},
               icon: const Icon(Icons.access_alarm_rounded),
               label: const Text('Elevated icon')
             ),
 
+            //Paso 12: Botón Relleno Básico (FilledButton)
             FilledButton(onPressed: (){}, child: const Text('Filled')),
 
+            //Paso 13: Botón Relleno con Icono
             FilledButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.access_alarm_rounded),
               label: const Text('Filled icon')
             ),
 
+            // Paso 14: Botón Contorneado Básico (OutlinedButton)
             OutlinedButton(
               onPressed: () {}, child: const Text('Outlined'),
             ),
 
+            //Paso 15: Botón Contorneado con Icono
             OutlinedButton.icon(
               onPressed: () {},
               label: const Text('Outlined icon'),              
               icon: const Icon(Icons.terminal),
             ),
 
+            //Paso 16: Botón de Texto Básico (TextButton)
             TextButton(
               onPressed: () {}, child: const Text('Text'),
             ),
 
+            // Paso 17: Botón de Texto con Icono
             TextButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.account_box_outlined),
               label: const Text('Text icon'),
             ),
 
-
-
+            // Paso 18: Botón de Icono Puro (IconButton)
             IconButton(
               onPressed: (){},
               icon: const Icon(Icons.app_registration_rounded)
             ),
             
+            //Paso 19: Botón de Icono Personalizado con Estilo
             IconButton(
               onPressed: (){},
               icon: const Icon(Icons.app_registration_rounded),
