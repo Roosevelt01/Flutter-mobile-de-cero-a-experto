@@ -10,19 +10,21 @@ class ButtonsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Buttons Screen'),
-      ),
-      body: _ButtonsView(),//Paso 1
-      floatingActionButton: FloatingActionButton(//Paso 3
+      ),//AppBar
+      //Paso 1: Se extrae el cuerpo a un nuevo widget _ButtonsView
+      body: _ButtonsView(),
+      // Paso 2: Se añade un FloatingActionButton
+      floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.arrow_back_ios_new_rounded),
         onPressed: () {
           Navigator.pop(context);
         },
-      ),
-    );
+      ),// FloatingActionButton
+    ); //Scaffold
   }
 }
 
-//Paso 2
+// Paso 3: Definición del nuevo widget _ButtonsView
 class _ButtonsView extends StatelessWidget {
 
   @override
@@ -79,6 +81,8 @@ class _ButtonsView extends StatelessWidget {
               label: const Text('Text icon'),
             ),
 
+
+
             IconButton(
               onPressed: (){},
               icon: const Icon(Icons.app_registration_rounded)
@@ -99,3 +103,6 @@ class _ButtonsView extends StatelessWidget {
     );
   }
 }
+
+
+
