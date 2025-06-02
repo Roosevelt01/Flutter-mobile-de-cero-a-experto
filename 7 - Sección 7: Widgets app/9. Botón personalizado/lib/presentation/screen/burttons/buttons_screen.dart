@@ -102,7 +102,7 @@ class _ButtonsView extends StatelessWidget {
   }
 }
 
-//Paso 2
+// Paso 2: Definición y estilización inicial del CustomButton
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
@@ -112,13 +112,13 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
 
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: Material(
-        color:colors.primary,
-        child: InkWell(
+    return ClipRRect(// Envuelve todo en ClipRRect para bordes redondeados
+      borderRadius: BorderRadius.circular(20), //Define el radio de los bordes
+      child: Material( // Envuelve el contenido en un widget Material
+        color:colors.primary, // Aplica el color primario del tema como fondo
+        child: InkWell( //Envuelve el Padding en un InkWell para efectos táctiles
           onTap: (){},
-          child: const Padding(
+          child: const Padding(//Añade Padding alrededor del texto
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text('Hola Mundo', style: TextStyle( color: Colors.white)),
           ),// Padding
