@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-//Paso 1sds
+// Paso 1: Lista de datos para las tarjetas
 const cards = <Map<String, dynamic>>[
-  {'elevationf': 0.0, 'label': 'Elevation 0'},
+  {'elevation': 0.0, 'label': 'Elevation 0'},
   {'elevation': 1.0, 'label': 'Elevation 1'},
   {'elevation': 2.0, 'label': 'Elevation 2'},
   {'elevation': 3.0, 'label': 'Elevation 3'},
@@ -10,7 +10,7 @@ const cards = <Map<String, dynamic>>[
   {'elevation': 5.0, 'label': 'Elevation 5'},
 ];
 
-
+// Paso 2: Widget principal de la pantalla
 class CardsScreen extends StatelessWidget {
   static const String name = 'cards_screen';
 
@@ -22,10 +22,11 @@ class CardsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Cards Screen'),//PAso 2
       ),
-      body: _CardsView(),
+      body: _CardsView(),// Delega la construcción del cuerpo a _CardsView
     );
   }
 }
+
 
 //Paso 3
 class _CardsView extends StatelessWidget {
