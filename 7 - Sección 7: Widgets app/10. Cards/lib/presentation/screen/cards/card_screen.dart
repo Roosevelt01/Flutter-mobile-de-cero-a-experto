@@ -58,7 +58,6 @@ class _CardType1 extends StatelessWidget {
     required this.label,
     required this.elevation});
 
-  
   @override
   Widget build(BuildContext context) {
     return Card(
