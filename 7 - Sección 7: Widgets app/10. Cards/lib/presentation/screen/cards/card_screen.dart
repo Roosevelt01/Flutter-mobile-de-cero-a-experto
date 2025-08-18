@@ -49,7 +49,7 @@ class _CardsView extends StatelessWidget {
   }
 }
 
-//Paso 4
+//Paso 4: Widget reutilizable para el diseño de la tarjeta
 class _CardType1 extends StatelessWidget {
   final String label;
   final double elevation;
@@ -58,6 +58,7 @@ class _CardType1 extends StatelessWidget {
     required this.label,
     required this.elevation});
 
+  
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -66,6 +67,7 @@ class _CardType1 extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
         child: Column(
           children: [
+             // Icono de opciones en la esquina superior derecha
             Align(
               alignment: Alignment.topRight,
               child: IconButton(
@@ -73,6 +75,7 @@ class _CardType1 extends StatelessWidget {
                 onPressed: () {},
               ),
             ),
+            // Etiqueta de la tarjeta en la esquina inferior izquierda
             Align(
               alignment: Alignment.bottomLeft,
               child: Text(label),
