@@ -27,19 +27,18 @@ class CardsScreen extends StatelessWidget {
   }
 }
 
-
-//Paso 3
+// Paso 3: Widget para el cuerpo de la pantalla
 class _CardsView extends StatelessWidget {
   const _CardsView();
 
   @override
   Widget build(BuildContext context) {
-    //Paso 5
+    //Envuelve el contenido en un SingleChildScrollView para permitir el scroll
     return SingleChildScrollView(
       child: Column(
         children: [
-          ...cards.map(
-            (card) => _CardType1(
+          ...cards.map(// Itera sobre la lista 'cards'
+            (card) => _CardType1(// Crea una instancia de _CardType1 para cada elemento
               elevation: card['elevation'],
               label: card['label'],
             ),
