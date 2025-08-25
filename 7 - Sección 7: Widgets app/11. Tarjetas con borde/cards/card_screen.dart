@@ -40,7 +40,7 @@ class _CardsView extends StatelessWidget {
               label: card['label'],
             ),
           ),
-          //Paso 2
+          // Paso 2: Añadir la nueva lista de tarjetas
           ...cards.map(
             (card) => _CardType2(
               elevation: card['elevation'],
@@ -87,7 +87,7 @@ class _CardType1 extends StatelessWidget {
   }
 }
 
-//Paso 1
+//Paso 1: Duplicar el widget _CardType1 y renombrarlo
 class _CardType2 extends StatelessWidget {
   final String label;
   final double elevation;
@@ -98,13 +98,13 @@ class _CardType2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Paso 3
+    // Paso 3: Obtener el esquema de colores del tema
     final colors = Theme.of(context).colorScheme;//Paso 3
 
     return Card(
-      //Paso 4(shape)(En este paso recuerdarme plasmar el resultado)
+      // Paso 4: Definir la forma y el borde de la tarjeta(En este paso recuerdarme plasmar el resultado)
       shape: RoundedRectangleBorder(
-        borderRadius:  const BorderRadius.all(Radius.circular(12)), //Paso 5, recuerdarme plasmar el resyltado enla documnentation
+        borderRadius:  const BorderRadius.all(Radius.circular(12)), // Paso 5: Añadir radio a las esquinas (recuerdarme plasmar el resyltado enla documnentation)
         side: BorderSide(
           color: colors.outline
         ),
