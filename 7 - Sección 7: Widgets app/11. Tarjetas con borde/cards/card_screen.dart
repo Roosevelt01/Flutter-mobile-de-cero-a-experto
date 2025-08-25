@@ -104,9 +104,9 @@ class _CardType2 extends StatelessWidget {
     return Card(
       // Paso 4: Definir la forma y el borde de la tarjeta(En este paso recuerdarme plasmar el resultado)
       shape: RoundedRectangleBorder(
-        borderRadius:  const BorderRadius.all(Radius.circular(12)), // Paso 5: Añadir radio a las esquinas (recuerdarme plasmar el resyltado enla documnentation)
+        borderRadius:  const BorderRadius.all(Radius.circular(12)), // Paso 5: Añadir radio a las esquinas 
         side: BorderSide(
-          color: colors.outline
+          color: colors.outline// Usar el color del tema
         ),
       ),
       elevation: elevation,
@@ -123,7 +123,7 @@ class _CardType2 extends StatelessWidget {
             ),
             Align(
               alignment: Alignment.bottomLeft,
-              child: Text('$label - outline'),//Paso 5
+              child: Text('$label - outline'),// Diferenciar el texto de la tarjeta
             ),
           ], 
         ),
