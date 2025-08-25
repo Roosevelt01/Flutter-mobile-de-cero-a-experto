@@ -1,3 +1,3 @@
 # Resultado
 
-![qemu-system-x86_64_kXxwbBXv4q](https://github.com/user-attachments/assets/c86a879f-8ef8-4722-9d00-7620a9d0eed4)
+![qemu-system-x86_64_FMwq633XaT](https://github.com/user-attachments/assets/ce61b0c2-d174-496c-a512-bc0c43c1b440)
