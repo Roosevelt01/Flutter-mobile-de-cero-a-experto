@@ -99,7 +99,7 @@ class _CardType2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Paso 3: Obtener el esquema de colores del tema
-    final colors = Theme.of(context).colorScheme;//Paso 3
+    final colors = Theme.of(context).colorScheme;
 
     return Card(
       // Paso 4: Definir la forma y el borde de la tarjeta(En este paso recuerdarme plasmar el resultado)
@@ -131,3 +131,4 @@ class _CardType2 extends StatelessWidget {
     );
   }
 }
+
