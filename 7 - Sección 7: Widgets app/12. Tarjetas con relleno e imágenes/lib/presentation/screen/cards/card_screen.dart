@@ -9,7 +9,6 @@ const cards = <Map<String, dynamic>>[
   {'elevation': 5.0, 'label': 'Elevation 5'},
 ];
 
-
 class CardsScreen extends StatelessWidget {
   static const String name = 'cards_screen';
 
@@ -19,7 +18,7 @@ class CardsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cards Screen'),//PAso 2
+        title: const Text('Cards Screen'),
       ),
       body: _CardsView(),
     );
@@ -48,7 +47,7 @@ class _CardsView extends StatelessWidget {
             ),
           ),
 
-          //Paso 5  
+          //Integrar _CardType3 en la Pantalla 
           ...cards.map(
             (card) => _CardType3(
               elevation: card['elevation'],
@@ -56,14 +55,15 @@ class _CardsView extends StatelessWidget {
             ),
           ),
           
-          //Paso 8
+          //Integrar _CardType4 en la Pantalla
           ...cards.map(
             (card) => _CardType4(
               elevation: card['elevation'],
               label: card['label'],
             ),
           ),
-
+          
+          // Añadir un espacio al final
           SizedBox(height: 15),
         ],
       ),
@@ -149,7 +149,7 @@ class _CardType2 extends StatelessWidget {
   }
 }
 
-//Paso 2 
+//Creación de una Tarjeta con Relleno (Filled Card)
 class _CardType3 extends StatelessWidget {
   
   final String label;
@@ -162,10 +162,10 @@ class _CardType3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final colors = Theme.of(context).colorScheme; //Paso 3
+    final colors = Theme.of(context).colorScheme; // Paso 1: Acceder a los Colores del Tema
     
     return Card(
-      color: colors.surfaceContainerHigh, //Paso 4
+      color: colors.surfaceContainerHigh, //Paso 2: Aplicar el Color de Fondo
 
       elevation: elevation,
       child: Padding(
@@ -190,7 +190,7 @@ class _CardType3 extends StatelessWidget {
   }
 }
 
-//Modificando CardType4
+//Creación de una Tarjeta con Imagen de Fondo
 class _CardType4 extends StatelessWidget {
   
   final String label;
@@ -204,12 +204,13 @@ class _CardType4 extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Card(
-      clipBehavior: Clip.hardEdge, //Paso 2
+      clipBehavior: Clip.hardEdge,
       elevation: elevation,
+      // Paso 1: Se elimina el padding para que la imagen ocupe todo el espacio
       child: Stack(
         children: [
       
-          //Paso 1  
+          //Paso 2: Añadir la Imagen de Fondo 
           Image.network(
             'https://picsum.photos/id/${elevation.toInt()}/600/250',
             height: 350,
@@ -218,7 +219,7 @@ class _CardType4 extends StatelessWidget {
       
           Align(
             alignment: Alignment.topRight,
-            child: Container( //Paso 3
+            child: Container( //Paso 3: Estilizar el Botón Superpuesto
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
