@@ -149,7 +149,7 @@ class _CardType2 extends StatelessWidget {
   }
 }
 
-//Creación de una Tarjeta con Relleno (Filled Card)
+//Creación de una Tarjeta con Relleno (Filled Cards)
 class _CardType3 extends StatelessWidget {
   
   final String label;
