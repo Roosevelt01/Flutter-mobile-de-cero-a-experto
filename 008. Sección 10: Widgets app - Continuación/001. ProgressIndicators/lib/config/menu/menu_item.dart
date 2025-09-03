@@ -30,12 +30,11 @@ const appMenuItems = <MenuItem>[
     icon: Icons.credit_card,
   ),
 
-  //Paso 1 
+  //Paso 1: añade un nuevo MenuItem a la lista appMenuItems
   MenuItem(
     title: "ProgressIndicators",
     subTitle: "Generales y controlados",
     link: "/progress",
     icon: Icons.refresh_rounded,
   ),
-  
 ];
