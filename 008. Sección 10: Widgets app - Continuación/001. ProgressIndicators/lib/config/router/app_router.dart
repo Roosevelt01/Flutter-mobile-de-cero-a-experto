@@ -22,7 +22,7 @@ final appRouter = GoRouter(
       builder: (context, state) => const CardsScreen()
     ),
         
-    //Paso 1    
+    //Paso 1: indicamos al router qué hacer cuando se navega a /progress    
     GoRoute(
       path: '/progress',
       name: ProgressScreen.name,
