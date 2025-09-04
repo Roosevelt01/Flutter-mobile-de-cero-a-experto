@@ -43,6 +43,7 @@ class _ControlledProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    // El contenido se desarrollará en la próxima clase.
+    return Container(); // Placeholder inicial
   }
 }
