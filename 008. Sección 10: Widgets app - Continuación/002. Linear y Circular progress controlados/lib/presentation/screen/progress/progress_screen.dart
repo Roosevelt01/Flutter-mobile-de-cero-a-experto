@@ -36,8 +36,8 @@ class _ProgressView extends StatelessWidget {
   }
 }
 
-//Paso 1
-/*class _ControlledProgressIndicator extends StatelessWidget {
+//Paso 1: Primer intento dentro de _ControlledProgressIndicator
+class _ControlledProgressIndicator extends StatelessWidget {
   const _ControlledProgressIndicator();
 
   @override
@@ -52,14 +52,11 @@ class _ProgressView extends StatelessWidget {
             backgroundColor: Colors.black45,
           ),
           const SizedBox(width: 20),
-          Expanded(
-            child: LinearProgressIndicator(),
-          )
         ]
       ),
     );
   }
-}*/
+}
 
 //Paso 2
 /*class _ControlledProgressIndicator extends StatelessWidget {
