@@ -58,6 +58,31 @@ class _ControlledProgressIndicator extends StatelessWidget {
   }
 }
 
+//Paso 1.1: Primer intento dentro de _ControlledProgressIndicator
+class _ControlledProgressIndicator extends StatelessWidget {
+  const _ControlledProgressIndicator();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+          CircularProgressIndicator(
+            strokeWidth: 2,
+            backgroundColor: Colors.black45,
+          ),
+          const SizedBox(width: 20),
+          Expanded(
+          child: LinearProgressIndicator(),
+        )
+        ]
+      ),
+    );
+  }
+}
+
 //Paso 2
 /*class _ControlledProgressIndicator extends StatelessWidget {
   const _ControlledProgressIndicator();
