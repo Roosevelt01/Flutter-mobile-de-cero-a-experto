@@ -27,23 +27,96 @@ class _ProgressView extends StatelessWidget {
             SizedBox(width: 30),
             Text('Circular progress indicator'),
             SizedBox(height: 10),
-            CircularProgressIndicator(
-              strokeWidth: 2, backgroundColor: Colors.black45
-            ),           
-            SizedBox(height: 20),// Añadido para espaciado
-            _ControlledProgressIndicator()// Nuevo widget placeholder
+            CircularProgressIndicator(strokeWidth: 2, backgroundColor: Colors.black45),
+            SizedBox(height: 20),
+            Text('Circular indicator controlado'),_ControlledProgressIndicator()
           ],
         )
     );
   }
 }
 
+//Paso 1
+/*class _ControlledProgressIndicator extends StatelessWidget {
+  const _ControlledProgressIndicator();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+          CircularProgressIndicator(
+            strokeWidth: 2,
+            backgroundColor: Colors.black45,
+          ),
+          const SizedBox(width: 20),
+          Expanded(
+            child: LinearProgressIndicator(),
+          )
+        ]
+      ),
+    );
+  }
+}*/
+
+//Paso 2
+/*class _ControlledProgressIndicator extends StatelessWidget {
+  const _ControlledProgressIndicator();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+          CircularProgressIndicator(
+            strokeWidth: 2,
+            backgroundColor: Colors.black45,
+          ),
+          const SizedBox(width: 20),
+          Expanded(
+            child: LinearProgressIndicator(value: 0.5),
+          )
+        ]
+      ),
+    );
+  }
+}*/
+
+//Paso 3
 class _ControlledProgressIndicator extends StatelessWidget {
   const _ControlledProgressIndicator();
 
   @override
   Widget build(BuildContext context) {
-    // El contenido se desarrollará en la próxima clase.
-    return Container(); // Placeholder inicial
+    return StreamBuilder(
+      stream: Stream.periodic(const Duration(milliseconds: 300), (value) {
+        return (value * 2)/100;
+      }).takeWhile((value) => value <=100),
+      builder: (context, snapshot){
+        final  progresssValue = snapshot.data ?? 0;
+      
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+            CircularProgressIndicator(
+              strokeWidth: 2,
+              backgroundColor: Colors.black45,
+              value:  progresssValue,
+            ),
+            const SizedBox(width: 20),
+            Expanded(
+              child: LinearProgressIndicator(value: progresssValue),
+            )
+          ]
+        ),
+      );
+    }
+    );
   }
 }
