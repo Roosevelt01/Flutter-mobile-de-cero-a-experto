@@ -83,8 +83,8 @@ class _ControlledProgressIndicator extends StatelessWidget {
   }
 }
 
-//Paso 2
-/*class _ControlledProgressIndicator extends StatelessWidget {
+//Paso 2: Controlando el Progreso con la Propiedad value
+class _ControlledProgressIndicator extends StatelessWidget {
   const _ControlledProgressIndicator();
 
   @override
@@ -97,18 +97,21 @@ class _ControlledProgressIndicator extends StatelessWidget {
           CircularProgressIndicator(
             strokeWidth: 2,
             backgroundColor: Colors.black45,
+            value: 0.5 //Asigna un valor fijo a la propiedad value(50% de progreso)
           ),
           const SizedBox(width: 20),
           Expanded(
-            child: LinearProgressIndicator(value: 0.5),
+            child: LinearProgressIndicator(
+              value: 0.5 //Asigna un valor fijo a la propiedad value(50% de progreso)
+            ),
           )
         ]
       ),
     );
   }
-}*/
+}
 
-//Paso 3
+//Paso 3: Animación Dinámica con StreamBuilder
 class _ControlledProgressIndicator extends StatelessWidget {
   const _ControlledProgressIndicator();
 
@@ -116,29 +119,29 @@ class _ControlledProgressIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder(
       stream: Stream.periodic(const Duration(milliseconds: 300), (value) {
-        return (value * 2)/100;
-      }).takeWhile((value) => value <=100),
-      builder: (context, snapshot){
-        final  progresssValue = snapshot.data ?? 0;
-      
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-           children: [
-            CircularProgressIndicator(
-              strokeWidth: 2,
-              backgroundColor: Colors.black45,
-              value:  progresssValue,
-            ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: LinearProgressIndicator(value: progresssValue),
-            )
-          ]
-        ),
-      );
-    }
+          return (value * 2)/100;
+        }).takeWhile((value) => value <=100),
+        builder: (context, snapshot){
+          final  progresssValue = snapshot.data ?? 0;
+        
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircularProgressIndicator(
+                strokeWidth: 2,
+                backgroundColor: Colors.black45,
+                value:  progresssValue,
+              ),
+              const SizedBox(width: 20),
+              Expanded(
+                child: LinearProgressIndicator(value: progresssValue),
+              )
+            ]
+          ),
+        );
+      }
     );
   }
 }
