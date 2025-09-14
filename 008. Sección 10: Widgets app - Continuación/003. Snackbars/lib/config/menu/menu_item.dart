@@ -37,7 +37,7 @@ const appMenuItems = <MenuItem>[
     icon: Icons.refresh_rounded,
   ),
   
-  //Paso 1
+  //Paso 1: Añadir la Opción al Menú
    MenuItem(
     title: "Progress dialog",
     subTitle: "Indicadores en pantalla",
