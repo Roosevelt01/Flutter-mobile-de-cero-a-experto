@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-//Paso 1
-/*
+//Paso 1: Estructura Básica.
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
 
@@ -15,10 +14,10 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-//Paso 2
-/*class SnackbarScreen extends StatelessWidget {
+//Paso 2: Estructura del botón
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
 
   const SnackbarScreen({super.key});
@@ -35,17 +34,15 @@ class SnackbarScreen extends StatelessWidget {
         label: const Text('Mostrar Snackbar'),
         icon: const Icon(Icons.remove_red_eye_outlined),
         onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: const Text('Hola Mundo'))
           );
         },
       ),
     );
   }
-}*/
+}
 
-//Paso 3
-/*class SnackbarScreen extends StatelessWidget {
+//Paso 3: Mostrar un SnackBar Básico
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
 
   const SnackbarScreen({super.key});
@@ -77,7 +74,7 @@ class SnackbarScreen extends StatelessWidget {
     )
     );
   }
-}*/
+}
 
 //Paso 4
 /*class SnackbarScreen extends StatelessWidget {
