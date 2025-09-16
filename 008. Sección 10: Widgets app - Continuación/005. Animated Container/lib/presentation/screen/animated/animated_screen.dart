@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-//Paso 1
-/*class AnimatedScreen extends StatelessWidget {
+//Paso 1: Construcción de la Interfaz y Animación
+class AnimatedScreen extends StatelessWidget {
   static const String name = 'animated_screen';
 
   const AnimatedScreen({super.key});
@@ -12,17 +12,15 @@ import 'package:flutter/material.dart';
       appBar: AppBar(title: const Text('Animated Container Screen')),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
+        onPressed: () { },// Aún sin funcionalidad
         child: const Icon(Icons.play_arrow_rounded),
       ),
     );
   }
-}*/
+}
 
-//Paso 2
-/*class AnimatedScreen extends StatelessWidget {
+//Paso 2: Añadir un Container Estático
+class AnimatedScreen extends StatelessWidget {
   static const String name = 'animated_screen';
 
   const AnimatedScreen({super.key});
@@ -32,7 +30,8 @@ import 'package:flutter/material.dart';
     return Scaffold(
       appBar: AppBar(title: const Text('Animated Container Screen')),
 
-      // Gemeni agregale comentario para indicar que se agregó
+      // Se añade un Container regular y estático en el centro de la pantalla para
+      //tener un punto de partida visual.
       body: Center(
         child: Container(
           width: 100,
@@ -52,9 +51,9 @@ import 'package:flutter/material.dart';
       ),
     );
   }
-}*/
+}
 
-//Paso 3
+//Paso 3: Paso 3: Introducir AnimatedContainer(Código final)
 class AnimatedScreen extends StatelessWidget {
   static const String name = 'animated_screen';
 
@@ -67,7 +66,7 @@ class AnimatedScreen extends StatelessWidget {
 
       
       body: Center(
-        // Gemeni agregale comentario para indicar que se agregó
+        // Reemplazamos el Container estático por un AnimatedContainer
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeOutCubic,
