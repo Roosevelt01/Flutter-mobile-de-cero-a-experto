@@ -64,17 +64,17 @@ class AnimatedScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Animated Container Screen')),
 
-      
+    
       body: Center(
         // Reemplazamos el Container estático por un AnimatedContainer
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeOutCubic,
-          width: 300,
+          width: 300, // Nuevos valores para ver la animación al cargar
           height: 230,
           decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(20),
+            color: Colors.red,// Nuevo color
+            borderRadius: BorderRadius.circular(10), // Nuevo radio
           ),
         ),
       ),
