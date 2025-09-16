@@ -51,7 +51,7 @@ class SnackbarScreen extends StatelessWidget {
 }
 
 //Paso 2
-/*class SnackbarScreen extends StatelessWidget {
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
 
@@ -102,7 +102,7 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3
 /*class SnackbarScreen extends StatelessWidget {
