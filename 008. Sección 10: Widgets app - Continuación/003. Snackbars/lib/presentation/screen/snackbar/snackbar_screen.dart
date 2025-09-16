@@ -1,39 +1,44 @@
 import 'package:flutter/material.dart';
 
-//Paso 1: Estructura Básica.
+//Paso 1: Estructura Básica y Botón Flotante
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
-
   const SnackbarScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Snackbar y Dialogos'),
+        title: const Text('Snackbar y Diálogos'),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        label: const Text('Mostrar Snackbar'),
+        icon: const Icon(Icons.remove_red_eye_outlined),
+        onPressed: () {
+          // La lógica irá aquí
+        },
       ),
     );
   }
 }
 
-//Paso 2: Estructura del botón
+//Paso 2: Mostrar un SnackBar Básico
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
-
   const SnackbarScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Snackbar y Dialogos'),
+        title: const Text('Snackbar y Diálogos'),
       ),
-
-      //Paso 2.1
       floatingActionButton: FloatingActionButton.extended(
         label: const Text('Mostrar Snackbar'),
         icon: const Icon(Icons.remove_red_eye_outlined),
         onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Hola Mundo'))
           );
         },
       ),
@@ -44,143 +49,92 @@ class SnackbarScreen extends StatelessWidget {
 //Paso 3: Mostrar un SnackBar Básico
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
-
   const SnackbarScreen({super.key});
 
-  //Paso 3.1
-  void showCustomSnackbar(BuildContext context){
-
-    final snackBar = SnackBar(
-      content: const Text('Hola Mundo'),
+  void showCustomSnackbar(BuildContext context) {
+    final snackBar = const SnackBar(
+      content: Text('Hola Mundo'),
     );
-
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
-   
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Snackbar y Dialogos'),
+        title: const Text('Snackbar y Diálogos'),
       ),
-      
       floatingActionButton: FloatingActionButton.extended(
         label: const Text('Mostrar Snackbar'),
         icon: const Icon(Icons.remove_red_eye_outlined),
-        //Paso 3.2
-        onPressed: () => showCustomSnackbar(context
+        
+        onPressed: () => showCustomSnackbar(context),
+
       ),
-    )
     );
   }
 }
 
-//Paso 4
-/*class SnackbarScreen extends StatelessWidget {
-  static const String name = 'snackbar_screen';
-
-  const SnackbarScreen({super.key});
-
-  void showCustomSnackbar(BuildContext context){
-
-    //Paso 4.1
-    ScaffoldMessenger.of(context).clearSnackBars();
-
-    final snackBar = SnackBar(
-      content: const Text('Hola Mundo'),
-    );
-
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Snackbar y Dialogos'),
-      ),
-      
-      floatingActionButton: FloatingActionButton.extended(
-        label: const Text('Mostrar Snackbar'),
-        icon: const Icon(Icons.remove_red_eye_outlined),
-        //Paso 3.2
-        onPressed: () => showCustomSnackbar(context),
-      )
-    );
-  }
-}*/
-
-//Paso 5
-/*class SnackbarScreen extends StatelessWidget {
-  static const String name = 'snackbar_screen';
-
-  const SnackbarScreen({super.key});
-
-  void showCustomSnackbar(BuildContext context){
-
-    ScaffoldMessenger.of(context).clearSnackBars();
-
-    final snackBar = SnackBar(
-      content: const Text('Hola Mundo'),
-      //Paso 5.1
-      action: SnackBarAction(label: 'Ok', onPressed: () {}),
-    );
-
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Snackbar y Dialogos'),
-      ),
-      
-      floatingActionButton: FloatingActionButton.extended(
-        label: const Text('Mostrar Snackbar'),
-        icon: const Icon(Icons.remove_red_eye_outlined),
-        onPressed: () => showCustomSnackbar(context),
-      )
-    );
-  }
-}*/
-
-
-//Paso 6
+//Paso 4: Evitar la Acumulación de SnackBars
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
-
   const SnackbarScreen({super.key});
 
-  void showCustomSnackbar(BuildContext context){
-
+  void showCustomSnackbar(BuildContext context) {
     ScaffoldMessenger.of(context).clearSnackBars();
 
-    final snackBar = SnackBar(
-      content: const Text('Hola Mundo'),
-      action: SnackBarAction(label: 'Ok', onPressed: () {}),
-      duration: const Duration(seconds: 2),//Duracion del snackbar
+    final snackBar = const SnackBar(
+      content: Text('Hola Mundo'),
     );
-
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Snackbar y Dialogos'),
+        title: const Text('Snackbar y Diálogos'),
       ),
-      
       floatingActionButton: FloatingActionButton.extended(
         label: const Text('Mostrar Snackbar'),
         icon: const Icon(Icons.remove_red_eye_outlined),
+        
         onPressed: () => showCustomSnackbar(context),
-      )
+
+      ),
+    );
+  }
+}
+
+//Paso 5: Personalizar el SnackBar con Acciones y Duración(Código Completo Final)
+class SnackbarScreen extends StatelessWidget {
+  static const String name = 'snackbar_screen';
+  const SnackbarScreen({super.key});
+
+  void showCustomSnackbar(BuildContext context) {
+    ScaffoldMessenger.of(context).clearSnackBars();
+
+    final snackBar = SnackBar(
+      content: const Text('Hola Mundo'),
+      action: SnackBarAction(label: 'Ok!', onPressed: () {}),
+      duration: Duration(seconds: 2),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Snackbar y Diálogos'),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        label: const Text('Mostrar Snackbar'),
+        icon: const Icon(Icons.remove_red_eye_outlined),
+        
+        onPressed: () => showCustomSnackbar(context),
+        
+      ),
     );
   }
 }
