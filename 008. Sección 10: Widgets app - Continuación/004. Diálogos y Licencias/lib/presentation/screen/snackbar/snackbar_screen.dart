@@ -105,8 +105,8 @@ class SnackbarScreen extends StatelessWidget {
   }
 }
 
-//Paso 4
-/*class SnackbarScreen extends StatelessWidget {
+//Paso 3: Personalizar el Diálogo About
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
 
@@ -136,7 +136,7 @@ class SnackbarScreen extends StatelessWidget {
             onPressed: () {
               showAboutDialog(
                 context: context,
-                //Gemini: Agregale comentarios a este codigo
+                applicationName: 'Flutter Widgets',
                 children: [
                   const Text('App de ejemplo para el curso de Flutter'),
                 ]
@@ -163,7 +163,7 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 5
 /*class SnackbarScreen extends StatelessWidget {
