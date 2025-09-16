@@ -313,9 +313,9 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-Paso 6: Implementar el Cierre del Diálogo
+//Paso 6: Implementar el Cierre del Diálogo
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
