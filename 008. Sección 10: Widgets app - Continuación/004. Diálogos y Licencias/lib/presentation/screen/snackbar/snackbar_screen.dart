@@ -395,7 +395,7 @@ class SnackbarScreen extends StatelessWidget {
   }
 }*/
 
-//Paso 8
+//Paso 7: Hacer el Diálogo Modal (No Descartable)
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
@@ -414,7 +414,7 @@ class SnackbarScreen extends StatelessWidget {
   void openDialog(BuildContext context) {
     showDialog(
       context: context,
-      barrierDismissible: false, //Paso 8.1: (Gemini) Agregale comentarios a este codigo
+      barrierDismissible: false, // Evita que el diálogo se cierre al tocar fuera de él estableciendo
       builder: (context) => AlertDialog(
         title: const Text('¿Estás seguro?'),
         content: const Text('Si aceptas, se eliminará el item'),
