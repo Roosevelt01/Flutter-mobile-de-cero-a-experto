@@ -395,7 +395,7 @@ class SnackbarScreen extends StatelessWidget {
   }
 }*/
 
-//Paso 7: Hacer el Diálogo Modal (No Descartable)
+//Paso 7: Hacer el Diálogo Modal (Código completo)
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
