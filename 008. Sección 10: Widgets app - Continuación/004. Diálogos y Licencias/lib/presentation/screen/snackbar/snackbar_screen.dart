@@ -165,8 +165,8 @@ class SnackbarScreen extends StatelessWidget {
   }
 }
 
-//Paso 5
-/*class SnackbarScreen extends StatelessWidget {
+//Paso 4: Refactorizar la Lógica a un Método openDialog
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
 
@@ -181,7 +181,7 @@ class SnackbarScreen extends StatelessWidget {
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
-  //Paso 5.1: (Gemini) Agregale comentarios a este codigo
+  //Implementación de un Diálogo Personalizado (AlertDialog)
   void openDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -216,7 +216,7 @@ class SnackbarScreen extends StatelessWidget {
           ),
           
           FilledButton.tonal(
-            // Paso 5.2: (Gemini) Agregale comentarios a este codigo
+            // onPressed del segundo botón
             onPressed: () => openDialog(context),
             child: const Text('Mostrar diálogo'),
           ),
@@ -233,7 +233,7 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 6
 /*class SnackbarScreen extends StatelessWidget {
