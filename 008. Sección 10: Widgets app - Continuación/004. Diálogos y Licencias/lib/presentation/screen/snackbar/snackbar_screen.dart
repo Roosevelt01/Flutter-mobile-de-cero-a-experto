@@ -50,7 +50,7 @@ class SnackbarScreen extends StatelessWidget {
   }
 }
 
-//Paso 2: Parte 2: Implementación del Diálogo de Licencias (showAboutDialog)
+// Parte 2: Implementación del Diálogo de Licencias (showAboutDialog)
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
