@@ -22,6 +22,7 @@ class SnackbarScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Snackbar y Diálogos')),
 
+      //Paso 1: Construcción de la Interfaz de Usuario (UI)
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
