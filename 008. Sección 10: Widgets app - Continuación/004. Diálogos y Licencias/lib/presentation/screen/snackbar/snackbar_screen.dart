@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 //Paso 1
-/*class SnackbarScreen extends StatelessWidget {
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
 
@@ -20,34 +20,34 @@ import 'package:go_router/go_router.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Snackbar y Diálogos'),
-      ),
+      appBar: AppBar(title: const Text('Snackbar y Diálogos')),
 
-     //(Gemini agregale comentarios a este codigo)
-     body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FilledButton.tonal(
-            onPressed: () {
-            },
-            child: const Text('Mostrar diálogo'),
-          ),
-        ],
-      )
-     ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FilledButton.tonal(
+              onPressed: () {},
+              child: const Text('Licencias usadas'),
+            ),
+
+            FilledButton.tonal(
+              onPressed: () {},
+              child: const Text('Mostrar diálogo'),
+            ),
+          ],
+        ),
+      ),
 
       floatingActionButton: FloatingActionButton.extended(
         label: const Text('Mostrar Snackbar'),
         icon: const Icon(Icons.remove_red_eye_outlined),
-        
+
         onPressed: () => showCustomSnackbar(context),
-        
       ),
     );
   }
-}*/
+}
 
 //Paso 2
 /*class SnackbarScreen extends StatelessWidget {
