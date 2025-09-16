@@ -44,7 +44,7 @@ const appMenuItems = <MenuItem>[
     icon: Icons.info_outline,
   ),
 
-  //Paso 1
+  //Añadir la Opción al Menú (menu_item.dart)
   MenuItem(
     title: "Animated container",
     subTitle: "Stateful widget animado",

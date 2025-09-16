@@ -34,12 +34,11 @@ final appRouter = GoRouter(
       builder: (context, state) => const SnackbarScreen()
     ),
 
-    //Paso 1
+    //Registrar la Nueva Ruta (app_router.dart)
     GoRoute(
       path: '/animated',
       name: AnimatedScreen.name,
       builder: (context, state) => const AnimatedScreen()
     ),
-
   ],
 );
