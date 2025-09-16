@@ -339,12 +339,12 @@ class SnackbarScreen extends StatelessWidget {
         content: const Text('Si aceptas, se eliminará el item'),
         actions: [
           TextButton(
-            //Paso 7.1: (Gemini) Agregale comentarios a este codigo
+            // Implementar el Cierre del Diálogo
             onPressed: () => context.pop(), 
             child: const Text('Cancelar')
           ),
           FilledButton(
-            //Paso 7.2: (Gemini) Agregale comentarios a este codigo
+            // Implementar el Cierre del Diálogo
             onPressed: () => context.pop(), 
             child: const Text('Aceptar')
           ),
