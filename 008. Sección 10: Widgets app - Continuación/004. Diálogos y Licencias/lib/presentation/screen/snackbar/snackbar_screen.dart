@@ -235,8 +235,8 @@ class SnackbarScreen extends StatelessWidget {
   }
 }
 
-//Paso 6
-/*class SnackbarScreen extends StatelessWidget {
+//Paso 5: Añadir Botones de Acción
+class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
 
@@ -258,12 +258,12 @@ class SnackbarScreen extends StatelessWidget {
         title: const Text('¿Estás seguro?'),
         content: const Text('Si aceptas, se eliminará el item'),
         actions: [
-          //Paso 6.1: (Gemini) Agregale comentarios a este codigo
+          //Añade botones de "Cancelar"
           TextButton(
             onPressed: (){}, 
             child: const Text('Cancelar')
           ),
-          //Paso 6.2: (Gemini) Agregale comentarios a este codigo
+          //Añade botones de "Aceptar"
           FilledButton(
             onPressed: (){}, 
             child: const Text('Aceptar')
