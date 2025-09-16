@@ -50,7 +50,7 @@ class SnackbarScreen extends StatelessWidget {
   }
 }
 
-//Paso 2
+//Paso 2: Parte 2: Implementación del Diálogo de Licencias (showAboutDialog)
 class SnackbarScreen extends StatelessWidget {
   static const String name = 'snackbar_screen';
   const SnackbarScreen({super.key});
@@ -79,61 +79,7 @@ class SnackbarScreen extends StatelessWidget {
         children: [
           FilledButton.tonal(
             onPressed: () {
-            },
-            child: const Text('Licencias usadas'),
-          ),
-          
-          //Segundo botón
-          FilledButton.tonal(
-            onPressed: () {
-            },
-            child: const Text('Mostrar diálogo'),
-          ),
-        ],
-      )
-     ),
-
-      floatingActionButton: FloatingActionButton.extended(
-        label: const Text('Mostrar Snackbar'),
-        icon: const Icon(Icons.remove_red_eye_outlined),
-        
-        onPressed: () => showCustomSnackbar(context),
-        
-      ),
-    );
-  }
-}
-
-//Paso 3
-/*class SnackbarScreen extends StatelessWidget {
-  static const String name = 'snackbar_screen';
-  const SnackbarScreen({super.key});
-
-  void showCustomSnackbar(BuildContext context) {
-    ScaffoldMessenger.of(context).clearSnackBars();
-
-    final snackBar = SnackBar(
-      content: const Text('Hola Mundo'),
-      action: SnackBarAction(label: 'Ok!', onPressed: () {}),
-      duration: Duration(seconds: 2),
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Snackbar y Diálogos'),
-      ),
-
-     body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FilledButton.tonal(
-            onPressed: () {
-              //Gemini: Agregale comentarios a este codigo
+              //Mostrar el Diálogo Básico
               showAboutDialog(context: context);
             },
             child: const Text('Licencias usadas'),
@@ -157,7 +103,7 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 4
 /*class SnackbarScreen extends StatelessWidget {
