@@ -259,7 +259,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   }
 }
 
-//Paso 6(Código final)
+//Paso 6: Robustecer el Código (La Corrección)(Código final)
 import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
