@@ -110,7 +110,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     final random = Random();
 
     width = random.nextInt(300) + 50;
-    height = random.nextInt(300) + 50; //Paso 3.1 (Agregale comentario para documentacion)
+    height = random.nextInt(300) + 50; // Se añade esta línea
 
     setState(() {});
   }
@@ -142,7 +142,6 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   }
 }
 
-// Paso 3: Animar la Altura (height)
 import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
