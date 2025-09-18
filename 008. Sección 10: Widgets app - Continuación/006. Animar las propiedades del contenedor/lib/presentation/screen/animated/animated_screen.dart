@@ -1,41 +1,7 @@
 import 'package:flutter/material.dart';
 
-/*class AnimatedScreen extends StatelessWidget {
-  static const String name = 'animated_screen';
-
-  const AnimatedScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Animated Container Screen')),
-
-      
-      body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 400),
-          curve: Curves.easeOutCubic,
-          width: 300,
-          height: 230,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: const Icon(Icons.play_arrow_rounded),
-      ),
-    );
-  }
-}*/
-
-//Paso 1
-/*class AnimatedScreen extends StatefulWidget {
+//Paso 1: Convertir a StatefulWidget y Definir el Estado
+class AnimatedScreen extends StatefulWidget {
   static const String name = 'animated_screen';
 
   const AnimatedScreen({super.key});
@@ -45,7 +11,6 @@ import 'package:flutter/material.dart';
 }
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
-  // Agregale comentario para documentacion
   double width = 50;
   double height = 50; 
   Color color = Colors.indigo;
@@ -78,7 +43,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 2
 /*import 'dart:math' show Random;
