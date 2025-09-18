@@ -45,7 +45,6 @@ class AnimatedScreen extends StatefulWidget {
 
   @override
   State<AnimatedScreen> createState() => _AnimatedScreenState();
-}
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
   double width = 50;
@@ -89,8 +88,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   }
 }
 
-//Paso 3
-/*import 'dart:math' show Random;
+//Paso 3: Animar la Altura (height)
+import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
   static const String name = 'animated_screen';
@@ -141,10 +140,10 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
     );
   }
-}*/
+}
 
-//Paso 4
-/*import 'dart:math' show Random;
+// Paso 3: Animar la Altura (height)
+import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
   static const String name = 'animated_screen';
@@ -166,7 +165,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
 
     width = random.nextInt(300) + 50;
     height = random.nextInt(300) + 50;
-    borderRadius = random.nextInt(100) + 10; //Paso 4.1 (Agregale comentario para documentacion)
+    borderRadius = random.nextInt(100) + 10; // Se añade esta línea
 
     setState(() {});
   }
@@ -196,7 +195,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 5
 /*import 'dart:math' show Random;
