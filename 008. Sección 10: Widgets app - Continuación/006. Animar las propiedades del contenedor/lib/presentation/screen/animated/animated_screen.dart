@@ -10,43 +10,8 @@ class AnimatedScreen extends StatefulWidget {
   State<AnimatedScreen> createState() => _AnimatedScreenState();
 }
 
-class _AnimatedScreenState extends State<AnimatedScreen> {
-  double width = 50;
-  double height = 50; 
-  Color color = Colors.indigo;
-  double borderRadius = 10;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Animated Container Screen')),
-
-      
-      body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 400),
-          curve: Curves.easeOutCubic,
-          width: width,
-          height: height,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(borderRadius),
-          ),
-        ),
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: const Icon(Icons.play_arrow_rounded),
-      ),
-    );
-  }
-}
-
-//Paso 2
-/*import 'dart:math' show Random;
+//Paso 2: Crear el Método changeShape y Animar el width
+import 'dart:math' show Random; // Importar solo la clase Random
 
 class AnimatedScreen extends StatefulWidget {
   static const String name = 'animated_screen';
@@ -63,11 +28,11 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   Color color = Colors.indigo;
   double borderRadius = 10;
 
-  //Paso 2.1 (Agregale comentario para documentacion)
+  //Crear el Método changeShape
   void changeShape() {
     final random = Random();
 
-    width = random.nextInt(300) + 50;
+    width = random.nextInt(300) + 50;// Solo cambia el ancho
 
     setState(() {});
   }
@@ -92,13 +57,12 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: changeShape, //Paso 2.2 (Agregale comentario para documentacion)
+        onPressed: changeShape, //Se agrega changeShape
         child: const Icon(Icons.play_arrow_rounded),
       ),
     );
   }
-}*/
-
+}
 
 //Paso 3
 /*import 'dart:math' show Random;
