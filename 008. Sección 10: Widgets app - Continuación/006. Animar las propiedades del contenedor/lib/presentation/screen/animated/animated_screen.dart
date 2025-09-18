@@ -198,8 +198,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   }
 }
 
-//Paso 5
-/*import 'dart:math' show Random;
+//Paso 5: Animar el Color
+import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
   static const String name = 'animated_screen';
@@ -223,14 +223,12 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     height = random.nextInt(300) + 50;
     borderRadius = random.nextInt(100) + 10; 
 
-    //Paso 5.1 (Agregale comentario para documentacion)
-    color = Color.fromARGB(
-      random.nextInt(255), 
-      random.nextInt(255), 
-      random.nextInt(255),
-      1
+    color = Color.fromRGBO( // Se añade esta sección
+      random.nextInt(256), // Valor para Red (0-255)
+      random.nextInt(256), // Valor para Green (0-255)
+      random.nextInt(256), // Valor para Blue (0-255)
+      1,                   // Opacidad (1 = opaco)
     );
-
     setState(() {});
   }
 
@@ -259,9 +257,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
     );
   }
-}*/
+}
 
-//Paso 6
+//Paso 6(Código final)
 import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
