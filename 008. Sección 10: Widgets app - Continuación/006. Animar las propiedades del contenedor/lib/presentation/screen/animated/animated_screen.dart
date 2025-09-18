@@ -142,6 +142,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   }
 }
 
+//Paso 4: Animar el borderRadius
+
 import 'dart:math' show Random;
 
 class AnimatedScreen extends StatefulWidget {
