@@ -280,7 +280,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   void changeShape() {
     final random = Random();
 
-    //Paso 6.1 (Agregale comentario para documentacion)
+    // Valores mínimos más altos para evitar que se haga muy pequeño
     width = random.nextInt(300) + 120;
     height = random.nextInt(300) + 120;
     borderRadius = random.nextInt(100) + 20; 
@@ -304,6 +304,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeOutCubic,
+          // Para prevenir valores negativos o cero
           width: width <= 0 ? 0: width,
           height: height <= 0 ? 0: height,
           decoration: BoxDecoration(
