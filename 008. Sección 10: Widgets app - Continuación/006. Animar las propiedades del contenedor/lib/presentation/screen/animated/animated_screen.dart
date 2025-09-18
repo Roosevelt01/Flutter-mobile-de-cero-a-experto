@@ -1,13 +1,38 @@
 import 'package:flutter/material.dart';
 
 //Paso 1: Convertir a StatefulWidget y Definir el Estado
-class AnimatedScreen extends StatefulWidget {
+class AnimatedScreen extends StatelessWidget {
   static const String name = 'animated_screen';
 
   const AnimatedScreen({super.key});
 
   @override
-  State<AnimatedScreen> createState() => _AnimatedScreenState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Animated Container Screen')),
+
+      
+      body: Center(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeOutCubic,
+          width: 300,
+          height: 230,
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(20),
+          ),
+        ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: const Icon(Icons.play_arrow_rounded),
+      ),
+    );
+  }
 }
 
 //Paso 2: Crear el Método changeShape y Animar el width
