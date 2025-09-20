@@ -40,7 +40,7 @@ class UiControlsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('UI Controls'),
       ),
-      body: const _UiControlsViiew(), //2.1 Agragale comentario 
+      body: const _UiControlsViiew(), // Paso 2.1
     );
   }
 }
@@ -51,9 +51,10 @@ class _UiControlsViiew extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-    //2.2 Agragale comentario 
+    //Paso 2.2
       physics: const ClampingScrollPhysics(),
       children: [
+          //Se añade el primer control a la lista y se ajusta la física del scroll.
           SwitchListTile(
             value: true, 
             onChanged: (value){},
