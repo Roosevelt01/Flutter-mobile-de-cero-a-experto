@@ -31,8 +31,7 @@ class _UiControlsViiew extends StatelessWidget {
 class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
-  const UiControlsScreen
-  ({super.key});
+  const UiControlsScreen ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,8 +63,8 @@ class _UiControlsViiew extends StatelessWidget {
   }
 }
 
-//Paso 3
-/*class UiControlsScreen extends StatelessWidget {
+//Paso 3: Paso 3: Añadir Título y Subtítulo
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen
