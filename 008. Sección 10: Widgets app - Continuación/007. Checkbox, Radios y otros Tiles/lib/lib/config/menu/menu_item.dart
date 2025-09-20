@@ -30,11 +30,35 @@ const appMenuItems = <MenuItem>[
     icon: Icons.credit_card,
   ),
 
-  //Paso 1: añade un nuevo MenuItem a la lista appMenuItems
-  MenuItem(
-    title: "ProgressIndicators",
+   MenuItem(
+    title: "Progress Indicators",
     subTitle: "Generales y controlados",
     link: "/progress",
     icon: Icons.refresh_rounded,
   ),
+  
+  MenuItem(
+    title: "Progress dialog",
+    subTitle: "Indicadores en pantalla",
+    link: "/snackbar",
+    icon: Icons.info_outline,
+  ),
+
+  MenuItem(
+    title: "Animated container",
+    subTitle: "Stateful widget animado",
+    link: "/animated",
+    icon: Icons.check_box_outline_blank_rounded,
+  ),
+
+  //Paso 1
+  MenuItem(
+    title: "UI Controls + Tiles",
+    subTitle: "Serie de controles de Flutter",
+    link: "/ui-controls",
+    icon: Icons.car_rental_outlined,
+  ),
+
+
+
 ];
