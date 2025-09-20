@@ -100,8 +100,8 @@ class _UiControlsViiew extends StatelessWidget {
   }
 }
 
-//Paso 4
-/*class UiControlsScreen extends StatelessWidget {
+//Paso 4: Para que el interruptor sea interactivo, se convierte el widget a Stateful y se gestiona su estado.
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen
@@ -118,7 +118,7 @@ class _UiControlsViiew extends StatelessWidget {
   }
 }
 
-//Paso 4.1 Se cambia stalessless a stateful
+// Se cambia stalessless a stateful
 class _UiControlsViiew extends StatefulWidget {
   const _UiControlsViiew();
 
@@ -141,7 +141,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
       ],
     );
   }
-}*/
+}
 
 //Paso 5
 /*class UiControlsScreen extends StatelessWidget {
