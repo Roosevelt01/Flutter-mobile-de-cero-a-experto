@@ -90,15 +90,15 @@ class _UiControlsViiew extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       children: [
           SwitchListTile(
-            title: const Text('Developer Mode'), //3.1 Agragale comentario
-            subtitle: const Text('Controles adicionales'),//3.2 Agragale comentario
+            title: const Text('Developer Mode'), //Paso 3.1: Se añaden textos descriptivos al SwitchListTile.
+            subtitle: const Text('Controles adicionales'),// Paso 3.2 Se añaden textos descriptivos al SwitchListTile.
             value: true, 
             onChanged: (value){},
           ),
       ],
     );
   }
-}*/
+}
 
 //Paso 4
 /*class UiControlsScreen extends StatelessWidget {
