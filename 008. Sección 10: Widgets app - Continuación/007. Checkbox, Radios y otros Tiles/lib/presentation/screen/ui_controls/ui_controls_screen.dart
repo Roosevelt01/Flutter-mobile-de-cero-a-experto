@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-//Paso 1
-/*class UiControlsScreen extends StatelessWidget {
+//Paso 1: Estructura Básica de la Pantalla
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen
@@ -25,7 +25,7 @@ class _UiControlsViiew extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView();
   }
-}*/
+}
 
 //Paso 2
 /*class UiControlsScreen extends StatelessWidget {
