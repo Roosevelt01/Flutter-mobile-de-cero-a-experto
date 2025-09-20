@@ -27,8 +27,8 @@ class _UiControlsViiew extends StatelessWidget {
   }
 }
 
-//Paso 2
-/*class UiControlsScreen extends StatelessWidget {
+//Paso 2: Añadir un SwitchListTile Básico
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen
@@ -61,7 +61,7 @@ class _UiControlsViiew extends StatelessWidget {
       ],
     );
   }
-}*/
+}
 
 //Paso 3
 /*class UiControlsScreen extends StatelessWidget {
