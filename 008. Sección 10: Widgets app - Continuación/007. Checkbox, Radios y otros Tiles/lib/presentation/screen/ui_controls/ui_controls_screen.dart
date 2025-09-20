@@ -63,7 +63,7 @@ class _UiControlsViiew extends StatelessWidget {
   }
 }
 
-//Paso 3: Paso 3: Añadir Título y Subtítulo
+// Paso 3: Añadir Título y Subtítulo
 class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
