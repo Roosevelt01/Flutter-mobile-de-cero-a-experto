@@ -100,7 +100,7 @@ class _UiControlsViiew extends StatelessWidget {
   }
 }
 
-//Paso 4: Para que el interruptor sea interactivo, se convierte el widget a Stateful y se gestiona su estado.
+//Paso 4: // Se cambia stalessless a stateful
 class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
@@ -143,8 +143,8 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
   }
 }
 
-//Paso 5
-/*class UiControlsScreen extends StatelessWidget {
+// Paso 5: Gestionar el Estado del SwitchListTile.
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen
@@ -170,7 +170,7 @@ class _UiControlsViiew extends StatefulWidget {
 
 class _UiControlsViiewState extends State<_UiControlsViiew> {
   
-  //Paso 5.1: Agragame comentario
+  //Paso 5.1
   bool isDeveloper = true;
   
   @override
@@ -181,8 +181,8 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
           SwitchListTile(
             title: const Text('Developer Mode'), 
             subtitle: const Text('Controles adicionales'),
-            value: isDeveloper, //Paso 5.2: Agragame comentario
-            //Paso 5.3: Agragame comentario
+            value: isDeveloper, //Paso 5.2
+            //Paso 5.3
             onChanged: (value) => setState(() {
               isDeveloper = !isDeveloper;
             }),
@@ -190,8 +190,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
       ],
     );
   }
-}*/
-
+}
 
 //Paso 6
 class UiControlsScreen extends StatelessWidget {
