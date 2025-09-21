@@ -192,7 +192,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
   }
 }
 
-//Paso 6
+//Paso 6: Definir Opciones con enum y Gestionar el Estado
 class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
@@ -217,7 +217,7 @@ class _UiControlsViiew extends StatefulWidget {
   State<_UiControlsViiew> createState() => _UiControlsViiewState();
 }
 
-//Paso 6.1: Agregame comentario
+//Paso 6.1: Definir Opciones con enum
 enum Transportation{car, plane, boat, submarine}
 
 class _UiControlsViiewState extends State<_UiControlsViiew> {
@@ -240,7 +240,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
             }),
           ),
 
-          //Paso 6.2: Agregame comentario
+          //Paso 6.2: Se crea un grupo de RadioListTile donde solo una opción puede estar seleccionada a la vez.
           RadioListTile(
             title: const Text('By Car'), 
             subtitle: const Text('Viajar por auto'),
@@ -251,7 +251,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
             }),
           ),
 
-          //Paso 6.3: Agregame comentario
           RadioListTile(
             title: const Text('By boat'), 
             subtitle: const Text('Viajar por barco'),
@@ -262,7 +261,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
             }),
           ),
           
-          //Paso 6.4: Agregame comentario
           RadioListTile(
             title: const Text('By plane'), 
             subtitle: const Text('Viajar por avión'),
@@ -273,7 +271,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
             }),
           ),
 
-          //Paso 6.5: Agregame comentario
           RadioListTile(
             title: const Text('By submarine'), 
             subtitle: const Text('Viajar por submarino'),
@@ -283,7 +280,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
               selectedTransportation = Transportation.submarine;
             }),
           ),
-
       ],
     );
   }
