@@ -47,7 +47,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
             }),
           ),
 
-          //  Introduce un ExpansionTile en el ListView para que actúe como contenedor de los RadioListTile.
+          // Introduce un ExpansionTile en el ListView para que actúe como contenedor de los RadioListTile.
           ExpansionTile(
             title: const Text('Vehículo de transporte'),
             subtitle: Text('$selectedTransportation'),
