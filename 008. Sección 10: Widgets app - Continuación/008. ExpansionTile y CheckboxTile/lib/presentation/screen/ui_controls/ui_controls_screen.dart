@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-//Paso 1
-/*class UiControlsScreen extends StatelessWidget {
+//Paso 1: Añadir el ExpansionTile
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen
@@ -47,7 +47,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
             }),
           ),
 
-          // Paso 1.1. (Gémini quiero que le agregues comentario a este widget)
+          //  Introduce un ExpansionTile en el ListView para que actúe como contenedor de los RadioListTile.
           ExpansionTile(
             title: const Text('Vehículo de transporte'),
             subtitle: Text('$selectedTransportation'),
@@ -96,10 +96,10 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
       ],
     );
   }
-}*/
+}
 
-//Paso 2
-/*class UiControlsScreen extends StatelessWidget {
+//Paso 2: Mover los RadioListTile Hijos
+class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
   const UiControlsScreen({super.key});
@@ -130,7 +130,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
   Widget build(BuildContext context) {
     return ListView(
       physics: const ClampingScrollPhysics(),
-      // Paso 2.1. (Gémini quiero que le agregues comentario a este widget)
       children: [
         SwitchListTile(
           title: const Text('Developer Mode'),
@@ -146,6 +145,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
           title: const Text('Vehículo de transporte'),
           subtitle: Text('$selectedTransportation'),
           children: [
+            //Corta todos los RadioListTile y pégalos dentro de la propiedad children del ExpansionTile.
             RadioListTile(
               title: const Text('By Car'),
               subtitle: const Text('Viajar por auto'),
@@ -194,9 +194,9 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
       ],
     );
   }
-}*/
+}
 
-//Paso 3
+//Paso 3: Definir el Estado y Añadir los Checkboxes(Código final)
 class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
 
@@ -223,9 +223,10 @@ enum Transportation { car, plane, boat, submarine }
 class _UiControlsViiewState extends State<_UiControlsViiew> {
   bool isDeveloper = true;
   Transportation selectedTransportation = Transportation.car;
-  bool wantsBreakfast = false;// Paso 3.1(Gémini quiero que le agregues comentario a esta variable)
-  bool wantsLunch = false;// Paso 3.2(Gémini quiero que le agregues comentario a esta variable)
-  bool wantsDinner = false;// Paso 3.3(Gémini quiero que le agregues
+  //Crea las variables de estado booleanas para las nuevas opciones
+  bool wantsBreakfast = false;
+  bool wantsLunch = false;
+  bool wantsDinner = false;
 
   @override
   Widget build(BuildContext context) {
@@ -292,7 +293,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
           ],
         ),
       
-        // Paso 3.4(Gémini quiero que le agregues comentario a este widget)
+        // Se añade los CheckboxListTile correspondientes a la lista.
         CheckboxListTile(
           subtitle: const Text('¿Quieres desayunar?'),
           value: wantsBreakfast,
@@ -301,7 +302,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
           }),
         ),
         
-        // Paso 3.5(Gémini quiero que le agregues comentario a este widget)
         CheckboxListTile(
           subtitle: const Text('¿Quieres desayunar?'),
           value: wantsLunch,
@@ -310,7 +310,6 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
           }),
         ),
 
-        // Paso 3.6(Gémini quiero que le agregues comentario a este widget)
         CheckboxListTile(
           subtitle: const Text('¿Quieres cenar?'),
           value: wantsDinner,
