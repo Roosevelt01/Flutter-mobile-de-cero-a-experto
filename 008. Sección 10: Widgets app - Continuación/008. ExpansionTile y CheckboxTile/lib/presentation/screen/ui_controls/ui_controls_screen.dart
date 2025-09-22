@@ -144,7 +144,7 @@ class _UiControlsViiewState extends State<_UiControlsViiew> {
         ExpansionTile(
           title: const Text('Vehículo de transporte'),
           subtitle: Text('$selectedTransportation'),
-          children: [
+          children: [// Los RadioListTile ahora están anidados aquí
             //Corta todos los RadioListTile y pégalos dentro de la propiedad children del ExpansionTile.
             RadioListTile(
               title: const Text('By Car'),
