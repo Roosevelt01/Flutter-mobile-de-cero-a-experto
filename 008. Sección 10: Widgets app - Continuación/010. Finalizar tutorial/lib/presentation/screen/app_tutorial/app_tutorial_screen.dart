@@ -391,7 +391,7 @@ class AppTutorialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // Paso 5.1: Cambia el color de fondo del Scaffold a blanco para que 
-      coincida con el fondo de las imágenes.
+      //coincida con el fondo de las imágenes.
       backgroundColor: Colors.white,
       body: PageView(
         physics: const BouncingScrollPhysics(),
