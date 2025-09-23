@@ -341,10 +341,10 @@ class _Slide extends StatelessWidget {
               const SizedBox(height: 10),
               // Paso 4.3: Se aplica a los Text widgets para un diseño consistente.
               Text(caption, style: captionStyle),
-            ],
-          ),
-        ),
-      );
+           ],
+         ),
+      ),
+    );
   }
 }
 
