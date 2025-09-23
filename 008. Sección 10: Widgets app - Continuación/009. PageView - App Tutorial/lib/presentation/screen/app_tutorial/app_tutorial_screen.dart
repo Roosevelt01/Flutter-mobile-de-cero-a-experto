@@ -40,7 +40,7 @@ class AppTutorialScreen extends StatelessWidget {
   }
 }
 
-// Paso 2: Implementar el PageView Dinámico
+// Paso 2: Implementar el PageView Dinámico(Código final)
 class SlideInfo{
   final String title;
   final String caption;
