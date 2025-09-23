@@ -68,7 +68,7 @@ class _Slide extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
       // Paso 1.1: Reemplaza el Placeholder en el widget _Slide con la estructura 
-      básica de la UI, comenzando con la imagen.
+      //básica de la UI, comenzando con la imagen.
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Center(
