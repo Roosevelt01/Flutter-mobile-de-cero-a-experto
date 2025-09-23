@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-//Paso 1
-/*class SlideInfo{
+//Paso 1 Añadir la Imagen
+class SlideInfo{
   final String title;
   final String caption;
   final String imageUrl;
@@ -67,6 +67,8 @@ class _Slide extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
+      // Paso 1.1: Reemplaza el Placeholder en el widget _Slide con la estructura 
+      básica de la UI, comenzando con la imagen.
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Center(
@@ -78,10 +80,10 @@ class _Slide extends StatelessWidget {
         ),
       );
   }
-}*/
+}
 
-//Paso 2
-/*class SlideInfo{
+//Paso 2: Añadir Títulos y Espaciado
+class SlideInfo{
   final String title;
   final String caption;
   final String imageUrl;
@@ -153,7 +155,8 @@ class _Slide extends StatelessWidget {
           child: Column(
             children: [
               Image(image: AssetImage(imageUrl)),
-              //Paso 2.1
+              //Paso 2.1: Añade los Text para el título y la descripción, 
+              separados por SizedBox para crear espacio vertical.
               const SizedBox(height: 20),
               Text(title),
               const SizedBox(height: 10),
@@ -163,10 +166,10 @@ class _Slide extends StatelessWidget {
         ),
       );
   }
-}*/
+}
 
-//Paso 3
-/*class SlideInfo{
+//Paso 3: Alinear el Contenido
+class SlideInfo{
   final String title;
   final String caption;
   final String imageUrl;
@@ -236,7 +239,9 @@ class _Slide extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,//Paso 3.1
+            //Paso 3.1: Centra la columna verticalmente.
+            mainAxisAlignment: MainAxisAlignment.center,
+            //Paso 3.2: Se alinea el texto a la izquierda.
             crossAxisAlignment: CrossAxisAlignment.start,//Paso 3.2
             children: [
               Image(image: AssetImage(imageUrl)),
@@ -249,10 +254,10 @@ class _Slide extends StatelessWidget {
         ),
       );
   }
-}*/
+}
 
-// Paso 4
-/*class SlideInfo{
+// Paso 4: Aplicar Estilos del Tema
+class SlideInfo{
   final String title;
   final String caption;
   final String imageUrl;
@@ -318,8 +323,9 @@ class _Slide extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
-      final titleStyle = Theme.of(context).textTheme.titleLarge;// Paso 4.1
-      final captionStyle = Theme.of(context).textTheme.bodyMedium;// Paso 4.2
+      //Paso 4.1: Obtén estilos de texto del tema global de la aplicación
+      final titleStyle = Theme.of(context).textTheme.titleLarge;
+      final captionStyle = Theme.of(context).textTheme.bodyMedium;
 
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -330,18 +336,20 @@ class _Slide extends StatelessWidget {
             children: [
               Image(image: AssetImage(imageUrl)),
               const SizedBox(height: 20),
-              Text(title, style: titleStyle),// Paso 4.3
+              // Paso 4.2: Se aplica a los Text widgets para un diseño consistente.
+              Text(title, style: titleStyle),
               const SizedBox(height: 10),
-              Text(caption, style: captionStyle),// Paso 4.4
+              // Paso 4.3: Se aplica a los Text widgets para un diseño consistente.
+              Text(caption, style: captionStyle),
             ],
           ),
         ),
       );
   }
-}*/
+}
 
-// Paso 5
-/*class SlideInfo{
+// Paso 5: Ajustar el Color de Fondo
+class SlideInfo{
   final String title;
   final String caption;
   final String imageUrl;
@@ -382,7 +390,9 @@ class AppTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,// Paso 5.1
+      // Paso 5.1: Cambia el color de fondo del Scaffold a blanco para que 
+      coincida con el fondo de las imágenes.
+      backgroundColor: Colors.white,
       body: PageView(
         physics: const BouncingScrollPhysics(),
         children: slides.map((slideData) => _Slide(
@@ -428,9 +438,9 @@ class _Slide extends StatelessWidget {
         ),
       );
   }
-}*/
+}
 
-// Paso 6
+// Paso 6: Superponer el Botón "Salir" con Stack
 class SlideInfo{
   final String title;
   final String caption;
@@ -473,7 +483,7 @@ class AppTutorialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      //paso 6.1: Envolemos el PageView con un Stack
+      //paso 6.1: Envuelve el PageView en un Stack
       body: Stack(
         children: [
           PageView(
@@ -485,7 +495,7 @@ class AppTutorialScreen extends StatelessWidget {
             )).toList(),
           ),
 
-          //Paso 6.2: Agregamos el botón
+          //Paso 6.2: Se añade un TextButton posicionado en la esquina superior derecha.
           Positioned(
             right: 30,
             top: 50,
