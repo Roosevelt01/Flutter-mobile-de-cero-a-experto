@@ -239,20 +239,20 @@ class _Slide extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Center(
           child: Column(
-            //Paso 3.1: Centra la columna verticalmente.
-            mainAxisAlignment: MainAxisAlignment.center,
-            //Paso 3.2: Se alinea el texto a la izquierda.
-            crossAxisAlignment: CrossAxisAlignment.start,//Paso 3.2
-            children: [
-              Image(image: AssetImage(imageUrl)),
-              const SizedBox(height: 20),
-              Text(title),
-              const SizedBox(height: 10),
-              Text(caption),
-            ],
-          ),
+          //Paso 3.1: Centra la columna verticalmente.
+          mainAxisAlignment: MainAxisAlignment.center,
+          //Paso 3.2: Se alinea el texto a la izquierda.
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image(image: AssetImage(imageUrl)),
+            const SizedBox(height: 20),
+            Text(title),
+            const SizedBox(height: 10),
+            Text(caption),
+          ],
         ),
-      );
+      ),
+    );
   }
 }
 
