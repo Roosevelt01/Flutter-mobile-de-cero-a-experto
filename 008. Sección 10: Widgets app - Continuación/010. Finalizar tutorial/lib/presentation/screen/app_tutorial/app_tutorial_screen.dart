@@ -440,7 +440,7 @@ class _Slide extends StatelessWidget {
   }
 }
 
-// Paso 6: Superponer el Botón "Salir" con Stack
+// Paso 6: Superponer el Botón "Salir" con Stack(Código final)
 class SlideInfo{
   final String title;
   final String caption;
