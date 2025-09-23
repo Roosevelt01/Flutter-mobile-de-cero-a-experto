@@ -46,11 +46,12 @@ final appRouter = GoRouter(
       builder: (context, state) => const UiControlsScreen()
     ),
       
-    //Paso 1
+    //Paso 2: Registrar la Nueva Ruta (app_router.dart)
     GoRoute(
       path: '/tutorial',
       name: AppTutorialScreen.name,
       builder: (context, state) => const AppTutorialScreen()
     ),
+    
   ],
 );

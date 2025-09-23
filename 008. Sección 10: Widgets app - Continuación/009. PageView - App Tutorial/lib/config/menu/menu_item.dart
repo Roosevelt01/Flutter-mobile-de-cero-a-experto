@@ -58,7 +58,7 @@ const appMenuItems = <MenuItem>[
     icon: Icons.car_rental_outlined,
   ),
 
-  //Paso 1
+  //Paso 1: Añadir la Opción al Menú (menu_item.dart)
   MenuItem(
     title: "Introducción a la aplicación",
     subTitle: "Pequeño tutorial introductorio",

@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
-//Paso 1
-/*class SlideInfo{
+//Paso 1: Definir el Modelo de Datos y la Lista de Slides
+class SlideInfo{
   final String title;
   final String caption;
   final String imageUrl;
 
-  SlideInfo({
-    required this.title,
-    required this.caption,
-    required this.imageUrl,
-  });
+  SlideInfo({required this.title, required this.caption,  required this.imageUrl, });
 }
 
 final slides = <SlideInfo>[
@@ -31,7 +27,6 @@ final slides = <SlideInfo>[
     caption: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.',
     imageUrl: 'assets/images/3.png'
   ),
-
 ];
 
 class AppTutorialScreen extends StatelessWidget {
@@ -43,9 +38,9 @@ class AppTutorialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
-}*/
+}
 
-//Paso 2
+// Paso 2: Implementar el PageView Dinámico
 class SlideInfo{
   final String title;
   final String caption;
@@ -87,6 +82,7 @@ class AppTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //utilizamos PageView para generar sus hijos dinámicamente a partir de la lista slides
       body: PageView(
         physics: const BouncingScrollPhysics(),
         children: slides.map((slideData) => _Slide(
