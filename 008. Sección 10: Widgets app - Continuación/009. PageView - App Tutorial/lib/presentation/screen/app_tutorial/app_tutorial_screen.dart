@@ -82,7 +82,7 @@ class AppTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //utilizamos PageView para generar sus hijos dinámicamente a partir de la lista slides
+      //Paso 2.1: utilizamos PageView para generar sus hijos dinámicamente a partir de la lista slides
       body: PageView(
         physics: const BouncingScrollPhysics(),
         children: slides.map((slideData) => _Slide(
@@ -95,7 +95,7 @@ class AppTutorialScreen extends StatelessWidget {
   }
 }
 
-//2.1 Gemini agregale comentarios 
+//Paso 2.2: _Slide widget
 class _Slide extends StatelessWidget {
     final String title;
     final String caption;
