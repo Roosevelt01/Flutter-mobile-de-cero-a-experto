@@ -642,7 +642,7 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 6: Animar la Aparición del Botón(Código final)
 class SlideInfo {
