@@ -37,7 +37,7 @@ class InfiniteScrollScreen extends StatelessWidget {
 }
 
 //Paso 3: añadir imágenes
-/*class InfiniteScrollScreen extends StatelessWidget {
+class InfiniteScrollScreen extends StatelessWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -58,10 +58,10 @@ class InfiniteScrollScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 4: Ajustar la imagen
-/*class InfiniteScrollScreen extends StatelessWidget {
+class InfiniteScrollScreen extends StatelessWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -82,7 +82,7 @@ class InfiniteScrollScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 5: Se convierte en StatefulWidget
 /*class InfiniteScrollScreen extends StatefulWidget {
