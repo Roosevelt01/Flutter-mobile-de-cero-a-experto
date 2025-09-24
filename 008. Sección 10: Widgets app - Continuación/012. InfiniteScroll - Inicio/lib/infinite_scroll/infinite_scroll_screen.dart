@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 //Paso 1: Crear la pantalla
-/*class InfiniteScrollScreen extends StatelessWidget {
+class InfiniteScrollScreen extends StatelessWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -15,10 +15,10 @@ import 'package:go_router/go_router.dart';
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Añadir el ListView.builder
-/*class InfiniteScrollScreen extends StatelessWidget {
+class InfiniteScrollScreen extends StatelessWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -34,7 +34,7 @@ import 'package:go_router/go_router.dart';
       ),
     );
   }
-}*/
+}
 
 //Paso 3: añadir imágenes
 /*class InfiniteScrollScreen extends StatelessWidget {
