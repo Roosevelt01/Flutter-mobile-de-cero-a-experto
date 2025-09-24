@@ -366,10 +366,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-//Paso 4: Mostrar el botón solo al llegar al final
-/*class SlideInfo {
+//Paso 4: Renderizado Condicional del Botón
+class SlideInfo {
   final String title;
   final String caption;
   final String imageUrl;
