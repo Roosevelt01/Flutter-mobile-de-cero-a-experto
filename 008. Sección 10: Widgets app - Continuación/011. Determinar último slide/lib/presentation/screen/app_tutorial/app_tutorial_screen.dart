@@ -498,10 +498,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-//Paso 5: Actualizar endReached cuando se llegue al final
-/*class SlideInfo {
+//Paso 5: Lógica para Detectar el Final y dispose()
+class SlideInfo {
   final String title;
   final String caption;
   final String imageUrl;
@@ -645,7 +645,7 @@ class _Slide extends StatelessWidget {
   }
 }*/
 
-//Paso 6: Agregar animación al botón
+//Paso 6: Animar la Aparición del Botón
 class SlideInfo {
   final String title;
   final String caption;
