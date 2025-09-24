@@ -187,7 +187,6 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                     )
                     .toList(),
           ),
-
           Positioned(
             right: 30,
             top: 50,
