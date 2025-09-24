@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-//Paso 1: 
-/*class SlideInfo {
+//Paso 1: Convertir a StatefulWidget
+class SlideInfo {
   final String title;
   final String caption;
   final String imageUrl;
@@ -37,7 +37,7 @@ final slides = <SlideInfo>[
   ),
 ];
 
-//Paso 1.2: cambiamos el statelessWidget por statefulwidget
+//Paso 1.2: Convierte AppTutorialScreen de StatelessWidget a StatefulWidget.
 class AppTutorialScreen extends StatefulWidget {
   static const String name = 'tutorial_screen';
 
@@ -113,10 +113,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Implementar el PageController 
-/*class SlideInfo {
+class SlideInfo {
   final String title;
   final String caption;
   final String imageUrl;
@@ -235,10 +235,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-//Paso 3: Implementamos el positioned 
-/*class SlideInfo {
+//Paso 3: Añadir el Botón "Comenzar" Fijo
+class SlideInfo {
   final String title;
   final String caption;
   final String imageUrl;
@@ -282,7 +282,6 @@ class AppTutorialScreen extends StatefulWidget {
 class _AppTutorialScreenState extends State<AppTutorialScreen> {
   final PageController pageviewController = PageController();
 
-  //Paso 2.2: Agregar el listener en el initState
   @override
   void initState() {
     super.initState();
