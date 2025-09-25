@@ -85,7 +85,7 @@ class InfiniteScrollScreen extends StatelessWidget {
 }
 
 //Paso 5: Se convierte en StatefulWidget
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -114,7 +114,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 }*/
 
 //Paso 6: Añadir una lista de imágenes
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -144,7 +144,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 7: Añadir un botón flotante
 /*class InfiniteScrollScreen extends StatefulWidget {
