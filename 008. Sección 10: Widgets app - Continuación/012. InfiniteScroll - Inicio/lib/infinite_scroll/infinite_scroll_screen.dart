@@ -147,7 +147,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 }
 
 //Paso 7: Añadir un botón flotante
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -183,7 +183,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
 //Paso 8: Eliminar el padding superior del ListView
 /*class InfiniteScrollScreen extends StatefulWidget {
