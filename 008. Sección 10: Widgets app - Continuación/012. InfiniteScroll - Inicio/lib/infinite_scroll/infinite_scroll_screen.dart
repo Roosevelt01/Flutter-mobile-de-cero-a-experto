@@ -111,7 +111,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 6: Añadir una lista de imágenes
 class InfiniteScrollScreen extends StatefulWidget {
