@@ -1,153 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-//Paso 1: Crear la pantalla
-class InfiniteScrollScreen extends StatelessWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('InfiniteScroll'),
-      ),
-    );
-  }
-}
-
-//Paso 2: Añadir el ListView.builder
-class InfiniteScrollScreen extends StatelessWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      //Paso 2.1: Se añade el ListView.builder
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return Text('Hola');
-        },
-      ),
-    );
-  }
-}
-
-//Paso 3: añadir imágenes
-class InfiniteScrollScreen extends StatelessWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          //Paso 3.1: Devolver una imagen 
-          return FadeInImage(
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('assets/images/jar-loading.gif'),
-            image: NetworkImage('https://picsum.photos/id/237/500/300'),
-          );
-        },
-      ),
-    );
-  }
-}
-
-//Paso 4: Ajustar la imagen
-class InfiniteScrollScreen extends StatelessWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return FadeInImage(
-            fit: BoxFit.cover, //Paso 4.1: Ajustar la imagen
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('assets/images/jar-loading.gif'),
-            image: NetworkImage('https://picsum.photos/id/237/500/300'),
-          );
-        },
-      ),
-    );
-  }
-}
-
-//Paso 5: Se convierte en StatefulWidget
-class InfiniteScrollScreen extends StatefulWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
-}
-
-class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return FadeInImage(
-            fit: BoxFit.cover, 
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('assets/images/jar-loading.gif'),
-            image: NetworkImage('https://picsum.photos/id/237/500/300'),
-          );
-        },
-      ),
-    );
-  }
-}
-
-//Paso 6: Añadir una lista de imágenes
-class InfiniteScrollScreen extends StatefulWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
-}
-
-class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
-  
-  List<int> imagesIds = [1,2,3,4,5];//Paso 6.1: Lista de imágenes
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
-        itemCount: imagesIds.length,//Paso 6.2: Definir el itemCount
-        itemBuilder: (context, index) {
-          return FadeInImage(
-            fit: BoxFit.cover, 
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('assets/images/jar-loading.gif'),
-            image: NetworkImage('https://picsum.photos/id/${imagesIds[index]}/500/300'), //Paso 6.3: Cambiar la URL de la imagen
-          );
-        },
-      ),
-    );
-  }
-}
-
-//Paso 7: Añadir un botón flotante
-class InfiniteScrollScreen extends StatefulWidget {
+//Paso 1: Crear un listado de imágenes que se vayan agregando conforme el usuario
+/*class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -160,53 +15,21 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   
   List<int> imagesIds = [1,2,3,4,5];
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
-        itemCount: imagesIds.length,
-        itemBuilder: (context, index) {
-          return FadeInImage(
-            fit: BoxFit.cover, 
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('assets/images/jar-loading.gif'),
-            image: NetworkImage('https://picsum.photos/id/${imagesIds[index]}/500/300'),
-          );
-        },
-      ),
-
-      //Paso 7.1: Añadir un botón flotante
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => context.pop(),
-        child: const Icon(Icons.arrow_back_ios_new_outlined),
-      )
-    );
+  //Paso 1.1: Crear el método para agregar imágenes
+  void addFiveImages() {
+    final lastId = imagesIds.last;
+    imagesIds.addAll([1,2,3,4,5].map((e) => lastId + e));
+    setState(() {});
   }
-}
-
-//Paso 8: Eliminar el padding superior del ListView
-class InfiniteScrollScreen extends StatefulWidget {
-  static const String name = 'infinite_screen';
-
-  const InfiniteScrollScreen({super.key});
-
-  @override
-  State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
-}
-
-class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
-  
-  List<int> imagesIds = [1,2,3,4,5];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //Paso 8.1: Eliminar el padding superior del ListView
+      backgroundColor: Colors.black,
       body: MediaQuery.removePadding(
-        context: context,//Paso 8.2: Contexto
-        removeTop: true,//Paso 8.3: Eliminar el padding superior
-        removeBottom: true,//Paso 8.4: No eliminar el padding inferior
+        context: context,
+        removeTop: true,
+        removeBottom: true,
         child: ListView.builder(
           itemCount: imagesIds.length,
           itemBuilder: (context, index) {
@@ -227,12 +50,12 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}
+}*/
 
-//Paso 9: Cambiar el color de fondo(Código final)
-class InfiniteScrollScreen extends StatefulWidget {
+//Paso 2: Agregar el ScrollController para detectar cuando el usuario está cerca del final del scroll
+/*class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
-
+  
   const InfiniteScrollScreen({super.key});
 
   @override
@@ -240,18 +63,222 @@ class InfiniteScrollScreen extends StatefulWidget {
 }
 
 class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
-  
+  final ScrollController scrollController = ScrollController(); // Paso 2.1: Crear el ScrollController
+
+  //Paso 2.2: Inicializar el ScrollController y agregar el listener
+  @override
+  void initState() {
+    super.initState();
+
+    //Listener que se ejecuta cuando el usuario hace scroll
+    scrollController.addListener(() {
+      // Comprueba si el usuario está cerca del final del scroll
+      if ( (scrollController.position.pixels + 500) >= scrollController.position.maxScrollExtent ) {
+        // Si está cerca del final, agrega más imágenes
+        addFiveImages();
+      }
+    });
+  }
+
+  //Paso 2.3: Liberar el ScrollController
+  @override
+  void dispose() {
+    // Liberar el controlador cuando el widget se elimine del árbol de widgets
+    scrollController.dispose();
+    super.dispose();
+  }
+
+
   List<int> imagesIds = [1,2,3,4,5];
+
+  //Paso 2.4: Crear el método para agregar imágenes
+  void addFiveImages() {
+    final lastId = imagesIds.last;
+    imagesIds.addAll([1,2,3,4,5].map((e) => lastId + e));
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, //Paso 9.1: Cambiar el color de fondo
+      backgroundColor: Colors.black,
       body: MediaQuery.removePadding(
         context: context,
         removeTop: true,
         removeBottom: true,
         child: ListView.builder(
+          controller: scrollController, //Paso 2.5: Asignar el ScrollController al ListView 
+          itemCount: imagesIds.length,
+          itemBuilder: (context, index) {
+            return FadeInImage(
+              fit: BoxFit.cover, 
+              width: double.infinity,
+              height: 300,
+              placeholder: const AssetImage('assets/images/jar-loading.gif'),
+              image: NetworkImage('https://picsum.photos/id/${imagesIds[index]}/500/300'),
+            );
+          },
+        ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.pop(),
+        child: const Icon(Icons.arrow_back_ios_new_outlined),
+      )
+    );
+  }
+}*/
+
+
+//Paso 3: _InfiniteScrollScreenState - Hacer la carga de imágenes asíncrona
+/*class InfiniteScrollScreen extends StatefulWidget {
+  static const String name = 'infinite_screen';
+  
+  const InfiniteScrollScreen({super.key});
+
+  @override
+  State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
+}
+
+class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
+  final ScrollController scrollController = ScrollController();
+  bool isLoading = false; // Paso 3.1: Variable para controlar si se está cargando
+
+  @override
+  void initState() {
+    super.initState();
+
+    scrollController.addListener(() {
+      if ( (scrollController.position.pixels + 500) >= scrollController.position.maxScrollExtent ) {
+        loadNextPage(); // Paso 3.2: Llamar a la función para cargar la siguiente página
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
+
+  // Paso 3.3: Función para cargar la siguiente página
+  Future loadNextPage() async {
+    if (isLoading) return; // Si ya se está cargando, no hacer nada
+    isLoading = true; // Indicar que se está cargando
+    setState(() {});// Actualizar la UI para reflejar el estado de carga
+
+    await Future.delayed(const Duration(seconds: 2)); // Simular un retraso de 2 segundos
+    
+    addFiveImages(); // Agregar más imágenes
+    isLoading = false; // Indicar que ya no se está cargando
+   
+    setState(() {}); // Llama a setState UNA SOLA VEZ para actualizar la UI
+
+  }
+
+  List<int> imagesIds = [1,2,3,4,5];
+
+  void addFiveImages() {
+    final lastId = imagesIds.last;
+    imagesIds.addAll([1,2,3,4,5].map((e) => lastId + e));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        removeBottom: true,
+        child: ListView.builder(
+          controller: scrollController,
+          itemCount: imagesIds.length,
+          itemBuilder: (context, index) {
+            return FadeInImage(
+              fit: BoxFit.cover, 
+              width: double.infinity,
+              height: 300,
+              placeholder: const AssetImage('assets/images/jar-loading.gif'),
+              image: NetworkImage('https://picsum.photos/id/${imagesIds[index]}/500/300'),
+            );
+          },
+        ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.pop(),
+        child: const Icon(Icons.arrow_back_ios_new_outlined),
+      )
+    );
+  }
+}*/
+
+//Paso 4: 
+class InfiniteScrollScreen extends StatefulWidget {
+  static const String name = 'infinite_screen';
+  
+  const InfiniteScrollScreen({super.key});
+
+  @override
+  State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
+}
+
+class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
+  final ScrollController scrollController = ScrollController();
+  bool isLoading = false;
+  bool isMounted = true; // Paso 4.1: Variable para controlar si el widget está montado
+
+  @override
+  void initState() {
+    super.initState();
+
+    scrollController.addListener(() {
+      if ( (scrollController.position.pixels + 500) >= scrollController.position.maxScrollExtent ) {
+        loadNextPage(); 
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    isMounted = false; // Paso 4.2: Indicar que el widget ya no está montado
+    super.dispose();
+  }
+
+  Future loadNextPage() async {
+    if (isLoading) return; 
+    isLoading = true; 
+    setState(() {});
+
+    await Future.delayed(const Duration(seconds: 2)); 
+    
+    addFiveImages(); 
+    isLoading = false; 
+
+    if (!isMounted) return; // Paso 4.3: Si el widget está montado, salir de la función
+      setState(() {});     
+
+  }
+
+  List<int> imagesIds = [1,2,3,4,5];
+
+  void addFiveImages() {
+    final lastId = imagesIds.last;
+    imagesIds.addAll([1,2,3,4,5].map((e) => lastId + e));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        removeBottom: true,
+        child: ListView.builder(
+          controller: scrollController,
           itemCount: imagesIds.length,
           itemBuilder: (context, index) {
             return FadeInImage(
