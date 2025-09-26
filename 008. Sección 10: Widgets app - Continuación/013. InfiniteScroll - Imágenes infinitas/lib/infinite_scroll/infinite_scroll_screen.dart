@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 //Paso 1: Crear un listado de imágenes que se vayan agregando conforme el usuario
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
@@ -50,10 +50,10 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
 //Paso 2: Agregar el ScrollController para detectar cuando el usuario está cerca del final del scroll
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
   const InfiniteScrollScreen({super.key});
@@ -127,11 +127,10 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
-
+}
 
 //Paso 3: _InfiniteScrollScreenState - Hacer la carga de imágenes asíncrona
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
   const InfiniteScrollScreen({super.key});
@@ -212,9 +211,9 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
-//Paso 4: 
+//Paso 4: _Mounting - Evitar setState si el widget ya no está montado(Código final)
 class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
