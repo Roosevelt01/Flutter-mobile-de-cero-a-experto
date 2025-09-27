@@ -91,7 +91,6 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 
   List<int> imagesIds = [1,2,3,4,5];
 
-  //Paso 2.4: Crear el método para agregar imágenes
   void addFiveImages() {
     final lastId = imagesIds.last;
     imagesIds.addAll([1,2,3,4,5].map((e) => lastId + e));
