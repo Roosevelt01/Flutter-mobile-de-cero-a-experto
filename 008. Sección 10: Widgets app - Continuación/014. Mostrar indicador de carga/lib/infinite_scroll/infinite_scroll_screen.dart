@@ -177,10 +177,10 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
 //Paso 3: Animacion solo cuando isLoading es true 
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
   const InfiniteScrollScreen({super.key});
@@ -255,7 +255,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
             );
           },
         ),
-      ),
+      ), 
 
       floatingActionButton: FloatingActionButton(
         onPressed: () => context.pop(),
@@ -263,14 +263,14 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
           infinite: true, 
           child: Icon(Icons.refresh_outlined),
         ): 
-        FadeIn(child: Icon(Icons.arrow_back_ios_new_outlined)), // Paso 3.2: Animacion de entrada al icono (FadeIn)
+        child: Icon(Icons.arrow_back_ios_new_outlined), 
       )
     );
   }
-}*/
+}
 
 //Paso 4: Animacion de entrada al icono (FadeIn)
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
   const InfiniteScrollScreen({super.key});
