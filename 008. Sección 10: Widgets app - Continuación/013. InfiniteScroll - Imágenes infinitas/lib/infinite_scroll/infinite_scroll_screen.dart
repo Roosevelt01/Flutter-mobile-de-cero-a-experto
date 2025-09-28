@@ -297,3 +297,22 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     );
   }
 }
+
+[Pantalla Carga] -> initState() -> [Listener en espera]
+       |
+[Usuario hace scroll] 📜
+       |
+[Listener se ejecuta repetidamente] -> ¿Cerca del final? -> [NO]
+       |
+[Usuario se acerca al final]
+       |
+[Listener se ejecuta] -> ¿Cerca del final? -> [SÍ] ✅
+       |
+[Llama a loadNextPage()]
+       |
+1. isLoading = true, setState()
+2. await Future.delayed(2s)  <-- Pausa Asíncrona ⏸️
+3. addFiveImages()
+4. isLoading = false, setState()
+       |
+[build() se ejecuta de nuevo] -> ListView.builder renderiza 5 nuevas imágenes ✨
