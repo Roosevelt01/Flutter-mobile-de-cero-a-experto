@@ -357,7 +357,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
 //Paso 5: Animacion de entrada al icono (FadeIn)
 class InfiniteScrollScreen extends StatefulWidget {
