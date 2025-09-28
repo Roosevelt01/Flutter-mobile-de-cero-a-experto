@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 //Paso 1: Importar paquete animate_do 
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
   const InfiniteScrollScreen({super.key});
@@ -88,7 +88,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
 //Paso 2. Hacer que la animacion sea infinita
 /*class InfiniteScrollScreen extends StatefulWidget {
