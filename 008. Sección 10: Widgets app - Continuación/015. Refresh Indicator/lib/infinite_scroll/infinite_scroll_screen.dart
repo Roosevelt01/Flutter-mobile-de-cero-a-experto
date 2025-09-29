@@ -96,7 +96,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 }
 
 //Paso 2: Implementar el método onRefresh
-/*class InfiniteScrollScreen extends StatefulWidget {
+class InfiniteScrollScreen extends StatefulWidget {
   static const String name = 'infinite_screen';
   
   const InfiniteScrollScreen({super.key});
@@ -203,7 +203,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       )
     );
   }
-}*/
+}
 
 // Paso 3: Asignar el método onRefresh al callback
 class InfiniteScrollScreen extends StatefulWidget {
