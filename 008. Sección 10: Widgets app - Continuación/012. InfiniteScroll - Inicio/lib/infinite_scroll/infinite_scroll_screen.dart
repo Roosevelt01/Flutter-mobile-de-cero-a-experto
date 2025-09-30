@@ -272,3 +272,55 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     );
   }
 }
+
+
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Mi App'),
+      ),
+      // 1. Añade el Drawer aquí
+      drawer: Drawer(
+        child: ListView(
+          // Importante: Elimina cualquier padding del ListView.
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            // 2. Encabezado del Drawer (opcional pero recomendado)
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Menú Principal',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+            ),
+            // 3. Opciones del menú
+            ListTile(
+              leading: Icon(Icons.home),
+              title: const Text('Inicio'),
+              onTap: () {
+                // Lógica para navegar a la pantalla de Inicio
+                Navigator.pop(context); // Cierra el drawer
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: const Text('Configuración'),
+              onTap: () {
+                // Lógica para navegar a Configuración
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
+      body: const Center(
+        child: Text('Contenido de la pantalla'),
+      ),
+    );
+  }
