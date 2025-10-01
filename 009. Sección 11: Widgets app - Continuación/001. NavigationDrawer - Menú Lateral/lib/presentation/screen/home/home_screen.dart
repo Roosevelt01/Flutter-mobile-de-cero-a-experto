@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text("Flutter + Material 3"),
       ),
       body: const _HomeView(), 
-      drawer: Placeholder(),// Paso 1.1: colocamos un drawer (menu lateral
+      drawer: Placeholder(),// Paso 1.1: colocamos un drawer (menu lateral)
     );
   }
 }
@@ -63,7 +63,7 @@ class _CustomListTitle extends StatelessWidget {
 }
 
 //Paso 2: Usamos NavigationDrawer (menu lateral) 
-/*class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
  static const String name = 'home_screen'; 
   
   const HomeScreen({super.key});
@@ -119,7 +119,7 @@ class _CustomListTitle extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 3: 
 class HomeScreen extends StatelessWidget {
