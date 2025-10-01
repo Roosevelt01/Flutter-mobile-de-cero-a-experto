@@ -121,7 +121,7 @@ class _CustomListTitle extends StatelessWidget {
   }
 }
 
-//Paso 3: 
+//Paso 3: Extraer a un Widget SideMenu
 class HomeScreen extends StatelessWidget {
  static const String name = 'home_screen'; 
   
