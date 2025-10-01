@@ -4,7 +4,7 @@ import 'package:widgets_app/config/menu/menu_item.dart';
 import 'package:widgets_app/presentation/widgets/side_menu.dart';
 
 //Paso 1: comienzamos creando el drawer (menu lateral)
-/*class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
  static const String name = 'home_screen'; 
   
   const HomeScreen({super.key});
@@ -60,7 +60,7 @@ class _CustomListTitle extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 2: Usamos NavigationDrawer (menu lateral) 
 /*class HomeScreen extends StatelessWidget {
