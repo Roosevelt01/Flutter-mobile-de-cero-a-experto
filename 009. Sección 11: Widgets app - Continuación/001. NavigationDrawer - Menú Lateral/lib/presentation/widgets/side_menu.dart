@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //Paso 1: creamos el stateful widget SideMenu
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -13,7 +13,7 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
-}*/
+}
 
 //Paso 2: creamos el estado del widget
 /*class SideMenu extends StatefulWidget {
