@@ -33,7 +33,7 @@ class _SideMenuState extends State<SideMenu> {
 }
 
 //Paso 3: retornamos un NavigationDrawer
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -49,7 +49,7 @@ class _SideMenuState extends State<SideMenu> {
       children:[] // Paso 3.2: dentro de children colocamos los elementos del menu
     );
   }
-}*/
+}
 
 //Paso 4: Usamos NavigationDrawerDestination para colocar los elementos del menu
 /*class SideMenu extends StatefulWidget {
