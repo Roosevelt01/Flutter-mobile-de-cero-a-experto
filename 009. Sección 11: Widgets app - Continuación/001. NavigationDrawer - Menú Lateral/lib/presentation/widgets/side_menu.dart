@@ -16,7 +16,7 @@ class _SideMenuState extends State<SideMenu> {
 }
 
 //Paso 2: creamos el estado del widget
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -30,7 +30,7 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
-}*/
+}
 
 //Paso 3: retornamos un NavigationDrawer
 /*class SideMenu extends StatefulWidget {
