@@ -212,9 +212,9 @@ class _SideMenuState extends State<SideMenu> {
       ],
     );
   }
-}*/
+}
 
-//Paso 6: Se añade una segunda sección de opciones al menú, separada por un `Divider`.
+//Paso 6: Se añade una segunda sección de opciones al menú, separada por un `Divider`(Código final)
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
