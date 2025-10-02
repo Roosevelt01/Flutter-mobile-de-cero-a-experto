@@ -42,7 +42,7 @@ class _SideMenuState extends State<SideMenu> {
 }
 
 // Paso 2: Se añade lógica para ajustar el padding superior en dispositivos con 'notch'.
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -65,8 +65,8 @@ class _SideMenuState extends State<SideMenu> {
         setState(() {});
           navDrawerIndex = value;
       },
+      
       children:[
-
         // Paso 2.1: Añade un padding superior condicional.
         // Si hay un notch, el padding es 0; de lo contrario, es 20 para evitar que el texto se pegue a la barra de estado.
         Padding( 
@@ -85,7 +85,7 @@ class _SideMenuState extends State<SideMenu> {
       ]
     );
   }
-}*/
+}
 
 // Paso 3: Se refactoriza el menú para generar las opciones dinámicamente a partir de una lista de `MenuItem`s.
 /*class SideMenu extends StatefulWidget {
