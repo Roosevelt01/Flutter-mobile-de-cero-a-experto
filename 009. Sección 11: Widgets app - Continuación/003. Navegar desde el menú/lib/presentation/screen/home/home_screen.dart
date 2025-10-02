@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
 import 'package:widgets_app/presentation/widgets/side_menu.dart';
 
-//Paso 2: Define la pantalla principal de la aplicación.
+//Paso 1: Define la pantalla principal de la aplicación.
 /*class HomeScreen extends StatelessWidget {
  static const String name = 'home_screen'; 
   
