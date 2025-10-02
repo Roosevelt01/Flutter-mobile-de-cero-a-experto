@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
 
 //Paso 1: Se implementa la lógica de navegación al seleccionar una opción del menú.
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -24,8 +24,11 @@ class _SideMenuState extends State<SideMenu> {
           navDrawerIndex = value;
         });        
 
-        final menuItem = appMenuItems[value];//Paso 1.1: Obtiene el `MenuItem` correspondiente al índice seleccionado.
-        context.push(menuItem.link); //Paso 1.2: Utiliza `go_router` para navegar a la ruta especificada en el `link` del `MenuItem`.
+        //Paso 1.1: Obtiene el `MenuItem` correspondiente al índice seleccionado.
+        final menuItem = appMenuItems[value];
+
+        //Paso 1.2: Utiliza `go_router` para navegar a la ruta especificada en el `link` del `MenuItem`.
+        context.push(menuItem.link); 
       },
 
       children: [
@@ -62,7 +65,7 @@ class _SideMenuState extends State<SideMenu> {
       ],
     );
   }
-}*/
+}
 
 //Paso 2: Se pasa la `scaffoldKey` para poder controlar el `Scaffold` desde este widget.
 class SideMenu extends StatefulWidget {
