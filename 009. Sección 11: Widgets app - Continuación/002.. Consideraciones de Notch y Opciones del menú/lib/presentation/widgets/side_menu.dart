@@ -128,7 +128,7 @@ class _SideMenuState extends State<SideMenu> {
 }
 
 //Paso 4: Se limita el número de opciones mostradas en el menú usando `sublist`.
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -157,15 +157,15 @@ class _SideMenuState extends State<SideMenu> {
         // Se utiliza sublist para tomar solo una porción de la lista de items.
         ...appMenuItems
           .sublist(0,3) //Paso 4.1: Crea una sub-lista con los primeros 3 elementos (índices 0, 1, 2).
-          .map((item) => NavigationDrawerDestination(
-            icon: Icon(item.icon), 
-            label: Text(item.title), 
+            .map((item) => NavigationDrawerDestination(
+              icon: Icon(item.icon), 
+              label: Text(item.title), 
+            ),
           ),
-        ),
-      ],
-    );
+        ],
+      );
+    }
   }
-}*/
 
 //Paso 5: Se añade un `Divider` para separar visualmente las secciones del menú.
 /*class SideMenu extends StatefulWidget {
