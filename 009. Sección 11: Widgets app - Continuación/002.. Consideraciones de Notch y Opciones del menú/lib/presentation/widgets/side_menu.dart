@@ -168,7 +168,7 @@ class _SideMenuState extends State<SideMenu> {
   }
 
 //Paso 5: Se añade un `Divider` para separar visualmente las secciones del menú.
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -202,11 +202,11 @@ class _SideMenuState extends State<SideMenu> {
           ),
         ),
 
-        //Paso 5.1: Este `Padding` contiene un `Divider`, que es una línea horizontal utilizada para agrupar o separar contenido.
+        //Paso 5.1: Este `Padding` contiene un `Divider`, que es una línea horizontal 
+        //utilizada para agrupar o separar contenido.
         const Padding(
           padding: EdgeInsets.fromLTRB(28, 16, 16, 10),
           child: Divider(),
-
         ),
         
       ],
