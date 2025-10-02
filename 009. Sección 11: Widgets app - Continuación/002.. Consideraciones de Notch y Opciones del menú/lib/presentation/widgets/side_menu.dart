@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
 
 //Paso 1: Versión inicial del menú lateral con opciones estáticas.
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -21,7 +21,6 @@ class _SideMenuState extends State<SideMenu> {
           navDrawerIndex = value;
       },
       children:[
-
         // Título simple para la sección principal del menú.
         Text("Main"),
 
@@ -37,7 +36,7 @@ class _SideMenuState extends State<SideMenu> {
       ]
     );
   }
-}*/
+}
 
 // Paso 2: Se añade lógica para ajustar el padding superior en dispositivos con 'notch'.
 /*class SideMenu extends StatefulWidget {
