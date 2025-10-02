@@ -83,7 +83,7 @@ class _SideMenuState extends State<SideMenu> {
 }
 
 //Paso 5: comprobamos el index seleccionado
-/*class SideMenu extends StatefulWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
   @override
@@ -110,7 +110,7 @@ class _SideMenuState extends State<SideMenu> {
       ]
     );
   }
-}*/
+}
 
 //Paso 6: OnDestinationSelected para controlar la seleccion del menu
 class SideMenu extends StatefulWidget {
@@ -120,6 +120,7 @@ class SideMenu extends StatefulWidget {
   State<SideMenu> createState() => _SideMenuState();
 }
 
+//
 class _SideMenuState extends State<SideMenu> {
   int navDrawerIndex = 1; 
 
