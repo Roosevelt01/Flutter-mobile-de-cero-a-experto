@@ -22,7 +22,10 @@ class _SideMenuState extends State<SideMenu> {
       },
       children:[
         // Título simple para la sección principal del menú.
-        Text("Main"),
+          const Padding(
+          padding: EdgeInsets.fromLTRB(28, 30, 16, 10),
+          child: Text('Main'),
+        ),
 
         NavigationDrawerDestination(
           icon: const Icon(Icons.add),
