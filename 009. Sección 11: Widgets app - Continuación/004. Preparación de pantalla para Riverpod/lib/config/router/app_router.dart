@@ -58,7 +58,7 @@ final appRouter = GoRouter(
       builder: (context, state) => const InfiniteScrollScreen()
     ),
 
-    //Paso 1
+    //Paso 1: Añade una nueva GoRoute para manejar la navegación a la pantalla del contador.
     GoRoute(
       path: '/counter-river',
       name: CounterScreen.name,
