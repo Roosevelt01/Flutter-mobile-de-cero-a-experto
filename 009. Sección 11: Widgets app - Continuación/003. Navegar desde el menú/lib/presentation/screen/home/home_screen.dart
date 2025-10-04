@@ -4,17 +4,20 @@ import 'package:widgets_app/config/menu/menu_item.dart';
 import 'package:widgets_app/presentation/widgets/side_menu.dart';
 
 //Paso 1: Define la pantalla principal de la aplicación.
-/*class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
  static const String name = 'home_screen'; 
   
   const HomeScreen({super.key});
   
   @override
   Widget build(BuildContext context) {
-    final scaffoldKey = GlobalKey<ScaffoldState>(); //Paso 1.1: Crea una GlobalKey para obtener una referencia única al estado del Scaffold.
+    //Paso 1.1: Crea una GlobalKey para obtener una referencia única al estado del Scaffold.
+    final scaffoldKey = GlobalKey<ScaffoldState>(); 
 
     return Scaffold(
-      key: scaffoldKey, //Paso 1.2: Asigna la GlobalKey al Scaffold. Esto permite controlar el Scaffold (ej. abrir el drawer) desde cualquier parte del widget.
+      //Paso 1.2: Asigna la GlobalKey al Scaffold. Esto permite controlar el Scaffold (ej. abrir el drawer)
+      desde cualquier parte del widget.
+      key: scaffoldKey, 
       appBar: AppBar(
         title: const Text("Flutter + Material 3"),
       ),
@@ -63,7 +66,7 @@ class _CustomListTitle extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 2: Se pasa la `scaffoldKey` al `SideMenu` para permitirle cerrar el drawer.
 class HomeScreen extends StatelessWidget {
