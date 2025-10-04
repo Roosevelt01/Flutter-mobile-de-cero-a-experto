@@ -11,7 +11,7 @@ class CounterScreen extends StatelessWidget {
   }
 }
 
-//Paso 2: 
+//Paso 2: Construir la Interfaz de Usuario(Código final)
 class CounterScreen extends StatelessWidget {
   
   static const name = 'counter_screen';
