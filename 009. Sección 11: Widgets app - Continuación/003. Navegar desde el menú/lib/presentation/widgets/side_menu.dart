@@ -67,9 +67,10 @@ class _SideMenuState extends State<SideMenu> {
   }
 }
 
-//Paso 2: Se pasa la `scaffoldKey` para poder controlar el `Scaffold` desde este widget.
+//Paso 2: Se pasa la `scaffoldKey` para poder controlar el `Scaffold` desde este widget(Código final)
 class SideMenu extends StatefulWidget {
-  final GlobalKey<ScaffoldState> scaffoldKey; //Paso 2.1: Declara una propiedad para recibir la GlobalKey del Scaffold.
+  //Paso 2.1: Declara una propiedad para recibir la GlobalKey del Scaffold.
+  final GlobalKey<ScaffoldState> scaffoldKey; 
   
   const SideMenu({
     super.key,
@@ -96,7 +97,8 @@ class _SideMenuState extends State<SideMenu> {
 
         final menuItem = appMenuItems[value];
         context.push(menuItem.link); 
-        widget.scaffoldKey.currentState?.closeDrawer(); //Paso 2.3: Usa la `scaffoldKey` para acceder al estado del Scaffold y cerrar el drawer.
+        //Paso 2.3: Usa la `scaffoldKey` para acceder al estado del Scaffold y cerrar el drawer.
+        widget.scaffoldKey.currentState?.closeDrawer(); 
 
       },
 
