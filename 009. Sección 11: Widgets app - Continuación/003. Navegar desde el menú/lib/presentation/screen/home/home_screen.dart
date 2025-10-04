@@ -84,7 +84,8 @@ class HomeScreen extends StatelessWidget {
         title: const Text("Flutter + Material 3"),
       ),
       body: const _HomeView(), 
-      drawer: SideMenu(scaffoldKey: scaffoldKey), //Paso 2.1: Pasa la `scaffoldKey` al `SideMenu` para que este pueda cerrar el drawer.
+      //Paso 2.1: Pasa la `scaffoldKey` al `SideMenu` para que este pueda cerrar el drawer.
+      drawer: SideMenu(scaffoldKey: scaffoldKey), 
     );
   }
 }
