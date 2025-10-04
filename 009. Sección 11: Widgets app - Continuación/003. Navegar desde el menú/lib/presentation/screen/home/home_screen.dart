@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       //Paso 1.2: Asigna la GlobalKey al Scaffold. Esto permite controlar el Scaffold (ej. abrir el drawer)
-      desde cualquier parte del widget.
+      //desde cualquier parte del widget.
       key: scaffoldKey, 
       appBar: AppBar(
         title: const Text("Flutter + Material 3"),
