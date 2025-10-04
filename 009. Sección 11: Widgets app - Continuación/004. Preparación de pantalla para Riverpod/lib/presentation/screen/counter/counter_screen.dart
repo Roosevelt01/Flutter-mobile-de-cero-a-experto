@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 
+//Paso 1: Crear la Estructura del Archivo y del Widget.
+class CounterScreen extends StatelessWidget {
+  static const String name = 'counter_screen';
+  const CounterScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(); // Placeholder inicial
+  }
+}
+
+//Paso 2: 
 class CounterScreen extends StatelessWidget {
   
   static const name = 'counter_screen';
