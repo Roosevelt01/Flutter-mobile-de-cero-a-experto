@@ -1,4 +1,3 @@
-
 //Paso 1: Configuración inicial para integrar Riverpod en la aplicación.
 import 'package:flutter_riverpod/legacy.dart'; 
 
