@@ -5,7 +5,7 @@ import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 //Paso 1: Para poder interactuar con los providers de Riverpod,
 //el widget debe heredar de `ConsumerWidget` en lugar de `StatelessWidget`.
-/*class CounterScreen extends ConsumerWidget { 
+class CounterScreen extends ConsumerWidget { 
   
   static const name = 'counter_screen';
   
@@ -41,7 +41,7 @@ import 'package:widgets_app/presentation/providers/theme_provider.dart';
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Se integra la funcionalidad para cambiar el tema de la aplicación.
 class CounterScreen extends ConsumerWidget {
