@@ -3,7 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgets_app/presentation/providers/counter_provider.dart';
 
 //Paso 1: Convertir el widget para que pueda consumir datos de Riverpod.
-class CounterScreen extends ConsumerWidget { //Paso 1.1: Se cambia `StatelessWidget` por `ConsumerWidget`. Este es un widget especial de Riverpod que nos permite "escuchar" los cambios en los providers.
+
+//Paso 1.1: Se cambia `StatelessWidget` por `ConsumerWidget`. 
+//Este es un widget especial de Riverpod que nos permite "escuchar" los cambios en los providers.
+class CounterScreen extends ConsumerWidget { 
   
   static const name = 'counter_screen';
   
