@@ -169,7 +169,7 @@ class _ThemeChangerView extends ConsumerWidget {
   }
 }*/
 
-//Paso 6
+//Paso 6: Se construye la lista de `RadioListTile` para mostrar los temas de colores disponibles.
 class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
@@ -205,11 +205,11 @@ class _ThemeChangerView extends ConsumerWidget {
     final List<Color> colors = ref.watch( colorListProvider );
     
     return ListView.builder(
-      itemCount: colors.length, //Paso 6.1
+      itemCount: colors.length, //Paso 6.1: Se establece la cantidad de elementos en la lista basándose en la longitud de la lista de colores.
       itemBuilder: (context, index) {
-          final Color color = colors[index]; //Paso 6.2
+          final Color color = colors[index]; //Paso 6.2: Se obtiene el color correspondiente al índice actual de la lista.
           
-          //Paso 6.3
+          //Paso 6.3: Se crea un `RadioListTile` para cada color, permitiendo al usuario visualizar y seleccionar un tema.
           return RadioListTile(
             title: Text("Este color", style: TextStyle(color: color)),
             subtitle: Text('${ color.value}'),
