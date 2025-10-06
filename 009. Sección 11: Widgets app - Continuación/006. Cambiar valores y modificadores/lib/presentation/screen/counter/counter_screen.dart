@@ -63,7 +63,7 @@ class CounterScreen extends ConsumerWidget {
           IconButton(
             //Paso 2.2: El ícono cambia dinámicamente dependiendo del valor de `isDarkMode`.
             icon: Icon(
-              isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined, //Paso 2.2:
+              isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined, 
             ), 
             onPressed: () {
               //Paso 2.3: Usamos `ref.read` para leer el notifier del provider y cambiar su estado.
