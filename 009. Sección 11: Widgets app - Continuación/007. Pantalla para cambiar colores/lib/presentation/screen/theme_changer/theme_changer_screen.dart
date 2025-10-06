@@ -21,7 +21,7 @@ class ThemeChangerScreen extends StatelessWidget {
 }
 
 //Paso 2: Se convierte el widget a `ConsumerWidget` para poder interactuar con los providers de Riverpod.
-/*class ThemeChangerScreen extends ConsumerWidget {
+class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
 
@@ -44,7 +44,7 @@ class ThemeChangerScreen extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: Se prepara la estructura para mostrar la lista de temas de colores.
 /*class ThemeChangerScreen extends ConsumerWidget {
