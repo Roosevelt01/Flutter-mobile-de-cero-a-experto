@@ -209,11 +209,15 @@ class _ThemeChangerView extends ConsumerWidget {
     final List<Color> colors = ref.watch( colorListProvider );
     
     return ListView.builder(
-      itemCount: colors.length, //Paso 6.1: Se establece la cantidad de elementos en la lista basándose en la longitud de la lista de colores.
+      //Paso 6.1: Se establece la cantidad de elementos en la lista basándose 
+      //en la longitud de la lista de colores.
+      itemCount: colors.length, 
       itemBuilder: (context, index) {
-          final Color color = colors[index]; //Paso 6.2: Se obtiene el color correspondiente al índice actual de la lista.
+          //Paso 6.2: Se obtiene el color correspondiente al índice actual de la lista.
+          final Color color = colors[index]; 
           
-          //Paso 6.3: Se crea un `RadioListTile` para cada color, permitiendo al usuario visualizar y seleccionar un tema.
+          //Paso 6.3: Se crea un `RadioListTile` para cada color, permitiendo al usuario 
+          //visualizar y seleccionar un tema.
           return RadioListTile(
             title: Text("Este color", style: TextStyle(color: color)),
             subtitle: Text('${ color.value}'),
