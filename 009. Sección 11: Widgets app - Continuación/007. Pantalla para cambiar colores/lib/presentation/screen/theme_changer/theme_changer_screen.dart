@@ -48,7 +48,7 @@ class ThemeChangerScreen extends ConsumerWidget {
 }
 
 //Paso 3: Se prepara la estructura para mostrar la lista de temas de colores.
-/*class ThemeChangerScreen extends ConsumerWidget {
+class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
 
@@ -69,12 +69,15 @@ class ThemeChangerScreen extends ConsumerWidget {
           ),
         ],
       ),
-      body: _ThemeChangerView(),//Paso 3.1: Se establece `_ThemeChangerView` como el cuerpo de la pantalla, donde se mostrarán las opciones de tema.
+      //Paso 3.1: Se establece `_ThemeChangerView` como el cuerpo de la pantalla, donde se
+      // mostrarán las opciones de tema.
+      body: _ThemeChangerView(),
     );
   }
 }
 
-//Paso 3.2: Se crea un nuevo widget `_ThemeChangerView` para encapsular la lógica y la vista de la lista de temas.
+//Paso 3.2: Se crea un nuevo widget `_ThemeChangerView` para encapsular la lógica
+// y la vista de la lista de temas.
 class _ThemeChangerView extends StatelessWidget {
   const _ThemeChangerView();
 
@@ -82,7 +85,7 @@ class _ThemeChangerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container();
   }
-}*/
+}
 
 //Paso 4: Se implementa la vista que mostrará la lista de temas.
 /*class ThemeChangerScreen extends ConsumerWidget {
