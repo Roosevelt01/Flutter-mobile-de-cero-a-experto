@@ -129,7 +129,7 @@ class _ThemeChangerView extends StatelessWidget {
 }
 
 //Paso 5: Se conecta la vista `_ThemeChangerView` con el provider que contiene la lista de colores.
-/*class ThemeChangerScreen extends ConsumerWidget {
+class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
 
@@ -171,7 +171,7 @@ class _ThemeChangerView extends ConsumerWidget {
       },
     );
   }
-}*/
+}
 
 //Paso 6: Se construye la lista de `RadioListTile` para mostrar los temas de colores disponibles.
 class ThemeChangerScreen extends ConsumerWidget {
