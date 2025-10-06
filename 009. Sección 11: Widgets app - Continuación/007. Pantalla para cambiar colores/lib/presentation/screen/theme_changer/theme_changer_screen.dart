@@ -162,8 +162,8 @@ class _ThemeChangerView extends ConsumerWidget {
   //Paso 5.2: El método `build` ahora recibe `ref` como segundo argumento, lo que permite interactuar con los providers.
   @override
   Widget build(BuildContext context, ref) {
-    
-    final List<Color> colors = ref.watch( colorListProvider );//Paso 5.3: Se utiliza `ref.watch` para obtener la lista de colores del `colorListProvider`.
+    //Paso 5.3: Se utiliza `ref.watch` para obtener la lista de colores del `colorListProvider`.
+    final List<Color> colors = ref.watch( colorListProvider );
     
     return ListView.builder(
       itemBuilder: (context, index) {
