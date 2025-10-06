@@ -88,7 +88,7 @@ class _ThemeChangerView extends StatelessWidget {
 }
 
 //Paso 4: Se implementa la vista que mostrará la lista de temas.
-/*class ThemeChangerScreen extends ConsumerWidget {
+class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
 
@@ -126,7 +126,7 @@ class _ThemeChangerView extends StatelessWidget {
       },
     );
   }
-}*/
+}
 
 //Paso 5: Se conecta la vista `_ThemeChangerView` con el provider que contiene la lista de colores.
 /*class ThemeChangerScreen extends ConsumerWidget {
