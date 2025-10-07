@@ -61,7 +61,7 @@ class _ThemeChangerView extends ConsumerWidget {
 }
 
 //Paso 2: Se implementa la funcionalidad para que el usuario pueda cambiar el color del tema.
-/*class ThemeChangerScreen extends ConsumerWidget {
+class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
 
@@ -116,7 +116,7 @@ class _ThemeChangerView extends ConsumerWidget {
       },
     );
   }
-}*/
+}
 
 //Paso 3: Se implementa la lógica para cambiar entre modo claro y oscuro.
 class ThemeChangerScreen extends ConsumerWidget {
