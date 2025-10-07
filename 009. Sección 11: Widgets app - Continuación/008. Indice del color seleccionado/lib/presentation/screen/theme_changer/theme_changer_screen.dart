@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 //Paso 1: Se define la pantalla para el cambio de tema como un `ConsumerWidget` para poder interactuar con los providers de Riverpod.
-/*class ThemeChangerScreen extends ConsumerWidget {
+class ThemeChangerScreen extends ConsumerWidget {
 
   static const name = 'theme_changer_screen';
 
@@ -56,7 +56,7 @@ class _ThemeChangerView extends ConsumerWidget {
       },
     );
   }
-}*/
+}
 
 //Paso 2: Se implementa la funcionalidad para que el usuario pueda cambiar el color del tema.
 /*class ThemeChangerScreen extends ConsumerWidget {
