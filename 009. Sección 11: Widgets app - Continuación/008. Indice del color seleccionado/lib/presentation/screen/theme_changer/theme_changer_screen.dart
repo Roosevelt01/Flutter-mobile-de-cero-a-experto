@@ -36,7 +36,8 @@ class _ThemeChangerView extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     
     final List<Color> colors = ref.watch( colorListProvider );
-    //Paso 1.1: Se observa el estado del `selectedColorProvider` para obtener el índice del color actualmente seleccionado.
+    //Paso 1.1: Se observa el estado del `selectedColorProvider` para obtener el índice del 
+    //color actualmente seleccionado.
     final int selectedColor = ref.watch( selectedColorProvider );
     
     return ListView.builder(
