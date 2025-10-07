@@ -50,9 +50,10 @@ class _ThemeChangerView extends ConsumerWidget {
             subtitle: Text('${ color.value}'),
             activeColor: color,
             value: index, 
-            groupValue: selectedColor, //Paso 1.2: El `groupValue` se enlaza al `selectedColor` para que el `RadioListTile` correcto aparezca como seleccionado.
-            onChanged: (value){},
-        
+            //Paso 1.2: El `groupValue` se enlaza al `selectedColor` para que el 
+            //`RadioListTile` correcto aparezca como seleccionado.
+            groupValue: selectedColor, 
+            onChanged: (value){},        
           );
       },
     );
