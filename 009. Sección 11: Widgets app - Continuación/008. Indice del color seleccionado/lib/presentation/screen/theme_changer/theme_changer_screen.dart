@@ -78,7 +78,12 @@ class ThemeChangerScreen extends ConsumerWidget {
                 actions: [
           IconButton(
             icon: Icon(isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined),
-            onPressed: () {}, 
+            onPressed: () {
+              //Paso 2.1: Al cambiar la selección, se actualiza el estado del `selectedColorProvider`
+              //con el nuevo índice. Se usa `ref.read` porque solo queremos escribir el valor, no necesitamos 
+              //escuchar los cambios en este punto.
+               ref.read( selectedColorProvider.notifier ).state = value ?? 0;
+            }, 
           ),
         ],
       ),
@@ -109,7 +114,7 @@ class _ThemeChangerView extends ConsumerWidget {
             value: index, 
             groupValue: selectedColor, 
             onChanged: (value){
-              ref.read( selectedColorProvider.notifier ).state = value ?? 0;//Paso 2.1: Al cambiar la selección, se actualiza el estado del `selectedColorProvider` con el nuevo índice. Se usa `ref.read` porque solo queremos escribir el valor, no necesitamos escuchar los cambios en este punto.
+              ref.read( selectedColorProvider.notifier ).state = value ?? 0;
             },
         
           );
