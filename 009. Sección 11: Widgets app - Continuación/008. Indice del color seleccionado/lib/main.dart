@@ -31,15 +31,3 @@ class MainApp extends ConsumerWidget {
     );
   }
 }
-
-lib
-├── config
-│   └── theme
-│       └── app_theme.dart      <-- Modificado
-├── presentation
-│   ├── providers
-│   │   └── theme_provider.dart   <-- Modificado
-│   └── screen
-│       └── theme_changer
-│           └── theme_changer_screen.dart <-- Modificado
-└── main.dart                     <-- Foco de la lección

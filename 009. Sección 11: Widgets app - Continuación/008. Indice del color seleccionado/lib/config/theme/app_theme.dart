@@ -28,11 +28,11 @@ class AppTheme {
 
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,
-    brightness: isDarkMode ? Brightness.dark : Brightness.light,//Paso 2.2: Se establece el brillo del tema (oscuro o claro) según el valor de `isDarkMode`.
+    //Paso 2.2: Se establece el brillo del tema (oscuro o claro) según el valor de `isDarkMode`.
+    brightness: isDarkMode ? Brightness.dark : Brightness.light,
     colorSchemeSeed: colorList[selectedColor],
     appBarTheme: const AppBarTheme(
       centerTitle: false,
     ),
   );
-
 }
