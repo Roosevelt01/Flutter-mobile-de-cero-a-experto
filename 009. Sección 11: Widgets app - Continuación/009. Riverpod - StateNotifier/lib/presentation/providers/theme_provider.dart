@@ -21,5 +21,5 @@ final themeNotifiesProvider = StateNotifierProvider<ThemeNotifier, AppTheme>(
 // Esta clase contendrá la lógica para manejar y actualizar el estado del tema de la aplicación.
 class ThemeNotifier extends StateNotifier<AppTheme> {
   // Se inicializa el estado con una instancia de `AppTheme()`, que contiene los valores por defecto.
-  ThemeNotifier(): super(AppTheme());
+  ThemeNotifier(): super(AppTheme());// STATE = new AppTheme();
 }
