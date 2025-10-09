@@ -11,7 +11,7 @@ void main() {
   );
 } 
 
-//Paso 1: 
+//Paso 1: Consumir el Nuevo Provider en MainApp (main.dart)
 class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
