@@ -22,7 +22,8 @@ class ThemeChangerScreen extends ConsumerWidget {
           IconButton(
             icon: Icon(isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined),
             onPressed: () {
-              //Paso 1.1: Al presionar el botón, se utiliza `ref.read` para obtener el notificador y llamar al método `toggleDarkmode`, que cambia el estado del tema.
+              //Paso 1.1: Al presionar el botón, se utiliza `ref.read` para obtener 
+              //el notificador y llamar al método `toggleDarkmode`, que cambia el estado del tema.
               ref.read( themeNotifiesProvider.notifier ).toggleDarkmode(); 
             }, 
           ),
