@@ -38,7 +38,8 @@ class _ThemeChangerView extends ConsumerWidget {
     
     final List<Color> colors = ref.watch( colorListProvider );
     
-    //Paso 1.1: Se obtiene el índice del color actualmente seleccionado del `themeNotifiesProvider`. `ref.watch` asegura que el widget se reconstruya si este valor cambia.
+    //Paso 1.1: Se obtiene el índice del color actualmente seleccionado del `themeNotifiesProvider`. `ref.watch`
+    //asegura que el widget se reconstruya si este valor cambia.
     final int selectedColor = ref.watch( themeNotifiesProvider ).selectedColor;
     
     return ListView.builder(
@@ -55,8 +56,7 @@ class _ThemeChangerView extends ConsumerWidget {
             onChanged: (value){
               //Paso 1.2: Al seleccionar un `RadioListTile`, se llama al método `changeColorIndex` del `ThemeNotifier` para actualizar el color del tema con el índice seleccionado.
               ref.read( themeNotifiesProvider.notifier ).changeColorIndex(value!);
-            },
-        
+            },        
           );
       },
     );

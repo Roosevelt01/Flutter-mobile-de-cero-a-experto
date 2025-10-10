@@ -18,7 +18,8 @@ class ThemeNotifier extends StateNotifier<AppTheme> {
     state = state.copyWith(isDarkMode: !state.isDarkMode);
   }
 
-  //Paso 1: Este método recibe un índice de color y actualiza el estado del tema con el nuevo color seleccionado, utilizando el método `copyWith` para mantener la inmutabilidad.
+  //Paso 1: Este método recibe un índice de color y actualiza el estado del tema
+  //con el nuevo color seleccionado, utilizando el método `copyWith` para mantener la inmutabilidad.
   void changeColorIndex(int colorIndex){
     state = state.copyWith(selectedColor: colorIndex);
   }
