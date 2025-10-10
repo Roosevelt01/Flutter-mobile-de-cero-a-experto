@@ -30,16 +30,15 @@ class ThemeChangerScreen extends ConsumerWidget {
   }
 }
 
-//Paso 1: Este widget `_ThemeChangerView` es un `ConsumerWidget` que se encarga de construir la interfaz para cambiar el color del tema de la aplicación.
 class _ThemeChangerView extends ConsumerWidget {
   const _ThemeChangerView();
 
   @override
   Widget build(BuildContext context, ref) {
     
-    final List<Color> colors = ref.watch( colorListProvider ); // Se obtiene la lista de colores disponibles para el tema desde `colorListProvider`.
+    final List<Color> colors = ref.watch( colorListProvider );
     
-    //Paso 1.1:
+    //Paso 1.1: Se obtiene el índice del color actualmente seleccionado del `themeNotifiesProvider`. `ref.watch` asegura que el widget se reconstruya si este valor cambia.
     final int selectedColor = ref.watch( themeNotifiesProvider ).selectedColor;
     
     return ListView.builder(
