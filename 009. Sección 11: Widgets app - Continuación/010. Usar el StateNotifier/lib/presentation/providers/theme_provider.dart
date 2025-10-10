@@ -1,4 +1,3 @@
-//Paso 1: Se crean los providers de Riverpod para gestionar el estado del tema.
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
