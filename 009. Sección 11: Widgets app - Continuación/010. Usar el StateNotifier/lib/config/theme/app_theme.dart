@@ -33,7 +33,8 @@ class AppTheme {
     ),
   );
 
-  //Paso 1: Este método `copyWith` permite crear una nueva instancia de `AppTheme` basada en la actual, pero con la posibilidad de modificar `selectedColor` o `isDarkMode`. Es útil para la inmutabilidad del estado.
+  //Paso 1: Este método `copyWith` permite crear una nueva instancia de `AppTheme` basada en la actual,
+  //pero con la posibilidad de modificar `selectedColor` o `isDarkMode`. Es útil para la inmutabilidad del estado.
   AppTheme copyWith({
     int? selectedColor,
     bool? isDarkMode,
