@@ -11,8 +11,6 @@ class ThemeChangerScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     
-    //Paso 1: Se utiliza `ref.watch` para observar el estado del `themeNotifiesProvider` 
-    //y obtener el valor actual de `isDarkMode`. El widget se reconstruirá si este valor cambia.
     final isDarkMode = ref.watch( themeNotifiesProvider ).isDarkMode;
     
     return Scaffold(
@@ -22,8 +20,6 @@ class ThemeChangerScreen extends ConsumerWidget {
           IconButton(
             icon: Icon(isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined),
             onPressed: () {
-              //Paso 1.1: Al presionar el botón, se utiliza `ref.read` para obtener 
-              //el notificador y llamar al método `toggleDarkmode`, que cambia el estado del tema.
               ref.read( themeNotifiesProvider.notifier ).toggleDarkmode(); 
             }, 
           ),
@@ -34,15 +30,17 @@ class ThemeChangerScreen extends ConsumerWidget {
   }
 }
 
+//Paso 1: Este widget `_ThemeChangerView` es un `ConsumerWidget` que se encarga de construir la interfaz para cambiar el color del tema de la aplicación.
 class _ThemeChangerView extends ConsumerWidget {
   const _ThemeChangerView();
 
   @override
   Widget build(BuildContext context, ref) {
     
-    final List<Color> colors = ref.watch( colorListProvider );
+    final List<Color> colors = ref.watch( colorListProvider ); // Se obtiene la lista de colores disponibles para el tema desde `colorListProvider`.
     
-    final int selectedColor = ref.watch( selectedColorProvider );
+    //Paso 1.1:
+    final int selectedColor = ref.watch( themeNotifiesProvider ).selectedColor;
     
     return ListView.builder(
       itemCount: colors.length,
@@ -56,7 +54,8 @@ class _ThemeChangerView extends ConsumerWidget {
             value: index, 
             groupValue: selectedColor, 
             onChanged: (value){
-              ref.read( selectedColorProvider.notifier ).state = value ?? 0;
+              //Paso 1.2: Al seleccionar un `RadioListTile`, se llama al método `changeColorIndex` del `ThemeNotifier` para actualizar el color del tema con el índice seleccionado.
+              ref.read( themeNotifiesProvider.notifier ).changeColorIndex(value!);
             },
         
           );
