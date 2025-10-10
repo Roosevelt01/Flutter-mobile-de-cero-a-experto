@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//Paso 1: Se define una lista constante de colores para los temas de la aplicación.
 const colorList = <Color>[
   Colors.amber,
   Colors.blue,
