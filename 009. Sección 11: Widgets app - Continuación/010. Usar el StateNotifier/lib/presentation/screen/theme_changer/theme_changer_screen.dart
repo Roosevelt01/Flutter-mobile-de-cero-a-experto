@@ -11,7 +11,8 @@ class ThemeChangerScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     
-    //Paso 1: Se utiliza `ref.watch` para observar el estado del `themeNotifiesProvider` y obtener el valor actual de `isDarkMode`. El widget se reconstruirá si este valor cambia.
+    //Paso 1: Se utiliza `ref.watch` para observar el estado del `themeNotifiesProvider` 
+    //y obtener el valor actual de `isDarkMode`. El widget se reconstruirá si este valor cambia.
     final isDarkMode = ref.watch( themeNotifiesProvider ).isDarkMode;
     
     return Scaffold(
