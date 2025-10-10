@@ -14,7 +14,8 @@ final themeNotifiesProvider = StateNotifierProvider<ThemeNotifier, AppTheme>(
 class ThemeNotifier extends StateNotifier<AppTheme> {
   ThemeNotifier(): super(AppTheme());
 
-  //Paso 1: Este método invierte el estado actual de `isDarkMode` del tema y actualiza el estado del `ThemeNotifier` con la nueva configuración.
+  //Paso 1: Este método invierte el estado actual de `isDarkMode` del tema y actualiza
+  //el estado del `ThemeNotifier` con la nueva configuración.
   void toggleDarkmode() {
     state = state.copyWith(isDarkMode: !state.isDarkMode);
   }
