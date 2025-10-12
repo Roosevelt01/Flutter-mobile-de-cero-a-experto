@@ -6,3 +6,4 @@ class AppTheme{
     colorSchemeSeed: const Color(0xFF2862F5)
   ); 
 }
+
