@@ -54,7 +54,8 @@ class _ThemeChangerView extends ConsumerWidget {
             value: index, 
             groupValue: selectedColor, 
             onChanged: (value){
-              //Paso 1.2: Al seleccionar un `RadioListTile`, se llama al método `changeColorIndex` del `ThemeNotifier` para actualizar el color del tema con el índice seleccionado.
+              //Paso 1.2: Al seleccionar un `RadioListTile`, se llama al método `changeColorIndex` del `ThemeNotifier`
+              //para actualizar el color del tema con el índice seleccionado.
               ref.read( themeNotifiesProvider.notifier ).changeColorIndex(value!);
             },        
           );
