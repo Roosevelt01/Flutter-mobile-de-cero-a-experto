@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 
 
 //Paso 1: Aplicar el Tema en main.dart
+void main() {
+  runApp(const MainApp());
+}
+
 import 'package:cinemapedia/config/theme/app_theme.dart';
 
 class MainApp extends StatelessWidget {
@@ -18,6 +22,7 @@ class MainApp extends StatelessWidget {
   }
 }
 
+//Paso 2: 
 void main() {
   runApp(const MainApp());
 }
