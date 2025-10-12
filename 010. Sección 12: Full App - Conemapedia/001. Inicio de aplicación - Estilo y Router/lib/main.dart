@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
   }
 }
 
-//Paso 2: 
+//Paso 2: Integrar el Router en main.dart(Código final)
 void main() {
   runApp(const MainApp());
 }
