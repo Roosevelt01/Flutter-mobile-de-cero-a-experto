@@ -68,4 +68,21 @@ class MovieMovieDB {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Paso D: Asegurar la Integridad de los Datos de la Película
+//Paso 2: Asegurar la Integridad de los Datos de la Película
+
+factory MovieMovieDB.fromJson(Map<String, dynamic> json) => MovieMovieDB(
+  adult: json["adult"] ?? false,
+  backdropPath: json["backdrop_path"] ?? '',
+  genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
+  id: json["id"],
+  originalLanguage: json["original_language"],
+  originalTitle: json["original_title"],
+  overview: json["overview"] ?? '',
+  popularity: json["popularity"]?.toDouble(),
+  posterPath: json["poster_path"] ?? '',
+  releaseDate: DateTime.parse(json["release_date"]),
+  title: json["title"],
+  video: json["video"],
+  voteAverage: json["vote_average"]?.toDouble(),
+  voteCount: json["vote_count"],
+);
