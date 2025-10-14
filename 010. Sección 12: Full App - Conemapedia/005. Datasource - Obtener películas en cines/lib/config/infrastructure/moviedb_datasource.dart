@@ -31,7 +31,7 @@ class MoviedbDatasource extends MoviesDatasource{
 }
 
 // Paso 4: Configuración inicial de Dio para las peticiones HTTP.
-/*class MoviedbDatasource extends MoviesDatasource{
+class MoviedbDatasource extends MoviesDatasource{
   
   // Se crea una instancia de Dio con la URL base de la API.
   final dio = Dio(BaseOptions(
@@ -42,7 +42,7 @@ class MoviedbDatasource extends MoviesDatasource{
   Future<List<Movie>> getNowPlaying({int page = 1}) async{
     return [];
   }
-}*/
+}
 
 // Paso 5: Añadir parámetros de consulta por defecto a Dio.
 /*class MoviedbDatasource extends MoviesDatasource{
