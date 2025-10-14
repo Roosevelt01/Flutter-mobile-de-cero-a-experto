@@ -3,13 +3,13 @@ import 'package:cinemapedia/config/infrastructure/models/moviedb/movie_moviedb.d
 import 'package:cinemapedia/domain/entities/movie.dart';
 
 // Paso 1: Define la estructura inicial de la clase `MovieMapper`.
-/*class MovieMapper {
+class MovieMapper {
 
-}*/
+}
 
 // Paso 2: Define el método estático para la conversión, pero aún sin la lógica de mapeo.
-/*
-/// Paso 2.2: La intención es crear una instancia de `Movie` a partir de `MovieMovieDB`.
+
+// Paso 2.2: La intención es crear una instancia de `Movie` a partir de `MovieMovieDB`.
 class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
     adult: adult,
@@ -27,10 +27,10 @@ class MovieMapper {
     voteAverage: voteAverage,
     voteCount: voteCount,
   );
-}*/
+}
 
 // Paso 3: Realiza el mapeo directo de propiedades entre `MovieMovieDB` y `Movie`.
-/*class MovieMapper {
+class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
 
     // Paso 3.1: Asigna cada propiedad de `moviedb` a la propiedad correspondiente en `Movie`.
@@ -49,9 +49,9 @@ class MovieMapper {
     voteAverage: moviedb.voteAverage,
     voteCount: moviedb.voteCount,
   );
-}*/
+}
 
-// Paso 4: Implementa la lógica final de mapeo, incluyendo transformaciones de datos.
+// Paso 4: Implementa la lógica final de mapeo, incluyendo transformaciones de datos(Código final)
 class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
 
