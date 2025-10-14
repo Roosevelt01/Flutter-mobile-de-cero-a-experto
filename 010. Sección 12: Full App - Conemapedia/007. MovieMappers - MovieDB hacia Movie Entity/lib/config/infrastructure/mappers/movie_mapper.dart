@@ -19,7 +19,7 @@ class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
     adult: adult,
     backdropPath: backdropPath,
-    genreIds: genreIds,
+    genreIds: genreIds,// Conversión de tipo
     id: id,
     originalLanguage: originalLanguage,
     originalTitle: originalTitle,
