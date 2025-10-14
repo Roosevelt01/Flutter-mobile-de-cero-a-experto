@@ -52,3 +52,17 @@ class Dates {
         "minimum": "${minimum.year.toString().padLeft(4, '0')}-${minimum.month.toString().padLeft(2, '0')}-${minimum.day.toString().padLeft(2, '0')}",
     };
 }
+
+<hr>
+
+//Paso 1: Manejar Nulabilidad en la Respuesta Principal
+
+class MovieDbResponse {
+  final Dates? dates; // Se hace la propiedad nullable con "?"
+  // ...
+  factory MovieDbResponse.fromJson(Map<String, dynamic> json) => MovieDbResponse(
+    dates: json["dates"] != null ? Dates.fromJson(json["dates"]) : null, // Se añade la comprobación de nulidad
+    // ...
+  );
+  // ...
+}
