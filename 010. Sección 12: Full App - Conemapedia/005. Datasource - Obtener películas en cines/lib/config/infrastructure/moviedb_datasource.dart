@@ -10,11 +10,13 @@ class MoviedbDatasource extends MoviesDatasource{
 }
 
 // Paso 2: Implementación del método `getNowPlaying` requerido por la clase abstracta.
-/*class MoviedbDatasource extends MoviesDatasource{
+class MoviedbDatasource extends MoviesDatasource{
   @override
   Future<List<Movie>> getNowPlaying({int page = 1}) {
+    // Aún falta la lógica asíncrona y el retorno.
+    throw UnimplementedError(); // Placeholder que arroja un error si se llama.
   }
-}*/
+}
 
 // Paso 3: Conversión del método a asíncrono y retorno de una lista vacía.
 /*class MoviedbDatasource extends MoviesDatasource{
