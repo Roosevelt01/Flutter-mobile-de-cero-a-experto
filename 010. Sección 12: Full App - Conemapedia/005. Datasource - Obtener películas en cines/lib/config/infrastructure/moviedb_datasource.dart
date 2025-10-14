@@ -5,9 +5,9 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:dio/dio.dart';
 
 // Paso 1: Creación de la clase que implementa el datasource abstracto.
-/*class MoviedbDatasource extends MoviesDatasource{
+class MoviedbDatasource extends MoviesDatasource{
 
-}*/
+}
 
 // Paso 2: Implementación del método `getNowPlaying` requerido por la clase abstracta.
 /*class MoviedbDatasource extends MoviesDatasource{
