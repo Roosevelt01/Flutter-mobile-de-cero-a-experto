@@ -19,7 +19,7 @@ class MoviedbDatasource extends MoviesDatasource{
 }
 
 // Paso 3: Conversión del método a asíncrono y retorno de una lista vacía.
-/*class MoviedbDatasource extends MoviesDatasource{
+class MoviedbDatasource extends MoviesDatasource{
   
   // Se convierte el método en asíncrono.
   @override
@@ -28,7 +28,7 @@ class MoviedbDatasource extends MoviesDatasource{
     // Se retorna una lista vacía temporalmente.
     return [];
   }
-}*/
+}
 
 // Paso 4: Configuración inicial de Dio para las peticiones HTTP.
 /*class MoviedbDatasource extends MoviesDatasource{
