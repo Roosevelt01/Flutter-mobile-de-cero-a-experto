@@ -2,39 +2,6 @@
 import 'package:cinemapedia/config/infrastructure/models/moviedb/movie_moviedb.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 
-// Paso 1: Define la estructura inicial de la clase `MovieMapper`.
-class MovieMapper {
-
-}
-
-//Paso 2: Definir el Método de Conversión Estático
-class MovieMapper {
-  static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
-    // Lógica de mapeo irá aquí
-  );
-}
-
-// Paso 3: La intención es crear una instancia de `Movie` a partir de `MovieMovieDB`.
-class MovieMapper {
-  static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
-    adult: adult,
-    backdropPath: backdropPath,
-    genreIds: genreIds,// Conversión de tipo
-    id: id,
-    originalLanguage: originalLanguage,
-    originalTitle: originalTitle,
-    overview: overview,
-    popularity: popularity,
-    posterPath: posterPath,
-    releaseDate: releaseDate,
-    title: title,
-    video: video,
-    voteAverage: voteAverage,
-    voteCount: voteCount,
-  );
-}
-
-// Paso 4: Implementar la Lógica de Transformación de Imágenes(Código final)
 class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
 
