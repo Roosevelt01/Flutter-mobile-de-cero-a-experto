@@ -47,9 +47,9 @@ class MoviedbDatasource extends MoviesDatasource{
     final movieDBResponse =  MovieDbResponse.fromJson(response.data);
     
     // Paso 2.1: Intenta mapear los resultados, pero devuelve `null` para cada película, resultando en una lista de nulos.
-    final  List<Movie> movies = movieDBResponse.results.map(
-      (e) => null
-    ).toList();
+    final List<Movie> movies = movieDBResponse.results
+      .map( (moviedb) => null ) // Intento inicial de mapeo
+      .toList();
 
     return movies;
   }
