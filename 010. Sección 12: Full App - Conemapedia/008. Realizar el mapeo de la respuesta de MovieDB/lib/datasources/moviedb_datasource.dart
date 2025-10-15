@@ -6,7 +6,7 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:dio/dio.dart';
 
 // Paso 1: Define la estructura inicial del Datasource y la configuración de Dio.
-class MoviedbDatasource extends MoviesDatasource{
+/*class MoviedbDatasource extends MoviesDatasource{
   
   final dio = Dio(BaseOptions(
     baseUrl: 'https://api.themoviedb.org/3', 
@@ -27,10 +27,10 @@ class MoviedbDatasource extends MoviesDatasource{
 
     return movies;
   }
-}
+}*/
 
 // Paso 2: Itera sobre los resultados de la API.
-class MoviedbDatasource extends MoviesDatasource{
+/*class MoviedbDatasource extends MoviesDatasource{
   
   final dio = Dio(BaseOptions(
     baseUrl: 'https://api.themoviedb.org/3', 
@@ -53,10 +53,10 @@ class MoviedbDatasource extends MoviesDatasource{
 
     return movies;
   }
-}
+}*/
 
 // Paso 3: Utiliza el `MovieMapper` para la conversión.
-class MoviedbDatasource extends MoviesDatasource{
+/*class MoviedbDatasource extends MoviesDatasource{
   
   final dio = Dio(BaseOptions(
     baseUrl: 'https://api.themoviedb.org/3', 
@@ -78,9 +78,9 @@ class MoviedbDatasource extends MoviesDatasource{
 
     return movies;
   }
-}
+}*/
 
-// Paso 4: Implementa la lógica final, incluyendo el filtrado de resultados(Código final)
+// Paso 4: Implementa la lógica final, incluyendo el filtrado de resultados.
 class MoviedbDatasource extends MoviesDatasource{
   
   final dio = Dio(BaseOptions(
