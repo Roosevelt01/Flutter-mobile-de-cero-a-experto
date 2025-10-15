@@ -34,7 +34,7 @@ class MovieMapper {
   );
 }
 
-// Paso 5: Implementa la lógica final de mapeo, incluyendo transformaciones de datos(Código final)
+// Paso 5: Implementar la Lógica de Transformación de Imágenes(Código final)
 class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
 
