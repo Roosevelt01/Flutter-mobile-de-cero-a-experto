@@ -34,28 +34,6 @@ class MovieMapper {
   );
 }
 
-// Paso 4: Realiza el mapeo directo de propiedades entre `MovieMovieDB` y `Movie`.
-class MovieMapper {
-  static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
-
-    // Paso 4.1: Asigna cada propiedad de `moviedb` a la propiedad correspondiente en `Movie`.
-    adult: moviedb.adult,
-    backdropPath: moviedb.backdropPath,
-    genreIds: moviedb.genreIds,
-    id: moviedb.id,
-    originalLanguage: moviedb.originalLanguage,
-    originalTitle: moviedb.originalTitle,
-    overview: moviedb.overview,
-    popularity: moviedb.popularity,
-    posterPath: moviedb.posterPath,
-    releaseDate: moviedb.releaseDate,
-    title: moviedb.title,
-    video: moviedb.video,
-    voteAverage: moviedb.voteAverage,
-    voteCount: moviedb.voteCount,
-  );
-}
-
 // Paso 5: Implementa la lógica final de mapeo, incluyendo transformaciones de datos(Código final)
 class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
