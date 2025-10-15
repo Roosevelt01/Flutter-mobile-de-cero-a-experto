@@ -22,7 +22,7 @@ class MoviedbDatasource extends MoviesDatasource{
     final movieDBResponse =  MovieDbResponse.fromJson(response.data);
     
     final  List<Movie> movies = movieDBResponse.results
-    .where((moviedb) => moviedb.posterPath != 'no-poster')// Paso 4.1: Filtra las películas que no tienen un póster.
+    .where((moviedb) => moviedb.posterPath != 'no-poster')// Paso 1: Filtra las películas que no tienen un póster.
     .map(
       (moviedb) => MovieMapper.movieDBToEntity(moviedb) 
     ).toList();
