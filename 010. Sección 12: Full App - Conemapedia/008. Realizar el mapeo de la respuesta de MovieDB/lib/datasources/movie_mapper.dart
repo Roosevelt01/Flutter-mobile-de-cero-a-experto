@@ -14,9 +14,11 @@ class MovieMapper {
     originalTitle: moviedb.originalTitle,
     overview: moviedb.overview,
     popularity: moviedb.popularity,
+
     posterPath: (moviedb.posterPath != '')
       ? 'https://image.tmdb.org/t/p/w500${ moviedb.posterPath }'
       : 'no-poster', // Paso 1: Asigna un identificador para luego filtrar las películas que no tienen póster.
+    
     releaseDate: moviedb.releaseDate,
     title: moviedb.title,
     video: moviedb.video,
