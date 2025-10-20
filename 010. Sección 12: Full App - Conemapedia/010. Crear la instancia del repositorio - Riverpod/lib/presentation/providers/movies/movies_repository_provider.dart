@@ -4,9 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // Paso 1: Provider de solo lectura para el repositorio de películas.
 // Su propósito es proporcionar una instancia inmutable de MovieRepositoryImpl.
-/*final movieRepositoryProvider = Provider((ref) {
+final movieRepositoryProvider = Provider((ref) {
   // La implementación concreta del repositorio que usa TheMovieDB como fuente de datos.
-});*/
+});
 
 // Paso 2: Implementación del provider.
 final movieRepositoryProvider = Provider((ref) {
