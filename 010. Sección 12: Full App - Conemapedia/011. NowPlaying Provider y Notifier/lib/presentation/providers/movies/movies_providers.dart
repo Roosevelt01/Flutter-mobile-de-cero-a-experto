@@ -1,6 +1,5 @@
 
 // Paso 1: Definición de la clase Notifier.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -9,10 +8,8 @@ import 'package:flutter_riverpod/legacy.dart';
 class MoviesNotifier extends StateNotifier<List<Movie>> {
 
 }
-*/
 
 // Paso 2: Inicialización del estado.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -21,10 +18,8 @@ class MoviesNotifier extends StateNotifier<List<Movie>> {
   // con el estado inicial: una lista vacía de películas.
   MoviesNotifier(): super([]);
 }
-*/
 
 // Paso 3: Creación del Provider y control de paginación.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -39,10 +34,8 @@ class MoviesNotifier extends StateNotifier<List<Movie>> {
 
   MoviesNotifier(): super([]); 
 }
-*/
 
 // Paso 4: Definición del método para cargar más películas.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -58,10 +51,8 @@ class MoviesNotifier extends StateNotifier<List<Movie>> {
   // 4.1: Se define el método asíncrono que la UI llamará para cargar la siguiente página.
   Future<void> loadNextPage() async {}
 }
-*/
 
 // Paso 5: Implementación del incremento de página.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -78,10 +69,8 @@ class MoviesNotifier extends StateNotifier<List<Movie>> {
     currentPage++; // 5.1: Se incrementa el contador de la página.
   }
 }
-*/
 
 // Paso 6: Inyección de dependencias para la obtención de datos.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -106,10 +95,8 @@ class MoviesNotifier extends StateNotifier<List<Movie>> {
     currentPage++;
   }
 }
-*/
 
 // Paso 7: Lógica final para cargar y actualizar el estado.
-/*
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -135,9 +122,8 @@ class MoviesNotifier extends StateNotifier<List<Movie>> {
     state = [...state, ...movies];
   }
 }
-*/
 
-// Paso 8: Conexión final del Provider con el Repositorio.
+// Paso 8: Conexión final del Provider con el Repositorio.(Código final)
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movies_repository_provider.dart';
 import 'package:flutter_riverpod/legacy.dart';
