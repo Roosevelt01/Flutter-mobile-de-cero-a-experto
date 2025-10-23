@@ -10,14 +10,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _HomeBiew(), // Se crea la vista principal.
+      body: _HomeView(), // Se crea la vista principal.
     );
   }
 }
 
 // Widget para el cuerpo de la pantalla.
-class _HomeBiew extends StatelessWidget {
-  const _HomeBiew();
+class _HomeView extends StatelessWidget {
+  const _HomeView();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _HomeBiew(),
+      body: _HomeView(),
     );
   }
 }
