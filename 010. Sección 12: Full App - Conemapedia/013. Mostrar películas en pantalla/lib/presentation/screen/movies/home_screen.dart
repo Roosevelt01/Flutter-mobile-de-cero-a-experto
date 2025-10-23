@@ -1,4 +1,4 @@
-//Paso 1:
+// Paso 1: Estructura inicial de la pantalla.
 /*import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,12 +10,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _HomeBiew(),//Paso 1.1:
+      body: _HomeBiew(), // Se crea la vista principal.
     );
   }
 }
 
-//Paso 1.2:
+// Widget para el cuerpo de la pantalla.
 class _HomeBiew extends StatelessWidget {
   const _HomeBiew();
 
@@ -25,7 +25,7 @@ class _HomeBiew extends StatelessWidget {
   }
 }*/
 
-//Paso 2:
+// Paso 2: Convertir a StatefulWidget.
 /*import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-//Paso 2.1: se cambiat staless por stateful
+// Se convierte _HomeView de StatelessWidget a StatefulWidget.
 class _HomeBiew extends StatefulWidget {
   const _HomeBiew();
 
@@ -57,7 +57,7 @@ class _HomeViewState extends State<_HomeBiew> {
   }
 }*/
 
-//Paso 3:
+// Paso 3: Añadir ciclo de vida.
 /*import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -83,7 +83,7 @@ class _HomeBiew extends StatefulWidget {
 
 class _HomeViewState extends State<_HomeBiew> {
 
-  //Paso 3.1: se agrega el metodo initState
+  // Se añade el método initState para futuras inicializaciones.
   @override
   void initState() {
     super.initState();
@@ -95,7 +95,7 @@ class _HomeViewState extends State<_HomeBiew> {
   }
 }*/
 
-//Paso 4:
+// Paso 4: Integración con Riverpod.
 /*import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -113,16 +113,16 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-//Paso 4.1: se cambia StatefulWidget por ConsumerStatefulWidget
+// Se convierte a ConsumerStatefulWidget para usar Riverpod.
 class _HomeBiew extends ConsumerStatefulWidget {
   const _HomeBiew();
 
   
   @override
-  _HomeViewState createState() => _HomeViewState(); // Paso 4.2: se colo _HomeViewState al principio
+  _HomeViewState createState() => _HomeViewState(); // Se ajusta el método createState.
 }
 
-//Paso 4.3: se cambia State por ConsumerState
+// Se cambia State por ConsumerState para tener acceso a `ref`.
 class _HomeViewState extends ConsumerState<_HomeBiew> {
 
   @override
@@ -136,7 +136,7 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   }
 }*/
 
-//Paso 5:
+// Paso 5: Cargar datos iniciales.
 /*import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -168,7 +168,7 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   void initState() {
     super.initState();
 
-    //Paso 5.1: cargar los movies
+    // Se cargan las películas al iniciar el widget.
     ref.read(nowPlayingMoviesProvider.notifier).loadNextPage();
   }
 
@@ -178,7 +178,7 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   }
 }*/
 
-//Paso 6:
+// Paso 6: Escuchar el estado de las películas.
 /*import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -216,13 +216,13 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   @override
   Widget build(BuildContext context) {
 
-    //Paso 6.1: escuchar los movies
+    // Se escucha el provider para obtener la lista de películas.
     final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);
     return Placeholder();
   }
 }*/
 
-//Paso 7:
+// Paso 7: Mostrar las películas en la UI.
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -261,7 +261,7 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   Widget build(BuildContext context) {
 
     final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);
-    //Paso 7.1: mostrar los movies en una lista
+    // Se muestran las películas obtenidas en un ListView.
     return ListView.builder(
       itemCount: nowPlayingMovies.length,
       itemBuilder: (context, index) {
