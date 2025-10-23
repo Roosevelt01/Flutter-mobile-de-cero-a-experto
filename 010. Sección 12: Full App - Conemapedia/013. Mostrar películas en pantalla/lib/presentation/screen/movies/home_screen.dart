@@ -74,14 +74,14 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class _HomeBiew extends StatefulWidget {
-  const _HomeBiew();
+class _HomeView extends StatefulWidget {
+  const _HomeView();
 
   @override
-  State<_HomeBiew> createState() => _HomeViewState();
+  State<_HomeView> createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<_HomeBiew> {
+class _HomeViewState extends State<_HomeView> {
 
   // Se añade el método initState para futuras inicializaciones.
   @override
@@ -108,14 +108,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _HomeBiew(),
+      body: _HomeView(),
     );
   }
 }
 
 // Se convierte a ConsumerStatefulWidget para usar Riverpod.
-class _HomeBiew extends ConsumerStatefulWidget {
-  const _HomeBiew();
+class _HomeView extends ConsumerStatefulWidget {
+  const _HomeView();
 
   
   @override
@@ -123,7 +123,7 @@ class _HomeBiew extends ConsumerStatefulWidget {
 }
 
 // Se cambia State por ConsumerState para tener acceso a `ref`.
-class _HomeViewState extends ConsumerState<_HomeBiew> {
+class _HomeViewState extends ConsumerState<_HomeView> {
 
   @override
   void initState() {
