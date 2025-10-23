@@ -236,19 +236,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _HomeBiew(),
+      body: _HomeView(),
     );
   }
 }
 
-class _HomeBiew extends ConsumerStatefulWidget {
-  const _HomeBiew();
+class _HomeView extends ConsumerStatefulWidget {
+  const _HomeView();
 
   @override
   _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomeViewState extends ConsumerState<_HomeBiew> {
+class _HomeViewState extends ConsumerState<_HomeView> {
 
   @override
   void initState() {
