@@ -1,5 +1,5 @@
 // Paso 1: Estructura inicial de la pantalla.
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   
@@ -23,10 +23,10 @@ class _HomeBiew extends StatelessWidget {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 // Paso 2: Convertir a StatefulWidget.
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   
@@ -55,10 +55,10 @@ class _HomeViewState extends State<_HomeBiew> {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 // Paso 3: Añadir ciclo de vida.
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   
@@ -93,10 +93,10 @@ class _HomeViewState extends State<_HomeBiew> {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 // Paso 4: Integración con Riverpod.
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -134,10 +134,10 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 // Paso 5: Cargar datos iniciales.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -176,10 +176,10 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 // Paso 6: Escuchar el estado de las películas.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -220,9 +220,9 @@ class _HomeViewState extends ConsumerState<_HomeBiew> {
     final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);
     return Placeholder();
   }
-}*/
+}
 
-// Paso 7: Mostrar las películas en la UI.
+// Paso 7: Mostrar las películas en la UI.(Código final)
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
