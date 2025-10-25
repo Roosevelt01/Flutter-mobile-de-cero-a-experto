@@ -129,10 +129,7 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
-
-
-
-//Paso 4: Se envuelve en un Container para visualizar el área del AppBar.
+//Paso 5: Se envuelve en un Container para visualizar el área del AppBar.
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -146,8 +143,8 @@ class CustomAppBar extends StatelessWidget {
     final titleStyle = Theme.of(context).textTheme.titleMedium;
 
     return SafeArea(
-      child: Container(//Paso 4.1: Se agrega un contenedor para visualizar el área del widget.
-      color: Colors.red,
+      child: Container( // Contenedor temporal para depuración 
+      color: Colors.red, // Color para visualizar el área
         child: Padding(
           padding : const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: SizedBox(
@@ -174,7 +171,7 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
-//Paso 5: Se ajusta el SafeArea para que no aplique en la parte inferior.
+//Paso 6: Se ajusta el SafeArea para que no aplique en la parte inferior.
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
