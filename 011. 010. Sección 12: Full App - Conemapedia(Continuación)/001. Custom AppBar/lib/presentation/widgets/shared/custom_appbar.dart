@@ -185,7 +185,7 @@ class CustomAppBar extends StatelessWidget {
     final titleStyle = Theme.of(context).textTheme.titleMedium;
 
     return SafeArea(
-      bottom: false,//Paso 5.1: Se desactiva el SafeArea en la parte inferior.
+      bottom: false,// Evita añadir padding inferior innecesario
       child: Container(
       color: Colors.red,
         child: Padding(
