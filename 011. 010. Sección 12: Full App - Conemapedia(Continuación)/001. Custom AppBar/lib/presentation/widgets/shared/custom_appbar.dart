@@ -83,12 +83,6 @@ class CustomAppBar extends StatelessWidget {
               Text('Cinemapedia', style: titleStyle?.copyWith(color: colors.primary) ),
 
               const Spacer(),//Paso 3.1: Se agrega un Spacer para empujar el botón a la derecha.
-
-               IconButton(onPressed: (){
-
-               },
-               icon: const Icon(Icons.search)
-               )
             ],
           )
         )
