@@ -49,12 +49,7 @@ class CustomAppBar extends StatelessWidget {
                //Paso 2.5: Título de la aplicación.
               Text('Cinemapedia', style: titleStyle?.copyWith(color: colors.primary) ),
 
-               //Paso 2.6: Botón para la acción de búsqueda.
-               IconButton(onPressed: (){
-
-               },
-               icon: const Icon(Icons.search)
-               )
+              // Faltan Spacer y Botón
             ],
           )
         )
