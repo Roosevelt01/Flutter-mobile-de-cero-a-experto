@@ -91,6 +91,47 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
+//Paso 4: Añadir el Botón de Búsqueda (IconButton)
+import 'package:flutter/material.dart';
+
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
+    final titleStyle = Theme.of(context).textTheme.titleMedium;
+
+    return SafeArea(
+      child: Padding(
+        padding : const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: SizedBox(
+          width: double.infinity,
+          child: Row(
+            children: [
+              Icon(Icons.movie_outlined, color: colors.primary),
+              const SizedBox(width: 5),
+              Text('Cinemapedia', style: titleStyle?.copyWith(color: colors.primary) ),
+
+              const Spacer(),
+
+              IconButton( // Añadir IconButton
+                onPressed: (){},
+                icon: const Icon(Icons.search)
+              )
+            ],
+          )
+        )
+      )
+    );
+  }
+}
+
+
+
+
 //Paso 4: Se envuelve en un Container para visualizar el área del AppBar.
 import 'package:flutter/material.dart';
 
