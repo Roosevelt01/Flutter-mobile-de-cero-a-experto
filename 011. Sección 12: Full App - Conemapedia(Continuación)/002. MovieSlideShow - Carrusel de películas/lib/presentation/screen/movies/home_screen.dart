@@ -3,7 +3,7 @@ import 'package:cinemapedia/presentation/widgets/widgets.dart';//Paso 3.1: impor
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-//Pas 1: Borramos el Expanded con el ListView y agregamos el MoviesSlideshow 
+//Paso 1: Borramos el Expanded con el ListView y agregamos el MoviesSlideshow 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home-screen';
 
