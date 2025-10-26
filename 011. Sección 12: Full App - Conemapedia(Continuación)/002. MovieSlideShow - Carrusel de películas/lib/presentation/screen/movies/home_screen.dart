@@ -38,7 +38,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 
         const CustomAppBar(),
 
-        MoviesSlideshow( //Paso 3.2: Usar el MoviesSlideshow
+        MoviesSlideshow( //Paso 1.1: Usar el MoviesSlideshow
           movies: nowPlayingMovies,
         ),
       ],
