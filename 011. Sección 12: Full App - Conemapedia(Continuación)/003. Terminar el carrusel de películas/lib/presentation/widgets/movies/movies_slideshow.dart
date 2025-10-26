@@ -4,7 +4,7 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 //Paso 1: Crear el widget MoviesSlideshow que recibe una lista de películas y las muestra en un Swiper.
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -41,10 +41,10 @@ class _Slide extends StatelessWidget {
       child: Placeholder(),
     );
   }
-}*/
+}
 
 //Paso 2: Agregar decoración a cada slide con bordes redondeados y sombra.
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -97,10 +97,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: Integrar la imagen de la película en cada slide.
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -155,10 +155,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 4: Mostrar la imagen de la película usando Image.network.
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -216,10 +216,10 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 5: Agregar un indicador de carga mientras se carga la imagen
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -286,7 +286,7 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 6: Agregar una animación de desvanecimiento cuando la imagen se carga completamente.(Código final)
 class MoviesSlideshow extends StatelessWidget {
