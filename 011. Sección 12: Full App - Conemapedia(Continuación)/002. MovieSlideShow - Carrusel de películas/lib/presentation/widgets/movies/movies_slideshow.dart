@@ -80,11 +80,11 @@ class MoviesSlideshow extends StatelessWidget {
       height: 210,
       width: double.infinity,
       child: Swiper(
-        viewportFraction: 0.8,
-        scale: 0.9,
-        autoplay: true,
+        viewportFraction: 0.8, // Mostrar parte de la siguiente tarjeta
+        scale: 0.9, // Efecto de escala
+        autoplay: true, // Reproducción automática
         itemCount: movies.length, 
-        itemBuilder: (context, index) =>  _Slide(movie: movies[index]), // Paso 4.1: Construir cada slide con el widget _Slide;
+        itemBuilder: (context, index) =>  _Slide(movie: movies[index]), // Uso de arrow function
       )
     );
   }
