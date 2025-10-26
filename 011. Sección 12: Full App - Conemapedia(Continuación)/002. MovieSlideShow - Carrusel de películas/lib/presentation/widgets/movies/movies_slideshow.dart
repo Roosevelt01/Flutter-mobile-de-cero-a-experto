@@ -65,7 +65,7 @@ class _Slide extends StatelessWidget {
   }
 }
 
-//Paso 5: Código final completo
+//Paso 4: Personalizar la Apariencia del Swiper(Código Final)
 class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
@@ -80,6 +80,9 @@ class MoviesSlideshow extends StatelessWidget {
       height: 210,
       width: double.infinity,
       child: Swiper(
+        viewportFraction: 0.8,
+        scale: 0.9,
+        autoplay: true,
         itemCount: movies.length, 
         itemBuilder: (context, index) =>  _Slide(movie: movies[index]), // Paso 4.1: Construir cada slide con el widget _Slide;
       )
