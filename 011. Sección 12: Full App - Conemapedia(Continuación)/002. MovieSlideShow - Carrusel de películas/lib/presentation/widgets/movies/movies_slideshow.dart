@@ -28,7 +28,7 @@ class MoviesSlideshow extends StatelessWidget {
   }
 }
 
-//Paso 3: Completar el itemBuilder del Swiper
+//Paso 3: Configurar SizedBox y Swiper Básico
 class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
