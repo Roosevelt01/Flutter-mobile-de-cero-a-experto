@@ -7,7 +7,7 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  card_swiper: ^3.0.1
+  card_swiper: ^3.0.1 # O la versión más reciente
   dio: ^5.9.0
   flutter:
     sdk: flutter
