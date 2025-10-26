@@ -44,17 +44,16 @@ class MoviesSlideshow extends StatelessWidget {
       width: double.infinity,
       child: Swiper(
         itemCount: movies.length, 
-        // Paso 4.1: Construir cada slide con el widget _Slide
         itemBuilder: (context, index) {
-          final movie = movies[index]; // Obtener la película actual
-          return  _Slide(movie: movie); // Pasar la película al widget _Slide
+          final movie = movies[index];
+          return  _Slide(movie: movie); 
         }
       )
     );
   }
 }
 
-//Paso 4.2: Crear el widget _Slide
+//Paso 3.2: Crear el widget _Slide
 class _Slide extends StatelessWidget {
   final Movie movie;
 
