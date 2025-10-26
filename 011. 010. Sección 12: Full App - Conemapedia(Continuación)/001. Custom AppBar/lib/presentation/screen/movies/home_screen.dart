@@ -136,9 +136,9 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     return Column(
       children: [
 
-        CustomAppBar(),//Paso 3.2: agregar el CustomAppBar
+        CustomAppBar(),// Se añade el AppBar personalizado
 
-        Expanded(
+        Expanded( // Se envuelve el ListView
           child: ListView.builder(
             itemCount: nowPlayingMovies.length,
             itemBuilder: (context, index) {
