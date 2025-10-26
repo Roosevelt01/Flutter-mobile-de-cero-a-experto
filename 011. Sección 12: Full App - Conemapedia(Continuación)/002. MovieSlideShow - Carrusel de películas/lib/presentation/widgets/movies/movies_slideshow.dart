@@ -44,10 +44,12 @@ class MoviesSlideshow extends StatelessWidget {
       height: 210,
       width: double.infinity,
       child: Swiper(
-        itemCount: movies.length, 
-        
-      )
-    );
+        itemCount: movies.length,
+        itemBuilder: (context, index) {
+          final movie = movies[index];
+          return _Slide(movie: movie);
+        }
+      );
   }
 }
 
