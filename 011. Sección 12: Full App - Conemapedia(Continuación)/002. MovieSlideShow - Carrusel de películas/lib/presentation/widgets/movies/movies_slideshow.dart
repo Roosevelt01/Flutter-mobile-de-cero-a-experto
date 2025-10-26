@@ -28,33 +28,7 @@ class MoviesSlideshow extends StatelessWidget {
   }
 }
 
-//Paso 3: Se agrega SizedBox y Swiper
-class MoviesSlideshow extends StatelessWidget {
-  final List<Movie> movies;
-
-  const MoviesSlideshow({
-    super.key, 
-    required this.movies 
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    // Paso 3.1: Usar el paquete card_swiper para mostrar las películas en un carrusel
-    return SizedBox(
-      height: 210,
-      width: double.infinity,
-      child: Swiper(
-        itemCount: movies.length,
-        itemBuilder: (context, index) {
-          final movie = movies[index];
-          return _Slide(movie: movie);
-        }
-      );
-    )
-  }
-}
-
-//Paso 4: Completar el itemBuilder del Swiper
+//Paso 3: Completar el itemBuilder del Swiper
 class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
