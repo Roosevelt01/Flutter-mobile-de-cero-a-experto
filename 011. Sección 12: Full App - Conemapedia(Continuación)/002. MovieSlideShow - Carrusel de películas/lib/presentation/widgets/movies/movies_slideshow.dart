@@ -50,6 +50,7 @@ class MoviesSlideshow extends StatelessWidget {
           return _Slide(movie: movie);
         }
       );
+    )
   }
 }
 
