@@ -3,7 +3,7 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 //Paso 1: Crear el widget MoviesSlideshow
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
 
   const MoviesSlideshow({super.key});
 
@@ -11,10 +11,10 @@ import 'package:flutter/material.dart';
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 //Paso 2: Agregar la lista de películas como propiedad
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies; //Paso 2.1: Agregar la propiedad movies
 
   const MoviesSlideshow({
@@ -26,10 +26,10 @@ import 'package:flutter/material.dart';
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 //Paso 3: Se agrega SizedBox y Swiper
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -49,10 +49,10 @@ import 'package:flutter/material.dart';
       )
     );
   }
-}*/
+}
 
 //Paso 4: Completar el itemBuilder del Swiper
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -87,7 +87,7 @@ class _Slide extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
-}*/
+}
 
 //Paso 5: Código final completo
 class MoviesSlideshow extends StatelessWidget {
