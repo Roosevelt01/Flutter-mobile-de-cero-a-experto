@@ -4,7 +4,7 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 //Paso 1: Crear el widget MoviesSlideshow que recibe una lista de películas
-/*class MoviesSlideshow extends StatelessWidget {
+class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
   const MoviesSlideshow({
@@ -78,7 +78,7 @@ class _Slide extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: 
 class MoviesSlideshow extends StatelessWidget {
