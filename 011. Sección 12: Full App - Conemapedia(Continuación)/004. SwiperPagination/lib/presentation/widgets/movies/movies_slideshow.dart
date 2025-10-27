@@ -24,6 +24,7 @@ class MoviesSlideshow extends StatelessWidget {
         viewportFraction: 0.8, 
         scale: 0.9, 
         autoplay: true, 
+        // Añadir la sección de paginación
         pagination: SwiperPagination( // Indicadores de paginación
           builder: DotSwiperPaginationBuilder( // Puntos indicadores
             activeColor: colors.primary, // Color del punto activo
