@@ -93,7 +93,7 @@ class MoviesSlideshow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final colors = Theme.of(context).colorScheme;// Obtener los colores del tema actual
+    final colors = Theme.of(context).colorScheme;
   
     return SizedBox(
       height: 210,
