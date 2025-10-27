@@ -81,7 +81,7 @@ class _Slide extends StatelessWidget {
   }
 }
 
-//Paso 2: 
+//Paso 2: Ajustar la Posición de la Paginación.
 class MoviesSlideshow extends StatelessWidget {
   final List<Movie> movies;
 
