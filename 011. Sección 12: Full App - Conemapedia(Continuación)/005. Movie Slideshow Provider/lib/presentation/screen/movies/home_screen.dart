@@ -35,7 +35,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
   Widget build(BuildContext context) {
     // Se obtiene la lista de películas optimizada para el slideshow desde el provider.
     // Paso 1.1: Observa el provider que expone las películas para el slideshow.
-    final nowPlayingMovies = ref.watch( moviesSlideshowProvider );
+    final nowPlayingMovies = ref.watch( moviesSlideshowProvider ); 
 
     return Column(
       children: [
