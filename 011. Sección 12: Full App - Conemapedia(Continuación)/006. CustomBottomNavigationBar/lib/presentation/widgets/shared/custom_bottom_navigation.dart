@@ -1,6 +1,5 @@
 // Paso 1: Define la estructura inicial del widget de navegación.
-
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
 
@@ -10,7 +9,7 @@ class CustomBottomNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 // Paso 2: Implementa el widget `BottomNavigationBar`.(Código final)
 import 'package:flutter/material.dart';
