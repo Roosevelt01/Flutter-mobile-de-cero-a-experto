@@ -1,21 +1,21 @@
 
 // Paso 1: Definición inicial del provider.
-/*import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // Se crea un provider simple que inicialmente no retorna datos (null).
-final moviesSlideshowProvider = Provider((ref) => null );*/
+final moviesSlideshowProvider = Provider((ref) => null );
 
 // Paso 2: Conectar con el provider de películas.
-/*import 'package:cinemapedia/presentation/providers/movies/movies_providers.dart';
+import 'package:cinemapedia/presentation/providers/movies/movies_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final moviesSlideshowProvider = Provider((ref) {
   // El provider ahora "observa" (watch) el estado de `nowPlayingMoviesProvider` para reaccionar a sus cambios.
   final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);
-});*/
+});
 
 // Paso 3: Limitar el número de películas para el slideshow.
-/*import 'package:cinemapedia/presentation/providers/movies/movies_providers.dart';
+import 'package:cinemapedia/presentation/providers/movies/movies_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final moviesSlideshowProvider = Provider((ref) {
@@ -26,9 +26,9 @@ final moviesSlideshowProvider = Provider((ref) {
 
   // Se limita el resultado a las primeras 6 películas de la lista.
   return nowPlayingMovies.sublist(0, 6);
-});*/
+});
 
-// Paso 4: Versión final con tipado explícito y lógica robusta.
+// Paso 4: Versión final con tipado explícito y lógica robusta.(Código final)
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movies_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
