@@ -141,9 +141,9 @@ class _Title extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container();
   }
-}*/
+}
 
-//Paso 6: 
+//Paso 6: Implementar la UI del Widget _Title
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
@@ -163,11 +163,9 @@ class MovieHorizontalListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    // Paso 6.1: Se define la estructura principal del widget.
     return SizedBox(
       height: 250,
       child: Column(children: [
-        // Paso 6.2: Se muestra el título y subtítulo si existen.
         if( title != null || subTitle != null )
           _Title( title: title, subTitle: subTitle ) 
       ],)
@@ -175,7 +173,6 @@ class MovieHorizontalListview extends StatelessWidget {
   }
 }
 
-// Paso 4: Se crea un widget privado para mostrar el título y subtítulo.
 class _Title extends StatelessWidget {
   final String? title; 
   final String? subTitle;
@@ -185,7 +182,6 @@ class _Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    //Paso 6.1:
     // Paso 6.1: Se obtiene el estilo del texto para el título desde el tema de la aplicación.
     final titleStyle = Theme.of(context).textTheme.titleLarge;
 
