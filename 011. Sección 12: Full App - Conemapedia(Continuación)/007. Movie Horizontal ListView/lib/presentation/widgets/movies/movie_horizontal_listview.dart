@@ -100,8 +100,8 @@ class _Title extends StatelessWidget {
   }
 }
 
-//Paso 5: 
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+//Paso 5: Implementar el Renderizado Condicional del Título
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
