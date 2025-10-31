@@ -123,7 +123,7 @@ class MovieHorizontalListview extends StatelessWidget {
     return SizedBox(
       height: 250,
       child: Column(children: [
-        //PAso 5.1: 
+        //PAso 5.1: En el build de MovieHorizontalListview, añade la lógica para mostrar el _Title solo si title o subTitle no son nulos.
         if( title != null  || subTitle != null )
           _Title(title!, subTitle: subTitle) // Mostrar el título solo si no es nulo
       ],)
