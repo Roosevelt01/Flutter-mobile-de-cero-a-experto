@@ -1,5 +1,5 @@
 // Paso 1: Define la estructura básica del widget `MovieHorizontalListview`.
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
   const MovieHorizontalListview({super.key});
@@ -8,10 +8,10 @@ class MovieHorizontalListview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container();
   }
-}*/
+}
 
 // Paso 2: Define las propiedades que recibirá el widget para hacerlo reutilizable.
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -31,10 +31,10 @@ class MovieHorizontalListview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Placeholder(); // Aquí iría la implementación del widget
   }
-}*/
+}
 
-// Paso 3: 
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+// Paso 3: Establecer la Estructura de Column y SizedBox
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -52,16 +52,17 @@ class MovieHorizontalListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Paso 3.1: 
+    //Paso 3.1: Se usa un SizedBox para darle una altura fija y una Column para organizar 
+    // verticalmente el título y la futura lista horizontal.
     return SizedBox(
       height: 300,
       child: Column(children: [],)
     ); 
   }
-}*/
+}
 
-// Paso 4: 
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+// Paso 4: Crear el Widget Interno _Title
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -86,7 +87,7 @@ class MovieHorizontalListview extends StatelessWidget {
   }
 }
 
-// Paso 4.2:
+// Paso 4.1: Crea un StatelessWidget privado (_Title) para encapsular el diseño del encabezado.
 class _Title extends StatelessWidget {
   final String? title; // Título opcional
   final String? subTitle; // Subtítulo opcional
@@ -95,9 +96,9 @@ class _Title extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(); // Placeholder temporal
   }
-}*/
+}
 
 //Paso 5: 
 /*import 'package:cinemapedia/domain/entities/movie.dart';
