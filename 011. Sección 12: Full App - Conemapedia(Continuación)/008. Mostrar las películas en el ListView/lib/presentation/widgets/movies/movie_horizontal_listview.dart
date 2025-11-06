@@ -1,5 +1,5 @@
 //Paso 1: Define la estructura inicial del widget MovieHorizontalListview.
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -72,7 +72,7 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Introduce el widget _Slide para representar cada película individualmente.
 /*import 'package:cinemapedia/domain/entities/movie.dart';
