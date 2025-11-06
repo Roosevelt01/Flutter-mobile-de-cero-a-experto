@@ -75,7 +75,7 @@ class _Title extends StatelessWidget {
 }
 
 //Paso 2: Introduce el widget _Slide para representar cada película individualmente.
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -159,10 +159,10 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: Añade un margen horizontal a cada elemento _Slide.
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -248,10 +248,10 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 4: Implementa la visualización de la imagen del póster de la película dentro de cada _Slide.
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 class MovieHorizontalListview extends StatelessWidget {
@@ -352,10 +352,10 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 5: Añade un indicador de carga y una animación de aparición para las imágenes de las películas.
-/*import 'package:animate_do/animate_do.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
@@ -468,10 +468,10 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 6: 
-/*import 'package:animate_do/animate_do.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
@@ -599,7 +599,7 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 7: 
 import 'package:animate_do/animate_do.dart';
