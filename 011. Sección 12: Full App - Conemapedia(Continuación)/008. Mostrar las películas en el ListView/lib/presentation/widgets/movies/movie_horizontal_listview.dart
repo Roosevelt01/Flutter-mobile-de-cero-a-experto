@@ -416,8 +416,8 @@ class _Slide extends StatelessWidget {
               child: ClipRRect( 
                 borderRadius: BorderRadius.circular(20), 
                 child: Image.network( 
-                  movie.posterPath, // Asegura que la imagen llene el espacio
-                  fit: BoxFit.cover, 
+                  movie.posterPath, 
+                  fit: BoxFit.cover, // Asegura que la imagen llene el espacio 
                   width: 80,
                   loadingBuilder: (context, child, loadingProgress) { // Constructor para mostrar un widget mientras la imagen se carga.
                     if(loadingProgress != null){
