@@ -19,7 +19,7 @@ class MovieHorizontalListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 250, // Se ajusta la altura total
       child: Column(
         children: [
           if (title != null || subTitle != null)
