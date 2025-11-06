@@ -308,12 +308,12 @@ class _Slide extends StatelessWidget {
        children: [
             // Paso 4.1: Define un contenedor de tamaño fijo para la imagen del póster.
             SizedBox(
-              width: 120,
+              width: 180,
               child: ClipRRect( // Recorta el contenido de su hijo en una forma rectangular redondeada.
                 borderRadius: BorderRadius.circular(20), // Aplica un radio de borde de 20 a las esquinas.
                 child: Image.network( // Muestra una imagen obtenida de la red.
                   movie.posterPath, // La URL de la imagen del póster de la película.
-                  width: 150, // Agregale comentario 
+                  width: 80, // Sugerencia de ancho para la imagen
               ),
               ),
             )
