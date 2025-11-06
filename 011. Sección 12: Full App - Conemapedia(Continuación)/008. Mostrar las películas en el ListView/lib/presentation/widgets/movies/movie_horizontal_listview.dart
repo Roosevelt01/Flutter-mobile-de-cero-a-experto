@@ -412,14 +412,13 @@ class _Slide extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
        children: [
             SizedBox(
-              width: 120,
+              width: 150,
               child: ClipRRect( 
                 borderRadius: BorderRadius.circular(20), 
                 child: Image.network( 
-                  movie.posterPath, 
+                  movie.posterPath, // Asegura que la imagen llene el espacio
                   fit: BoxFit.cover, 
-                  width: 150,
-                  //Paso 5.1: 
+                  width: 80,
                   loadingBuilder: (context, child, loadingProgress) { // Constructor para mostrar un widget mientras la imagen se carga.
                     if(loadingProgress != null){
                       return const Padding( // Widget para añadir espacio alrededor del indicador de carga.
@@ -428,7 +427,7 @@ class _Slide extends StatelessWidget {
                       );
                     }
 
-                    return FadeIn(child: child);
+                    return FadeIn(child: child); // Anima la entrada de la imagen
                   },
               ),
               ),
