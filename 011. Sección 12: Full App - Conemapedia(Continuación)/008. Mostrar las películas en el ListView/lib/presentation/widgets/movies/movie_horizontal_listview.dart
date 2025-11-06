@@ -469,7 +469,7 @@ class _Title extends StatelessWidget {
   }
 }
 
-//Paso 6: 
+//Paso 6: Añadir Título y Rating de la Película
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
