@@ -37,7 +37,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     
     final nowPlayingMovies = ref.watch( nowPlayingMoviesProvider );
     final slideShowMovies = ref.watch( moviesSlideshowProvider ); 
-
+d
     return Column(
       children: [
 
