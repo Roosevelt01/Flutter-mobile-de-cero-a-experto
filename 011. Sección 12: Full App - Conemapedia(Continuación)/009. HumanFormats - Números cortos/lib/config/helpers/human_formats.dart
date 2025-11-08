@@ -1,15 +1,12 @@
 //Paso 1: Se define la clase `HumanFormats` para agrupar métodos de formato.
-/*
 class HumanFormarts{
    //Paso 1.1: Se declara un método estático `number` para que pueda ser llamado sin instanciar la clase.
   static String number( double number){
      return '';
   }
 }
-*/
 
 //Paso 2: Se utiliza el paquete `intl` para formatear números de una manera más legible.
-
 import 'package:intl/intl.dart'; // Paso 2.1: Se importa el paquete `intl` para acceder a sus funcionalidades de formato.
 
 class HumanFormarts{
