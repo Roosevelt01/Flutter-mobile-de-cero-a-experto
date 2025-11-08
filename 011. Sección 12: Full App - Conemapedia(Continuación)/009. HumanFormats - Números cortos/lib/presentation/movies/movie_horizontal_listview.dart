@@ -90,15 +90,17 @@ class _Slide extends StatelessWidget {
                 style: textStyle.titleSmall,
               ),
             ),
-
             
             Row(
               children: [
                 Icon(Icons.star_half_outlined, color: Colors.yellow.shade800),
-                const SizedBox(width: 3), //Paso 1.1: Se añade un espacio de 3 píxeles entre el icono y el texto de la calificación.
+                //Paso 1.1: Se añade un espacio de 3 píxeles entre el icono y el texto de la calificación.
+                const SizedBox(width: 3), 
                 Text('${ movie.voteAverage }', style: textStyle.bodyMedium?.copyWith(color: Colors.yellow.shade800)),
-                const SizedBox(width: 10), //Paso 1.2: Se añade un espacio de 10 píxeles para separar la calificación de la popularidad.
-                Text(HumanFormarts.number( movie.popularity ), style: textStyle.bodySmall)//Paso 1.3: Se muestra la popularidad de la película, formateando el número para que sea más legible (ej. 1000 -> 1K).
+                //Paso 1.2: Se añade un espacio de 10 píxeles para separar la calificación de la popularidad.
+                const SizedBox(width: 10), 
+                //Paso 1.3: Se muestra la popularidad de la película, formateando el número para que sea más legible (ej. 1000 -> 1K).
+                Text(HumanFormarts.number( movie.popularity ), style: textStyle.bodySmall)
               ],
             ),
         ],
