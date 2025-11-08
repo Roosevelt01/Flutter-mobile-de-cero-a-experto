@@ -51,7 +51,9 @@ class _HomeViewState extends ConsumerState<_HomeView> {
           movies: nowPlayingMovies,
           title: 'En cines',
           subTitle: 'Lunes 20',  
-          loadNextPage: () => ref.read( nowPlayingMoviesProvider.notifier ).loadNextPage(), //Paso 1: Se pasa la función `loadNextPage` del provider para que el widget `MovieHorizontalListview` pueda cargar la siguiente página de películas cuando sea necesario.
+          //Paso 1: Se pasa la función `loadNextPage` del provider para que el widget `MovieHorizontalListview` 
+          //pueda cargar la siguiente página de películas cuando sea necesario.
+          loadNextPage: () => ref.read( nowPlayingMoviesProvider.notifier ).loadNextPage(), 
         )
 
       ],
