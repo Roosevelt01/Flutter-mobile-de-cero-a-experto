@@ -4,7 +4,7 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 
 //Paso 1: Se convierte el widget de StatelessWidget a StatefulWidget para poder manejar estado, como el controlador de scroll.
-/*class MovieHorizontalListview extends StatefulWidget {
+class MovieHorizontalListview extends StatefulWidget {
   final List<Movie> movies;
   final String? title;
   final String? subTitle;
@@ -140,10 +140,10 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Se introduce un ScrollController para detectar la posición del scroll y cargar más películas.
-/*class MovieHorizontalListview extends StatefulWidget {
+class MovieHorizontalListview extends StatefulWidget {
   final List<Movie> movies;
   final String? title;
   final String? subTitle;
@@ -297,7 +297,7 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: Se implementa la lógica para el "infinite scroll" y se asocia el controlador al ListView.
 class MovieHorizontalListview extends StatefulWidget {
