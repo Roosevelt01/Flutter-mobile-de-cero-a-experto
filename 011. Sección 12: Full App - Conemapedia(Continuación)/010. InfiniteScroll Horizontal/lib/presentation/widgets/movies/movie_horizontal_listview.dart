@@ -362,7 +362,6 @@ class _MovieHorizontalListviewState extends State<MovieHorizontalListview> {
                 return _Slide(movie: widget.movies[index]);
               } 
             )
-
           )
         ],
       ),
