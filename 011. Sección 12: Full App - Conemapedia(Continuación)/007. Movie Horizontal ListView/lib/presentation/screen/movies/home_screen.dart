@@ -60,16 +60,3 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     );
   }
 }
-
-lib
-└── presentation
-    ├── screen
-    │   └── movies
-    │       └── home_screen.dart   <-- Modificado
-    └── widgets
-        ├── movies
-        │   ├── movies_slideshow.dart
-        │   └── movie_horizontal_listview.dart <-- Foco de la lección
-        ├── shared
-        │   └── ...
-        └── widgets.dart           <-- Modificado
