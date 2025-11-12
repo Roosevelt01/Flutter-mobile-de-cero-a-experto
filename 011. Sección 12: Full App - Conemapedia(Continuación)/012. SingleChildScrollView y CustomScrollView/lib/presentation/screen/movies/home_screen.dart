@@ -133,7 +133,8 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);
     final slideShowMovies = ref.watch(moviesSlideshowProvider);
 
-    // Paso 2.1: Se reemplaza `SingleChildScrollView` por `CustomScrollView` para poder usar slivers, que ofrecen más control sobre el comportamiento del scroll.
+    // Paso 2.1: Se reemplaza `SingleChildScrollView` por `CustomScrollView`
+    // para poder usar slivers, que ofrecen más control sobre el comportamiento del scroll.
     return CustomScrollView(
       slivers: [
         // Se usan `slivers` en lugar de `children` para construir la vista.
@@ -183,7 +184,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                     loadNextPage:() => ref.read(nowPlayingMoviesProvider.notifier).loadNextPage(),
                   ),
 
-                  const SizedBox(height: 10), // Se añade un espacio al final para mejorar la visualización.
+                  const SizedBox(height: 10), 
                 ],
               );
             },
@@ -193,7 +194,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
 //Paso 3: Se elimina el `CustomAppBar` para prepararse para un `SliverAppBar`.
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -293,7 +294,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
 //Paso 4: Se introduce un `SliverAppBar` básico.
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -396,7 +397,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
 //Paso 5: Se configura el `SliverAppBar` para que se comporte como un AppBar flotante y se integra el `CustomAppBar` dentro de él.(Código final)
 import 'package:cinemapedia/presentation/providers/providers.dart';
