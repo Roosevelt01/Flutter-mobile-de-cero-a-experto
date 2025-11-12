@@ -1,5 +1,5 @@
 //Paso 1: Se reemplaza el `Column` por un `SingleChildScrollView` para permitir el scroll cuando el contenido excede la pantalla.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -91,10 +91,10 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Se reemplaza el `SingleChildScrollView` por un `CustomScrollView` para utilizar slivers.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -196,7 +196,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 }*/
 
 //Paso 3: Se elimina el `CustomAppBar` para prepararse para un `SliverAppBar`.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -287,7 +287,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                 ],
               );
             },
-            childCount: 1, // Se limita a 1 para que la columna se construya una sola vez.
+            childCount: 1,
           ),
         ),
       ],
@@ -296,7 +296,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 }*/
 
 //Paso 4: Se introduce un `SliverAppBar` básico.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -390,7 +390,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                 ],
               );
             },
-            childCount: 1, // Se limita a 1 para que la columna se construya una sola vez.
+            childCount: 1, 
           ),
         ),
       ],
@@ -494,7 +494,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                 ],
               );
             },
-            childCount: 1, // Se limita a 1 para que la columna se construya una sola vez.
+            childCount: 1, 
           ),
         ),
       ],
