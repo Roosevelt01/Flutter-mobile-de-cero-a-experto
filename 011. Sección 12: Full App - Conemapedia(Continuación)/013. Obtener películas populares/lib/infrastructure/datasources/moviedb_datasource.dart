@@ -55,7 +55,7 @@ class MoviedbDatasource extends MoviesDatasource {
 
     return movies;
   }
-}*/
+}
 
 // Paso 2: Refactorización y adición de nuevos métodos.
 // Se introduce un método privado `_jsonToMovies` para reutilizar la lógica de transformación
