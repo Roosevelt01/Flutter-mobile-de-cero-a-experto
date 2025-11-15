@@ -1,7 +1,7 @@
 //Paso 1: Se estructura la pantalla principal y se realiza la carga inicial de datos.
 // En esta fase se crea la vista, se cargan las películas "en cines" y "populares"
 // al iniciar la pantalla, y se comienza a construir la UI con los widgets correspondientes.
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -106,7 +106,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
 //Paso 2: Se limpia el código y se conectan correctamente los datos y funciones a la lista de "Populares".
 // Se eliminan las listas duplicadas y se asegura que el `MovieHorizontalListview` de "Populares" use el provider correcto.

@@ -3,7 +3,7 @@
 // desde la API de The Movie Database (TMDb). Se configura `dio` para las peticiones HTTP
 // y se comienza a implementar el método `getNowPlaying`.
 
-/*import 'package:cinemapedia/config/constants/environment.dart';
+import 'package:cinemapedia/config/constants/environment.dart';
 import 'package:cinemapedia/infrastructure/mappers/movie_mapper.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/moviedb_response.dart';
 import 'package:cinemapedia/domain/datasourve/movies_datasource.dart';
