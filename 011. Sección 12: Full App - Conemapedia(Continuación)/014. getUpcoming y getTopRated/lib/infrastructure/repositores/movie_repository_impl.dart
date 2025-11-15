@@ -1,6 +1,4 @@
-// Paso 1: Se crea la implementación del repositorio de películas.
-// Esta clase actúa como un intermediario entre el dominio de la aplicación (lo que la app necesita)
-// y las fuentes de datos (de dónde vienen los datos).
+
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/domain/datasourve/movies_datasource.dart';
 import 'package:cinemapedia/domain/repositories/movies_repository.dart';  
@@ -14,14 +12,24 @@ class MovieRepositoryImpl implements MoviesRepository{
     return datasource.getNowPlaying(page: page); 
   }
   
-  //Paso 1.1: Se implementa el método para obtener las películas populares.
   @override
   Future<List<Movie>> getPopular({int page = 1}) {
-    // Llama al método getPopular del datasource para obtener los datos.
-    // El repositorio no sabe de dónde vienen los datos (API, base de datos, etc.),
-    // simplemente delega la llamada a la fuente de datos.
     return datasource.getPopular(page: page);
+  }
+  
+  //Paso 1: Se implementa el método para obtener las películas mejor calificadas, cumpliendo con el contrato de MoviesRepository.
+  @override
+  Future<List<Movie>> getTopRated({int page = 1}) {
+    // Delega la llamada directamente al método correspondiente en el datasource.
+    return datasource.getTopRated(page: page);
+  }
+  
+  //Paso 2: Se implementa el método para obtener los próximos estrenos, cumpliendo con el contrato de MoviesRepository.
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) {
+    // Delega la llamada directamente al método correspondiente en el datasource.
+    return datasource.getUpcoming(page: page);
   }
 }
 
-// La función `getPopular` en esta clase es la implementación del contrato definido en `MoviesRepository`. Su única responsabilidad es llamar al método `getPopular` del `datasource` que se le inyectó y retornar el resultado. Esta separación permite cambiar la fuente de datos (por ejemplo, de TheMovieDB a otra API) sin tener que modificar la lógica de negocio que utiliza el repositorio.
+// Este archivo contiene la implementación concreta del `MoviesRepository`. La clase `MovieRepositoryImpl` actúa como un intermediario entre el dominio de la aplicación y la fuente de datos (`datasource`). Su responsabilidad es cumplir con el contrato definido por `MoviesRepository`, delegando las llamadas a los métodos correspondientes del `datasource` que se le inyecta. Esta separación permite cambiar la fuente de datos (por ejemplo, a una base de datos local) sin tener que modificar el código que consume el repositorio.

@@ -1,4 +1,3 @@
-//Paso 1: Se define el provider `nowPlayingMoviesProvider` para gestionar el estado de las películas en cartelera.
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movies_repository_provider.dart';
 import 'package:flutter_riverpod/legacy.dart';
@@ -11,16 +10,30 @@ final nowPlayingMoviesProvider = StateNotifierProvider<MoviesNotifier, List<Movi
   );
 });
 
-//Paso 1.1: Se define el provider `popularMoviesProvider` para gestionar el estado de las películas populares.
-// Sigue el mismo patrón que `nowPlayingMoviesProvider`, pero con una fuente de datos diferente.
 final popularMoviesProvider = StateNotifierProvider<MoviesNotifier, List<Movie>>((ref) {
-  // Obtiene la referencia a la función `getPopular` del repositorio de películas.
   final fetchMoreMovies = ref.watch(movieRepositoryProvider).getPopular;
 
-  // Retorna una nueva instancia del notificador, esta vez configurada para usar la función `getPopular`.
   return MoviesNotifier(
     fetchMoreMovies: fetchMoreMovies
   );
+});
+
+//Paso 1: Se crea un provider para las películas que están por estrenarse.
+final upComingMoviesProvider = StateNotifierProvider<MoviesNotifier, List<Movie>>((ref) {
+  // Se obtiene la referencia a la función `getUpcoming` del repositorio de películas.
+  final fetchMoreMovies = ref.watch(movieRepositoryProvider).getUpcoming;
+
+  // Se crea una instancia de `MoviesNotifier` pasándole la función específica para obtener las películas.
+  return MoviesNotifier(fetchMoreMovies: fetchMoreMovies);
+});
+
+//Paso 2: Se crea un provider para las películas mejor calificadas.
+final topRatedMoviesProvider = StateNotifierProvider<MoviesNotifier, List<Movie>>((ref) {
+  // Se obtiene la referencia a la función `getTopRated` del repositorio de películas.
+  final fetchMoreMovies = ref.watch(movieRepositoryProvider).getTopRated;
+
+  // Se crea una instancia de `MoviesNotifier` con la función correspondiente.
+  return MoviesNotifier(fetchMoreMovies: fetchMoreMovies);
 });
 
 typedef MovieCallback = Future<List<Movie>> Function({int page});
@@ -45,4 +58,4 @@ class MoviesNotifier extends StateNotifier<List<Movie>>{
   }
 }
 
-// El `popularMoviesProvider` es un gestor de estado que se encarga de mantener y actualizar la lista de películas populares. Utiliza la clase `MoviesNotifier` para manejar la lógica de paginación y carga de datos. Al crearse, se le inyecta la función `getPopular` del `movieRepositoryProvider`. De esta manera, cuando se llama a `loadNextPage()` en este provider, se obtendrá la siguiente página de películas populares de la API y se añadirá al estado actual, permitiendo a la UI mostrar una lista infinita de películas populares.
+// Este archivo define los `providers` de Riverpod que gestionan el estado de las diferentes listas de películas en la aplicación. Cada provider (`nowPlayingMoviesProvider`, `popularMoviesProvider`, etc.) utiliza un `MoviesNotifier` genérico para manejar la carga paginada de datos y el estado de la lista. Al centralizar la lógica en `MoviesNotifier` y simplemente pasarle la función de "fetch" correcta, se evita la duplicación de código y se mantiene una arquitectura limpia y escalable para manejar múltiples listas de películas.

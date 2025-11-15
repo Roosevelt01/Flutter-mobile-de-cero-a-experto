@@ -69,7 +69,6 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:dio/dio.dart';
 
 class MoviedbDatasource extends MoviesDatasource {
-  // Configuración inicial de Dio para las peticiones a la API de TMDb.
   final dio = Dio(
     BaseOptions(
       baseUrl: 'https://api.themoviedb.org/3',
@@ -80,16 +79,12 @@ class MoviedbDatasource extends MoviesDatasource {
     ),
   );
 
-  // Método privado para convertir la respuesta JSON en una lista de `Movie`.
   List<Movie> _jsonToMovies(Map<String, dynamic> json) {
 
-    // Parsea la respuesta JSON a un objeto `MovieDbResponse`.
     final movieDBResponse = MovieDbResponse.fromJson(json);
 
-    // Mapea la lista de resultados de la API a una lista de entidades `Movie`.
     final List<Movie> movies =
         movieDBResponse.results
-            // Filtra las películas que no tienen un póster.
             .where((moviedb) => moviedb.posterPath != 'no-poster') 
             .map((moviedb) => MovieMapper.movieDBToEntity(moviedb))
             .toList();
@@ -99,29 +94,49 @@ class MoviedbDatasource extends MoviesDatasource {
 
   @override
   Future<List<Movie>> getNowPlaying({int page = 1}) async {
-    // Realiza la petición GET para obtener las películas en cartelera.
     final response = await dio.get( '/movie/now_playing',
       queryParameters: {
         'page': page
       },
     );
 
-    // Paso 2.1: Se refactoriza el método para usar la función auxiliar `_jsonToMovies`.
     return _jsonToMovies(response.data);
   }
 
-  // Paso 2.2: Implementación del método para obtener películas populares.
   @override
   Future<List<Movie>> getPopular({int page = 1}) async {
-    // Realiza la petición GET para obtener las películas populares.
     final response = await dio.get( '/movie/popular',
       queryParameters: {
-        // Se especifica el número de página a solicitar.
         'page': page
       },
     );
 
-    // Reutiliza el método `_jsonToMovies` para procesar la respuesta.
+    return _jsonToMovies(response.data);
+  }
+
+  //Paso 1: Se implementa el método para obtener las películas mejor calificadas, cumpliendo con el contrato de MoviesDatasource.
+  @override
+  Future<List<Movie>> getTopRated({int page = 1}) async {
+    final response = await dio.get( '/movie/top_rated', // Se realiza una petición GET al endpoint 'top_rated' de la API para obtener las películas mejor calificadas.
+      queryParameters: {
+        'page': page
+      },
+    );
+
+    return _jsonToMovies(response.data);
+  }
+
+  //Paso 2: Se implementa el método para obtener los próximos estrenos, cumpliendo con el contrato de MoviesDatasource.
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) async {
+    final response = await dio.get( '/movie/upcoming', // Se realiza una petición GET al endpoint 'upcoming' de la API para obtener los próximos estrenos.
+      queryParameters: {
+        'page': page
+      },
+    );
+
     return _jsonToMovies(response.data);
   }
 }
+
+// Este archivo contiene la implementación concreta de `MoviesDatasource` utilizando la API de The Movie Database (TMDb). La clase `MoviedbDatasource` utiliza el paquete `dio` para realizar las peticiones HTTP a los diferentes endpoints de la API (`/now_playing`, `/popular`, `/top_rated`, `/upcoming`). Incluye un método privado `_jsonToMovies` que centraliza la lógica para transformar la respuesta JSON de la API en una lista de entidades `Movie`, evitando la duplicación de código y asegurando que todas las películas pasen por el mismo proceso de mapeo y filtrado.
