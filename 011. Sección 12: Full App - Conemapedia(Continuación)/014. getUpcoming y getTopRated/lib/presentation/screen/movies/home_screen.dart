@@ -1,7 +1,7 @@
 //Paso 1: Se realiza la carga inicial de datos para las nuevas categorías.
 // En este paso, se añaden las llamadas en `initState` para que, al iniciar la pantalla,
 // se dispare la carga de la primera página de películas para "próximamente" y "mejor calificadas".
-/* import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -101,13 +101,13 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
 //Paso 2: Se obtienen los datos de los nuevos providers.
 // Aquí, se utiliza `ref.watch` para suscribirse a los providers `topRatedMoviesProvider` y
 // `upComingMoviesProvider`. Esto permite que el widget se reconstruya cuando los datos de estas
 // listas de películas cambien.
-/* import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -209,11 +209,12 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
 //Paso 3: Se conectan los datos y funciones a la interfaz de usuario.
 // Este es el paso final donde se actualizan los widgets `MovieHorizontalListview` para que
-// muestren las listas de películas correctas ("próximamente" y "mejor calificadas") y se les asigna su respectiva función `loadNextPage`.
+// muestren las listas de películas correctas ("próximamente" y "mejor calificadas") y se 
+//les asigna su respectiva función `loadNextPage`.(Código final)
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
