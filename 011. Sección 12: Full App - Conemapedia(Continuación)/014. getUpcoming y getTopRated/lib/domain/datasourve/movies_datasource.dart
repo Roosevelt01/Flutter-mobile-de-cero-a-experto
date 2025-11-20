@@ -13,4 +13,9 @@ abstract class MoviesDatasource {
 
 }
 
-// Este archivo define la clase abstracta `MoviesDatasource`, que actúa como un contrato o interfaz para las fuentes de datos de películas. Al declarar los métodos que deben ser implementados (`getNowPlaying`, `getPopular`, `getUpcoming`, `getTopRated`), se asegura que cualquier clase que implemente `MoviesDatasource` proporcionará una forma estandarizada de obtener estos diferentes tipos de listas de películas. Esto es fundamental para la arquitectura limpia, ya que desacopla el dominio de la aplicación de las implementaciones concretas de dónde y cómo se obtienen los datos (por ejemplo, una API, una base de datos local, etc.).
+// Este archivo define la clase abstracta `MoviesDatasource`, que actúa como un contrato o interfaz
+// para las fuentes de datos de películas. Al declarar los métodos que deben ser 
+// implementados (`getNowPlaying`, `getPopular`, `getUpcoming`, `getTopRated`), se asegura que cualquier
+// clase que implemente `MoviesDatasource` proporcionará una forma estandarizada de obtener estos diferentes
+// tipos de listas de películas. Esto es fundamental para la arquitectura limpia, ya que desacopla el dominio 
+//de la aplicación de las implementaciones concretas de dónde y cómo se obtienen los datos (por ejemplo, una API, una base de datos local, etc.).
