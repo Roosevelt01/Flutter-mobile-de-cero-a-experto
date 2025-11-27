@@ -1,5 +1,5 @@
 // Paso 1: Agregamos Placeholder temporalmente
-/*import 'package:cinemapedia/presentation/providers/providers.dart';
+import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -101,9 +101,9 @@ class _HomeViewState extends ConsumerState<_HomeView> {
       ],
     );
   }
-}*/
+}
 
-// Paso 2: Se reemplaza el Placeholder por el FullScreenLoader
+// Paso 2: Se reemplaza el Placeholder por el FullScreenLoader(Código final)
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:cinemapedia/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,5 @@
 //Paso 1: Crear el widget FullScreenLoader
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class FullScreenLoader extends StatelessWidget {
   const FullScreenLoader({super.key});
@@ -11,7 +11,7 @@ class FullScreenLoader extends StatelessWidget {
 }*/
 
 //Paso 2: Reemplazar el Placeholder por un CircularProgressIndicator
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class FullScreenLoader extends StatelessWidget {
   const FullScreenLoader({super.key});
@@ -20,10 +20,10 @@ class FullScreenLoader extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircularProgressIndicator(); // Indicador de carga circular
   }
-}*/
+}
 
 //Paso 3: Mejorar el FullScreenLoader con un mensaje y estilo
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class FullScreenLoader extends StatelessWidget {
   const FullScreenLoader({super.key});
@@ -44,9 +44,9 @@ class FullScreenLoader extends StatelessWidget {
       ),
     ); 
   }
-}*/
+}
 
-//Paso 4: 
+//Paso 4: Agregar mensajes dinámicos al FullScreenLoader
 import 'package:flutter/material.dart';
 
 class FullScreenLoader extends StatelessWidget {
