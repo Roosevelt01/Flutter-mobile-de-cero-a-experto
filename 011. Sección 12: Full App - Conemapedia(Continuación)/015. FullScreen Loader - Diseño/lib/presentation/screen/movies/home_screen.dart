@@ -44,7 +44,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     final topRatedMovies = ref.watch(topRatedMoviesProvider);
     final upComingMovies = ref.watch(upComingMoviesProvider);
 
-     return FullScreenLoader(); // Paso 2.1: Se utiliza el FullScreenLoader mientras se carga el contenido
+     return FullScreenLoader(); // Paso 1.1: Se utiliza el FullScreenLoader mientras se carga el contenido
     
     return CustomScrollView(
       slivers: [

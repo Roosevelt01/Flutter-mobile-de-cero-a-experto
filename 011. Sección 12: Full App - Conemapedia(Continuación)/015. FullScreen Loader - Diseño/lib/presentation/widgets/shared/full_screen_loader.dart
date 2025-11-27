@@ -30,7 +30,7 @@ class FullScreenLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Paso 3.2: Seleccionar un mensaje aleatorio
+    //Paso 3.1: Seleccionar un mensaje aleatorio
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
