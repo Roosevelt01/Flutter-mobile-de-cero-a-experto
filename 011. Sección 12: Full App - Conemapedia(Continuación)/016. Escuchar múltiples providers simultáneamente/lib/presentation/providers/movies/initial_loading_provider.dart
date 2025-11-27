@@ -1,13 +1,13 @@
 //Paso 1: Crear el provider initial_loading_provider.dart
-/*import 'package:flutter_riverpod/flutter_riverpod.dart'
+import 'package:flutter_riverpod/flutter_riverpod.dart'
 
 final InitialRouteListProvider =  Provider<bool>((ref) {
   // Aquí iría la lógica para determinar si es la primera carga
   return false; // retorna false
-});*/
+});
 
 //Paso 2: Crear el provider initial_loading_provider.dart
-/*import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'movies_providers.dart'; // Paso 2.2: Importar los providers de películas
 
 final InitialRouteListProvider =  Provider<bool>((ref) {
@@ -18,10 +18,10 @@ final InitialRouteListProvider =  Provider<bool>((ref) {
   final upComingMovies = ref.watch(upComingMoviesProvider).isEmpty;
 
   return false;
-});*/
+});
 
 //Paso 3: Cambiamos las variables con step1, step2, step3 y step4. 
-// También usaremos if para retornar true si alguna de las listas está vacía
+//También usaremos if para retornar true si alguna de las listas está vacía(Código final)
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'movies_providers.dart'; 
 
