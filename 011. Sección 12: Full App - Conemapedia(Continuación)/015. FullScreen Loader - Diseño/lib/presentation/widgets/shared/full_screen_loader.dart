@@ -8,7 +8,7 @@ class FullScreenLoader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 //Paso 2: Reemplazar el Placeholder por un CircularProgressIndicator
 import 'package:flutter/material.dart';
