@@ -15,7 +15,7 @@ class _MovieScreenState extends State<MovieScreen> {
   }
 }
 
-//PAso 2: 
+//Paso 2: Agregar un parametro para el id de la pelicula
 import 'package:flutter/material.dart';
 
 class MovieScreen extends StatefulWidget {
