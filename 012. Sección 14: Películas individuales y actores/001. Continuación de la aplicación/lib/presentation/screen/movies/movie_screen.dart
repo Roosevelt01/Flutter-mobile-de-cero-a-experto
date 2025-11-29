@@ -1,5 +1,5 @@
 //PAso 1: Crear la pantalla de peliculas y su estado
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class MovieScreen extends StatefulWidget {
   const MovieScreen({super.key});
@@ -13,7 +13,7 @@ class _MovieScreenState extends State<MovieScreen> {
   Widget build(BuildContext context) {
     return Container();
   }
-}*/
+}
 
 //PAso 2: 
 import 'package:flutter/material.dart';
