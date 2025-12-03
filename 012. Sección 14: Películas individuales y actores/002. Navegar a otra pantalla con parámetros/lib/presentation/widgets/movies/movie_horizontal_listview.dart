@@ -1,5 +1,5 @@
 //Paso 1:  Crear un ListView horizontal de películas con carga perezosa.
-/*import 'package:animate_do/animate_do.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
@@ -167,9 +167,9 @@ class _Title extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-//Paso 2: Usamos Ontap para navegar a una pantalla de detalles de la película.
+//Paso 2: Usamos Ontap para navegar a una pantalla de detalles de la película.(Código final)
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
