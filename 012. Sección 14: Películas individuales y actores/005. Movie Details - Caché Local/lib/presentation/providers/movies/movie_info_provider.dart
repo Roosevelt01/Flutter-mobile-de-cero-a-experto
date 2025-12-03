@@ -1,22 +1,22 @@
 //Paso 1: Cambiamos stateless por stateful widget
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
   
-}*/
+}
 
 //Paso 2: Agregamos el metodo initState
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
     //Paso 2.1: Inicializamos el estado con un mapa vacio
     MovieMapNotifier(): super({});
-}*/
+}
 
 //Paso 3: Agregamos el metodo para actualizar el estado
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
@@ -26,10 +26,10 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
     Future<void> loadMovie() async{
 
     }
-}*/
+}
 
 //Paso 4: Agregamos la logica para cargar una pelicula solo si no esta en el estado
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
@@ -39,10 +39,10 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
       //Paso 4.1: Verificamos si la pelicula ya esta en el estado
       if(state[movieId] != null) return;
     }
-}*/
+}
 
 //Paso 5: Agregamos la logica para obtener una pelicula usando una funcion externa
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 //Paso 5.1: Definimos un typedef para la funcion que obtiene una pelicula por su ID
@@ -66,7 +66,7 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
       //Paso 5.5: Actualizamos el estado con la nueva pelicula
       state = { ...state, movieId: movie };
     }
-}*/
+}
 
 //Paso 6: Creamos el provider para el MovieMapNotifier (oódigo final)
 import 'package:cinemapedia/domain/entities/movie.dart';
