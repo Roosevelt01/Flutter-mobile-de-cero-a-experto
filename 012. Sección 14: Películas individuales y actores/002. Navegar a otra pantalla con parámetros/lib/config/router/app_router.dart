@@ -13,7 +13,7 @@ final appRouter = GoRouter(
       builder: (context, state) => const HomeScreen(),
     ),
 
-    //Paso 1: Crear la ruta para MovieScreen con un parametro de id
+    //Paso 1.1 Crear la ruta para MovieScreen con un parametro de id
     GoRoute(
       path: '/movie/:id', // Definir la ruta con un parametro de id
       name: MovieScreen.name, 
