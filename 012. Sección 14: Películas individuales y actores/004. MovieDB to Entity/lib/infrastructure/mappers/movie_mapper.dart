@@ -9,7 +9,9 @@ class MovieMapper {
     adult: moviedb.adult,
     backdropPath: (moviedb.backdropPath != '')
       ? 'https://image.tmdb.org/t/p/w500${ moviedb.backdropPath }'
-      : 'https://cdn.displate.com/artwork/270x380/2023-02-03/6b806b90ed460362ce845aec44991468_ee90576e764e6e2dc6be65372d967710.jpg',
+      : 'https://cdn.displate.com/artwork/270x380/2023-02-03/6b806b90ed460362ce845aec44991468_ee90576e764e6e2dc6be65372d967710.jpg', // URL de fallback
+    
+    // Transformación de Géneros: De objetos a lista de strings
     genreIds: moviedb.genreIds.map((e) => e.toString()).toList(),
     id: moviedb.id,
     originalLanguage: moviedb.originalLanguage,
