@@ -1,5 +1,5 @@
 //Paso 1: Creamos movieDetailsToEntity
-/*import 'package:cinemapedia/infrastructure/models/moviedb/movie_details.dart';
+import 'package:cinemapedia/infrastructure/models/moviedb/movie_details.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/movie_moviedb.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 
@@ -30,7 +30,7 @@ class MovieMapper {
   static Movie movieDetailsToEntity( MovieDetails movie ) => Movie(
     
   );
-}*/
+}
 
 //Paso 2:
 import 'package:cinemapedia/infrastructure/models/moviedb/movie_details.dart';
