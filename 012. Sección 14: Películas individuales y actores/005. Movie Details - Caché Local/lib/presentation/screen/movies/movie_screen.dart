@@ -1,5 +1,5 @@
 //PAso 1: Cambiamos stateless por stateful widget 
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class MovieScreen extends StatefulWidget {
 
@@ -25,7 +25,7 @@ class _MovieScreenState extends State<MovieScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Agregamos el metodo initState
 import 'package:flutter/material.dart';
