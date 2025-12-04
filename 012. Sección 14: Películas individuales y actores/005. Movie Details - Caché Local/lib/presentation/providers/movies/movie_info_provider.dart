@@ -32,6 +32,24 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
   }): super({});
 }
 
+//Paso 4: AObtener Datos y Actualizar el Estado
+import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:flutter_riverpod/legacy.dart';
+
+class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
+    MovieMapNotifier(): super({});
+
+    Future<void> loadMovie(String movieId) async{
+      //Paso 4.1: Verificamos si la pelicula ya esta en el estado
+      if(state[movieId] != null) return;
+    }
+}
+
+
+
+
+
+
 //Paso 4: Agregamos la logica para cargar una pelicula solo si no esta en el estado
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
