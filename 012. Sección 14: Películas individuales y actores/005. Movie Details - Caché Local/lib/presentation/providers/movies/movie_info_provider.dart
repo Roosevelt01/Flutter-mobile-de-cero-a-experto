@@ -15,17 +15,21 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
     MovieMapNotifier(): super({});
 }
 
-//Paso 3: Agregamos el metodo para actualizar el estado
+//Paso 3: Inyectar la Dependencia (getMovie)
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
+
+// Definición del tipo de función
+typedef GetMovieCallback = Future<Movie> Function(String movieId);
 
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
     MovieMapNotifier(): super({});
 
-    //Paso 3.1: Agregamos el metodo para actualizar el estado
-    Future<void> loadMovie() async{
+  final GetMovieCallback getMovie; // La dependencia
 
-    }
+  MovieMapNotifier({
+    required this.getMovie, // Inyección en el constructor
+  }): super({});
 }
 
 //Paso 4: Agregamos la logica para cargar una pelicula solo si no esta en el estado
