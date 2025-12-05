@@ -30,7 +30,7 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
   }): super({});
 }
 
-//Paso 4: AObtener Datos y Actualizar el Estado
+//Paso 4: Obtener Datos y Actualizar el Estado
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
