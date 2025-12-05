@@ -32,4 +32,3 @@ class _MovieScreenState extends State<MovieScreen> {
     );
   }
 }
-
