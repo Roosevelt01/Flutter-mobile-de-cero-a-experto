@@ -23,8 +23,6 @@ import 'package:flutter_riverpod/legacy.dart';
 typedef GetMovieCallback = Future<Movie> Function(String movieId);
 
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
-    MovieMapNotifier(): super({});
-
   final GetMovieCallback getMovie; // La dependencia
 
   MovieMapNotifier({
@@ -36,8 +34,14 @@ class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
+typedef GetMovieCallback = Future<Movie> Function(String movieId);
+
 class MovieMapNotifier extends StateNotifier<Map<String, Movie>>{
-    MovieMapNotifier(): super({});
+    final GetMovieCallback getMovie; // La dependencia
+
+    MovieMapNotifier({
+      required this.getMovie, 
+    }): super({});
 
     Future<void> loadMovie(String movieId) async{
       //Paso 4.1: Verificamos si la pelicula ya esta en el estado
