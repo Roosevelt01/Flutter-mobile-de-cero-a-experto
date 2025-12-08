@@ -1,6 +1,5 @@
-
 //Paso 1: Pasamos de StatefulWidget a ConsumerStatefulWidget
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MovieScreen extends ConsumerStatefulWidget {
@@ -18,7 +17,7 @@ class MovieScreen extends ConsumerStatefulWidget {
   //Paso 1.1: Cambiamos State<MovieScreen> por MovieScreenState  
   
   //Antes de  la modificacion:
-  /*@override
+  @override
   State<MovieScreen> createState() => _MovieScreenState();*/
 
   //Despues de la modificacion:
@@ -26,7 +25,7 @@ class MovieScreen extends ConsumerStatefulWidget {
   MovieScreenState createState() => MovieScreenState();
 }
 
-//Paso 1.1: Cambiamos State por ConsumerState
+//Paso 1.2: Cambiamos State por ConsumerState
 class MovieScreenState extends ConsumerState<MovieScreen> {
   @override
   void initState() {
@@ -43,10 +42,10 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: implemetamos ref.read en initState para llamar a loadMovie
-/*import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
+import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -92,7 +91,7 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
 }*/
 
 //Paso 3: Con la variable movie de tipo Movie? podemos acceder a los datos de la pelicula
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -131,10 +130,10 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 4: Con la variable movie de tipo Movie? podemos acceder a los datos de la pelicula
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -173,7 +172,7 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 5: Mostramos un CircularProgressIndicator mientras se carga la pelicula(Código final)
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
