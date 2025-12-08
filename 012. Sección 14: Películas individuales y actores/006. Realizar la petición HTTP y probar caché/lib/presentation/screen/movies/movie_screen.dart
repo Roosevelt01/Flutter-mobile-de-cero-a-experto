@@ -71,12 +71,10 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
      //Paso 2.1: Usamos el ref para cargar la pelicula
       ref.read(movieInfoProvider.notifier).loadMovie(widget.movieId);
 
-      //Quiero que me redactes que cuando hace clic en una pelicula, llame a loadMovie con el id de la pelicula
-      //I/flutter ( 8306): Realizando peticion para http: 1180831
-      //W/OnBackInvokedCallback( 8306): OnBackInvokedCallback is not enabled for the application.
-      //W/OnBackInvokedCallback( 8306): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
-      //E/libEGL  ( 8306): called unimplemented OpenGL ES API
-      //D/EGL_emulation( 8306): app_time_stats: avg=47.29ms min=10.58ms max=187.62ms count=22
+      //1. Al hacer clic en una película, se invoca loadMovie pasando el ID correspondiente.
+      //2. Descriptiva (Ideal para documentación).
+      //Cuando el usuario selecciona una película, se dispara la función loadMovie utilizando el movieId para obtener sus detalles.
+      //3. Enfocada en la Acción (Imperativa). Llamar a loadMovie con el ID de la película al detectar el evento de selección.
 
   }
 
