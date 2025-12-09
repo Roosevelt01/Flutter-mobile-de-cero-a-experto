@@ -92,17 +92,54 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       body: CustomScrollView( 
         physics: const ClampingScrollPhysics(), 
         slivers: [
-          _CustomSliverAppBar(movie:movie) // Paso 2.1
+          _CustomSliverAppBar(movie:movie) 
         ],
       ),
     );
   }
 }
 
+class _CustomSliverAppBar extends StatelessWidget {
+  final Movie movie;
 
-class _CustomSliverAppBar extends StatelessWidget{
-    
+  const _CustomSliverAppBar({ required this.movie });
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverAppBar(
+      backgroundColor: Colors.black,
+      expandedHeight: 200, // Altura temporal
+      foregroundColor: Colors.white,
+      flexibleSpace: FlexibleSpaceBar(
+        background: Placeholder(),
+      ),
+    );
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
