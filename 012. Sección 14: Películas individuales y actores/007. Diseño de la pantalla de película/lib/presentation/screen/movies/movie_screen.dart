@@ -93,7 +93,7 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       body: CustomScrollView( 
         physics: const ClampingScrollPhysics(), 
         slivers: [
-          //Paso 1.2: Usar el CustomSliverAppBar
+          //Paso 2.2: Usar el CustomSliverAppBar
           _CustomSliverAppBar(movie: movie),
         ],
       ),
@@ -101,7 +101,7 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
   }
 }
 
-//Paso 1.1: Crear el CustomSliverAppBar
+//Paso 2.1: Crear el CustomSliverAppBar
 class _CustomSliverAppBar extends StatelessWidget {
   
   // Creamos una variable movie de tipo Movie para recibir los datos
