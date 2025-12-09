@@ -92,13 +92,15 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       body: CustomScrollView( 
         physics: const ClampingScrollPhysics(), 
         slivers: [
-          _CustomSliverAppBar(movie:movie) 
+          _CustomSliverAppBar(movie:movie) // Paso 2.1: Llamamos a nuestro SliverAppBar personalizado. Es el primer elemento de la lista de slivers.
         ],
       ),
     );
   }
 }
 
+// Paso 2.2: Creamos el widget privado _CustomSliverAppBar
+// Este widget se encargará de mostrar la imagen y el título en la parte superior con efectos de scroll.
 class _CustomSliverAppBar extends StatelessWidget {
   final Movie movie;
 
@@ -106,13 +108,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Paso 2.3: Retornamos el SliverAppBar configurado
+    // El SliverAppBar es el componente que permite que la barra se expanda o contraiga al hacer scroll.
     return SliverAppBar(
       backgroundColor: Colors.black,
-      expandedHeight: 200, // Altura temporal
-      foregroundColor: Colors.white,
-      flexibleSpace: FlexibleSpaceBar(
-        background: Placeholder(),
-      ),
     );
   }
 }
