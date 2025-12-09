@@ -118,7 +118,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 }
 
 //Paso 3: Personalizar el SliverAppBar y usamos el backgroundColor para cambiar el color
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -180,10 +180,10 @@ class _CustomSliverAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     //Paso 3.1: Personalizar el SliverAppBar
     return SliverAppBar(
-      backgroundColor: Colors.black,// Cambiamos el color de
+      backgroundColor: Colors.black,
     );
   }
-}*/
+}
 
 //Paso 4: Agregamos la variable size para usar el 70% de la altura de la pantalla en expandedHeight y cambiamos el color de los íconos y texto con foregroundColor
 /*import 'package:cinemapedia/domain/entities/movie.dart';
