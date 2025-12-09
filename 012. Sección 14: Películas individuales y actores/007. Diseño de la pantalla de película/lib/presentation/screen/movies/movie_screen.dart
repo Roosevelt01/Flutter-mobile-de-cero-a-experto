@@ -49,6 +49,57 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
   }
 }
 
+//Paso 1: Modificamos el Scaffold para usar CustomScrollView
+import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class MovieScreen extends ConsumerStatefulWidget {
+
+  static const String name = 'movie_screen';
+
+  final String movieId;
+
+  const MovieScreen({
+    super.key,
+    required this.movieId, 
+  });
+
+  @override
+  MovieScreenState createState() => MovieScreenState();
+}
+
+class MovieScreenState extends ConsumerState<MovieScreen> {
+  @override
+  void initState() {
+    super.initState();
+      ref.read(movieInfoProvider.notifier).loadMovie(widget.movieId);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final movie = ref.watch(movieInfoProvider)[widget.movieId];
+
+    if (movie == null){
+      return const Scaffold(
+        body: Center(
+          child: CircularProgressIndicator(strokeWidth: 2),
+        ),
+      );
+    }
+
+    return Scaffold(
+      //Paso 1.1 Persornalizar el scroll
+      body: CustomScrollView( // CustomScrollView para scroll personalizado
+        physics: const ClampingScrollPhysics(), // Evita el efecto rebote
+        slivers: [
+          // Aquí irían los Slivers, como SliverAppBar, SliverList, etc.
+        ],
+      ),
+    );
+  }
+}
+
 //Paso 2: Crear el CustomSliverAppBar para mostrar la información de la película
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
