@@ -451,7 +451,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   }
 }*/
 
-//Paso 7: Agregar una segunda capa de degradado para mejorar la legibilidad en la parte superior
+//Paso 7: Agregar una segunda capa de degradado para mejorar la legibilidad en la parte superior(Código final)
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
@@ -563,7 +563,6 @@ class _CustomSliverAppBar extends StatelessWidget {
                 ),
               ),
             ) // finaliza SizedBox.expand
-
           ],
         ),
       ),
