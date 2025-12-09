@@ -259,7 +259,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 }
 
 //Paso 5: Agregar el FlexibleSpaceBar para mostrar el título de la película y la imagen de fondo
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -339,18 +339,16 @@ class _CustomSliverAppBar extends StatelessWidget {
                 movie.posterPath, // Usamos la ruta del póster de la película
                 fit: BoxFit.cover, // Cubrimos todo el espacio disponible
               ),
-
             ) 
           ],
         ),
       ),
-
     );
   }
-}*/
+}
 
 //Paso 6: Agregar un degradado para mejorar la legibilidad del texto
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -445,7 +443,6 @@ class _CustomSliverAppBar extends StatelessWidget {
                 ),
               ),
             ) // finaliza SizedBox.expand
-
           ],
         ),
       ),
