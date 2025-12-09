@@ -1,5 +1,5 @@
 //Paso 1: Modificamos el Scaffold para usar CustomScrollView
-/*import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
+import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -47,10 +47,10 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Crear el CustomSliverAppBar para mostrar la información de la película
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -115,7 +115,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 //Paso 3: Personalizar el SliverAppBar y usamos el backgroundColor para cambiar el color
 /*import 'package:cinemapedia/domain/entities/movie.dart';
