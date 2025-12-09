@@ -186,7 +186,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 }
 
 //Paso 4: Agregamos la variable size para usar el 70% de la altura de la pantalla en expandedHeight y cambiamos el color de los íconos y texto con foregroundColor
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -256,7 +256,7 @@ class _CustomSliverAppBar extends StatelessWidget {
       foregroundColor: Colors.white, // Cambiamos el color de los íconos y texto
     );
   }
-}*/
+}
 
 //Paso 5: Agregar el FlexibleSpaceBar para mostrar el título de la película y la imagen de fondo
 /*import 'package:cinemapedia/domain/entities/movie.dart';
