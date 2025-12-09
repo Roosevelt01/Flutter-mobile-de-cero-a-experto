@@ -116,34 +116,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Paso 3: Personalizar el SliverAppBar y usamos el backgroundColor para cambiar el color
-import 'package:cinemapedia/domain/entities/movie.dart';
+//Paso 3: Modificamos el Scaffold para usar CustomScrollView
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -186,7 +159,7 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
       body: CustomScrollView( 
         physics: const ClampingScrollPhysics(), 
         slivers: [
-          _CustomSliverAppBar(movie: movie),
+          _CustomSliverAppBar(movie:movie) 
         ],
       ),
     );
@@ -194,21 +167,106 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
 }
 
 class _CustomSliverAppBar extends StatelessWidget {
-  
-  final Movie movie; 
-  
-  const _CustomSliverAppBar({
-    required this.movie,
-  });
+  final Movie movie;
+
+  const _CustomSliverAppBar({ required this.movie });
 
   @override
   Widget build(BuildContext context) {
-    //Paso 3.1: Personalizar el SliverAppBar
+
+    final size = MediaQuery.of(context).size; //Paso 3.1: Obtenemos las dimensiones del dispositivo.
     return SliverAppBar(
       backgroundColor: Colors.black,
+      expandedHeight: size.height * 0.7, // Determina la altura del AppBar (70% de la pantalla) al estar expandido.
+      foregroundColor: Colors.white, // Asegura que los iconos (como el botón de atrás) sean blancos para contrastar.
     );
   }
 }
+
+//Paso 4: Configuramos el contenido visual (imagen) dentro del SliverAppBar
+import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class MovieScreen extends ConsumerStatefulWidget {
+
+  static const String name = 'movie_screen';
+
+  final String movieId;
+
+  const MovieScreen({
+    super.key,
+    required this.movieId, 
+  });
+
+  @override
+  MovieScreenState createState() => MovieScreenState();
+}
+
+class MovieScreenState extends ConsumerState<MovieScreen> {
+  @override
+  void initState() {
+    super.initState();
+      ref.read(movieInfoProvider.notifier).loadMovie(widget.movieId);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final movie = ref.watch(movieInfoProvider)[widget.movieId];
+
+    if (movie == null){
+      return const Scaffold(
+        body: Center(
+          child: CircularProgressIndicator(strokeWidth: 2),
+        ),
+      );
+    }
+
+    return Scaffold(
+      body: CustomScrollView( 
+        physics: const ClampingScrollPhysics(), 
+        slivers: [
+          _CustomSliverAppBar(movie:movie) 
+        ],
+      ),
+    );
+  }
+}
+
+class _CustomSliverAppBar extends StatelessWidget {
+  final Movie movie;
+
+  const _CustomSliverAppBar({ required this.movie });
+
+  @override
+  Widget build(BuildContext context) {
+
+    final size = MediaQuery.of(context).size; 
+    return SliverAppBar(
+      backgroundColor: Colors.black,
+      expandedHeight: size.height * 0.7, 
+      foregroundColor: Colors.white,
+      //Paso 4.1: Usamos flexibleSpace para definir el widget que se estira/contrae. 
+      flexibleSpace: FlexibleSpaceBar(
+        //Paso 4.2: Usamos un Stack en el background para poder apilar la imagen y luego los gradientes.
+        background: Stack(
+          children: [
+          ],
+        )
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 //Paso 4: Agregamos la variable size para usar el 70% de la altura de la pantalla en expandedHeight y cambiamos el color de los íconos y texto con foregroundColor
 import 'package:cinemapedia/domain/entities/movie.dart';
