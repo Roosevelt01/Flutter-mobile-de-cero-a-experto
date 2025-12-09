@@ -90,14 +90,21 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
 
     return Scaffold(
       body: CustomScrollView( 
-        physics: const ClampingScrollPhysics(), // Evita el efecto rebote
+        physics: const ClampingScrollPhysics(), 
         slivers: [
-          
+          _CustomSliverAppBar(movie:movie) // Paso 2.1
         ],
       ),
     );
   }
 }
+
+
+class _CustomSliverAppBar extends StatelessWidget{
+    
+}
+
+
 
 //Paso 3: Personalizar el SliverAppBar y usamos el backgroundColor para cambiar el color
 import 'package:cinemapedia/domain/entities/movie.dart';
