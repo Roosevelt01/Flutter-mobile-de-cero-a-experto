@@ -336,7 +336,7 @@ class _CustomSliverAppBar extends StatelessWidget {
               child: Image.network(
                 movie.posterPath,  // La URL desde donde se carga la imagen del póster.
                 fit: BoxFit.cover, // Escala la imagen para cubrir todo el contenedor sin deformarla.
-              ),// Cierre de SizedBox.expand
+              ),
             ),//Cierre de SizedBox.expand
 
           ],
@@ -433,8 +433,7 @@ class _CustomSliverAppBar extends StatelessWidget {
                   )
                 )
               )
-            ),
-
+            ), // Cierre Sized.expand
           ],
         )
       ),
