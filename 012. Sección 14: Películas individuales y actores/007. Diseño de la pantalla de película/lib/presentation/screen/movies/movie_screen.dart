@@ -247,9 +247,15 @@ class _CustomSliverAppBar extends StatelessWidget {
       expandedHeight: size.height * 0.7, 
       foregroundColor: Colors.white,
       //Paso 4.1: Usamos flexibleSpace para definir el widget que se estira/contrae. 
-      flexibleSpace: FlexibleSpaceBar(
+      flexibleSpace: FlexibleSpaceBar(        
         //Paso 4.2: Usamos un Stack en el background para poder apilar la imagen y luego los gradientes.
         background: Stack(
+
+        // Usamos un Stack porque vamos a apilar capas:
+        // a. Imagen (Fondo)
+        // b. Gradiente Inferior (Sombra Texto)
+        // c. Gradiente Superior (Sombra Botones)
+
           children: [
           ],
         )
