@@ -1,5 +1,5 @@
 //Paso 1: Agregamos SilverList y por consiguiente el widget _MovieDetails
-import 'package:cinemapedia/domain/entities/movie.dart';
+/*import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -46,16 +46,13 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
           //Paso 1.1: Agregame SliverList para mostrar los detalles
           SliverList( 
             delegate: SliverChildBuilderDelegate( // Usamos delegate que construye los elementos de la lista
-              // _MovieDetails es un widget que muestra los detalles de la película y el movie: movie es el 
-              //objeto de película que queremos mostrar
-              (context, index) =>  _MovieDetails(movie: movie), 
+              (context, index) =>  _MovieDetails(movie: movie), // _MovieDetails es un widget que muestra los detalles de la película y el movie: movie es el objeto de película que queremos mostrar
               childCount: 1, // Solo queremos un elemento en la lista
             ),
           )
         ],
       ),
     );
-
   }
 }
 
