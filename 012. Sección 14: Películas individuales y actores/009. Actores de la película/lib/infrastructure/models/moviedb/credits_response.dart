@@ -142,6 +142,10 @@ final departmentValues = EnumValues({
     }
 }*/
 
-//Redactame el paso que se hiz o para desde el uso de psotman(https://api.themoviedb.org/3/movie/505642/credits?api_key=abb2bb0e42043fb6792ffa33bcafec8d&language=es-MX)
+// Paso 1: Obtención de la respuesta JSON mediante Postman
+// Se realizó una petición GET a la URL: https://api.themoviedb.org/3/movie/505642/credits?api_key=...&language=es-MX
+// para obtener el JSON crudo con la información de los actores y el equipo de producción.
 
-//el uso de quicktype.io
+// Paso 2: Generación del modelo con Quicktype.io
+// Se copió el JSON obtenido en Postman y se pegó en Quicktype.io. Se configuró el lenguaje a "Dart"
+// para generar automáticamente esta clase `CreditsResponse` y sus métodos de serialización.
