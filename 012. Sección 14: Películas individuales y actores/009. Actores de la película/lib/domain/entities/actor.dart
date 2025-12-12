@@ -1,4 +1,3 @@
-
 //Paso 1: Definición de la entidad Actor
 class Actor{
   final String id;
