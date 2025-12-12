@@ -382,6 +382,9 @@ class _MovieDetails extends StatelessWidget {
                   width: size.width * 0.3, // Ancho de la imagen es el 30% del ancho de la pantalla
                 ),
               ),
+              const SizedBox(width: 10), // Separación
+      
+              // Columna de textos (siguiente paso)
             ],
           )
         ), 
