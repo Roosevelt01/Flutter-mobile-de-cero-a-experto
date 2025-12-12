@@ -144,7 +144,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 }*/
 
 //Paso 2: Completa el método build de _MovieDetails para mostrar los detalles de la película
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -292,10 +292,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 3: Completa el diseño de los detalles de la película en _MovieDetails
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -455,10 +455,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 4: Agregamos el segundo SizedBox en la clase _MovieDetails
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -561,8 +561,6 @@ class _MovieDetails extends StatelessWidget {
         ), 
 
         //Paso 5
-
-
         const SizedBox(height: 50)
       ],
     );
@@ -634,7 +632,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 
 //Paso 5: 
