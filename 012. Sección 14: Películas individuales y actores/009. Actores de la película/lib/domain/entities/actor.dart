@@ -15,4 +15,5 @@ class Actor{
 }
 
 // La clase Actor representa una entidad fundamental dentro del dominio de la aplicación.
-// Su función es encapsular los datos de un actor (como su ID, nombre, foto y personaje) de manera agnóstica a la fuente de datos (API), facilitando el uso de esta información en la interfaz de usuario y la lógica de negocio.
+// Su función es encapsular los datos de un actor (como su ID, nombre, foto y personaje) de
+// manera agnóstica a la fuente de datos (API), facilitando el uso de esta información en la interfaz de usuario y la lógica de negocio.
