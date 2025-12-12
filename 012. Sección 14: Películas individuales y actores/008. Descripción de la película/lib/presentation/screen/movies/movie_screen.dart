@@ -638,7 +638,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 }
 
 
-//Paso 5: 
+//Paso 5: Mostrar Géneros con Wrap y Chip(Código final)
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:flutter/material.dart';
