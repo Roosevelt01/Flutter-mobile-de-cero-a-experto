@@ -1,5 +1,5 @@
 //Paso 1: Estructura inicial del mapper para convertir objetos de la API a entidades de dominio.
-/*import 'package:cinemapedia/domain/entities/actor.dart';
+import 'package:cinemapedia/domain/entities/actor.dart';
 
 //Pvo 1: 
 class ActorMapper{
@@ -11,10 +11,10 @@ class ActorMapper{
        profilePath: profilePath,
       character: character 
     );
-}*/
+}
 
 //Paso 2: Implementación básica mapeando propiedades directas desde el modelo Cast.
-/*import 'package:cinemapedia/domain/entities/actor.dart';
+import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/credits_response.dart';
 class ActorMapper{
   static Actor castToEntity(Cast cast) =>
@@ -24,7 +24,7 @@ class ActorMapper{
       profilePath: cast.profilePath, // Se asigna la ruta de la imagen de perfil.
       character: cast.character  // Se asigna el nombre del personaje.
     );
-}*/
+}
 
 //Paso 3: Implementación final con validación de nulos para la imagen.(Códig final)
 import 'package:cinemapedia/domain/entities/actor.dart';
@@ -42,4 +42,4 @@ class ActorMapper{
     );
 }
 
-// La clase ActorMapper convierte objetos de tipo Cast (infraestructura) a entidades Actor (dominio), manejando la lógica de presentación de imágenes.
+// La clase ActorMapper convierte objetos de tipo Cast (infraestructura) a entidades Actor (dominio), manejando la lógica de presentación de imágenes
