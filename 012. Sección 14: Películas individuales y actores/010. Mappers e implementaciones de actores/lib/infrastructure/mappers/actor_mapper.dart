@@ -1,9 +1,7 @@
 //Paso 1: Estructura inicial del mapper para convertir objetos de la API a entidades de dominio.
 import 'package:cinemapedia/domain/entities/actor.dart';
 
-//Pvo 1: 
 class ActorMapper{
-  //Paso 1.2: 
   static Actor castToEntity() =>
     Actor(
       id: id, 
