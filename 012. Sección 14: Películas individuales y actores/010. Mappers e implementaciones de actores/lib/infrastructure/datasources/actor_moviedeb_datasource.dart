@@ -1,11 +1,11 @@
 //Paso 1: Estructura inicial de la clase datasource.
-/*import 'package:cinemapedia/domain/repositories/actors_repository.dart';
+import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 // Hereda de ActorDatasource para implementar los métodos definidos.
 class ActorMoviedebDatasource extends ActorDatasourve {}*/
 
 //Paso 2: Implementación del método getActorsByMovie.
-/*import 'package:cinemapedia/domain/repositories/actors_repository.dart';
+import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 class ActorMoviedebDatasource extends ActorDatasourve {
   //Paso 2.1: Definición del método que retornará una lista de actores.
@@ -14,10 +14,10 @@ class ActorMoviedebDatasource extends ActorDatasourve {
     // TODO: implement getActorsByMovie
     throw UnimplementedError();
   }
-}*/
+}
 
 //Paso 3: Retorno de una lista vacía temporalmente.
-/*import 'package:cinemapedia/domain/entities/actor.dart';
+import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 class ActorMoviedebDatasource extends ActorDatasourve {
@@ -26,10 +26,10 @@ class ActorMoviedebDatasource extends ActorDatasourve {
   Future<List<Actor>> getActorsByMovie(String movieId) async {
     return []; // Retorna una lista vacía mientras se implementa la lógica.
   }
-}*/
+}
 
 //Paso 4: Configuración de Dio para peticiones HTTP.
-/*import 'package:cinemapedia/config/constants/environment.dart';
+import 'package:cinemapedia/config/constants/environment.dart';
 import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 import 'package:dio/dio.dart';
@@ -49,10 +49,10 @@ class ActorMoviedebDatasource extends ActorDatasourve {
   Future<List<Actor>> getActorsByMovie(String movieId) async {
     return []; 
   }
-}*/
+}
 
 //Paso 5: Realizar la petición HTTP a la API.
-/*import 'package:cinemapedia/config/constants/environment.dart';
+import 'package:cinemapedia/config/constants/environment.dart';
 import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 import 'package:dio/dio.dart';
@@ -76,10 +76,10 @@ class ActorMoviedebDatasource extends ActorDatasourve {
 
     return []; 
   }
-}*/
+}
 
 //Paso 6: Mapeo de la respuesta JSON a un modelo de datos.
-/*import 'package:cinemapedia/config/constants/environment.dart';
+import 'package:cinemapedia/config/constants/environment.dart';
 import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/credits_response.dart';
@@ -105,9 +105,9 @@ class ActorMoviedebDatasource extends ActorDatasourve {
 
     return []; 
   }
-}*/
+}
 
-//Paso 7: Conversión final de modelos a entidades y retorno.
+//Paso 7: Conversión final de modelos a entidades y retorno(Código final)
 import 'package:cinemapedia/config/constants/environment.dart';
 import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
