@@ -2,6 +2,8 @@
 import 'package:cinemapedia/domain/entities/actor.dart';
 
 class ActorMapper{
+  // Definimos el método estático que devolverá un Actor.
+  // Aún no recibimos parámetros ni implementamos lógica.
   static Actor castToEntity() =>
     Actor(
       id: id, 
@@ -15,6 +17,7 @@ class ActorMapper{
 import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/credits_response.dart';
 class ActorMapper{
+  // Recibimos 'Cast' y mapeamos sus campos directos.
   static Actor castToEntity(Cast cast) =>
     Actor(
       id: cast.id, // Se asigna el ID del actor.
