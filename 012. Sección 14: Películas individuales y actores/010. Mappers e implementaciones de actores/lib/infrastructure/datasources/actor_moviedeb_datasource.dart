@@ -1,15 +1,8 @@
 //Paso 1: Creamos la clase y extendemos de ActorDatasource (el contrato).
-
 import 'package:cinemapedia/domain/datasources/actors_datasource.dart';
 
 // Hereda de ActorDatasource para obligarnos a cumplir las reglas
 class ActorMovieDbDatasource extends ActorDatasource {}
-
-//Paso 2: Estructura inicial de la clase datasource.
-import 'package:cinemapedia/domain/repositories/actors_repository.dart';
-
-// Hereda de ActorDatasource para implementar los métodos definidos.
-class ActorMoviedebDatasource extends ActorDatasourve {}*/
 
 //Paso 2: Implementación del método getActorsByMovie.
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
@@ -28,7 +21,7 @@ import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 class ActorMoviedebDatasource extends ActorDatasourve {
-  //Paso 2.1: Definición del método.
+  //Paso 3.1: Definición del método.
   @override
   Future<List<Actor>> getActorsByMovie(String movieId) async {
     return []; // Retorna una lista vacía mientras se implementa la lógica.
