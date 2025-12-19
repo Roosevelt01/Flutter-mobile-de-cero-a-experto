@@ -6,20 +6,19 @@ class ActorRepositoryImpl extends ActorsRepository {
   // Aún nos falta implementar los métodos, por eso marcará error momentáneo
 }
 
-
-//Paso 2:
-import 'package:cinemapedia/domain/entities/actor.dart';
+//Paso 2: Inyección de Dependencias (El Constructor)
+import 'package:cinemapedia/domain/datasources/actors_datasource.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 class ActorRepositoryImpl extends ActorsRepository {
   
-  //Paso 2.1: 
-  @override
-  Future<List<Actor>> getActorsByMovie(String movieId) {
-   
-    throw UnimplementedError();
-  }
+  final ActorsDatasource datasource; // Pedimos "cualquier" datasource de actores
+
+  ActorRepositoryImpl(this.datasource); // Lo inyectamos al nacer la clase
+
+  // ... Falta el método
 }
+
 
 //Paso 3:
 import 'package:cinemapedia/domain/datasourve/actor_datasource.dart';
