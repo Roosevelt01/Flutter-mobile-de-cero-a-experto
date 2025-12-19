@@ -28,23 +28,14 @@ class ActorRepositoryImpl extends ActorsRepository {
   
   final ActorsDatasource datasource;
 
-<<<<<<< HEAD
   ActorRepositoryImpl(this.datasource);
     
-=======
   ActorRepositoryImpl(this.datasource);    
->>>>>>> 5a90988096efa63d7c1aad5afd426e9ea221e879
 
   @override
   Future<List<Actor>> getActorsByMovie(String movieId) {
-<<<<<<< HEAD
-    // El Repositorio simplemente llama al Datasource.
-    // Es un "Pase de manos".
-    return datasource.getActorsByMovie(movieId); 
-=======
     // El Repositorio simplemente llama al Datasource.
     // Es un "Pase de manos".
     return datasource.getActorsByMovie(movieId);  
->>>>>>> 5a90988096efa63d7c1aad5afd426e9ea221e879
   }
 }
