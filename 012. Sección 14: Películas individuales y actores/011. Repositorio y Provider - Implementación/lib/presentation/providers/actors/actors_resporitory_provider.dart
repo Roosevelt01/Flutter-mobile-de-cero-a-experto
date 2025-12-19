@@ -2,7 +2,8 @@ import 'package:cinemapedia/infrastructure/datasources/actor_moviedeb_datasource
 import 'package:cinemapedia/infrastructure/repositores/actor_repository_impl.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+// Provider de solo lectura, inmutable
 final actorsRepositoryProvider = Provider((ref){
+  / Retornamos la implementación concreta, inyectando el datasource de TheMovieDB
   return ActorRepositoryImpl(ActorMovieDbDatasource() );
-
 });
