@@ -19,22 +19,21 @@ class ActorRepositoryImpl extends ActorsRepository {
   // ... Falta el método
 }
 
-
-//Paso 3:
+//Paso 3: Implementación y Delegación (getActorsByMovie).
 import 'package:cinemapedia/domain/datasourve/actor_datasource.dart';
 import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 class ActorRepositoryImpl extends ActorsRepository {
   
-  final ActorsDatasource datasource; //Paso 3.1:
+  final ActorsDatasource datasource;
 
-  ActorRepositoryImpl(this.datasource); //Paso 3.2:
-    
+  ActorRepositoryImpl(this.datasource);    
 
   @override
   Future<List<Actor>> getActorsByMovie(String movieId) {
-    return datasource.getActorsByMovie(movieId); //Paso 3.2:
-  
+    // El Repositorio simplemente llama al Datasource.
+    // Es un "Pase de manos".
+    return datasource.getActorsByMovie(movieId);  
   }
 }
