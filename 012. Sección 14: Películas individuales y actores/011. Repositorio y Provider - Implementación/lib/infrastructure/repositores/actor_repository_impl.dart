@@ -1,11 +1,11 @@
 //Paso 1:
 
-/*import 'package:cinemapedia/domain/repositories/actors_repository.dart';
-class ActorRepositoryImpl extends ActorsRepository {}*/
+import 'package:cinemapedia/domain/repositories/actors_repository.dart';
+class ActorRepositoryImpl extends ActorsRepository {}
 
 
 //Paso 2:
-/*import 'package:cinemapedia/domain/entities/actor.dart';
+import 'package:cinemapedia/domain/entities/actor.dart';
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 
 class ActorRepositoryImpl extends ActorsRepository {
@@ -16,7 +16,7 @@ class ActorRepositoryImpl extends ActorsRepository {
    
     throw UnimplementedError();
   }
-}*/
+}
 
 //Paso 3:
 import 'package:cinemapedia/domain/datasourve/actor_datasource.dart';
