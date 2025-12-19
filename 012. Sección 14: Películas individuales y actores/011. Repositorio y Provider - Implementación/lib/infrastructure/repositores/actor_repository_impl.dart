@@ -1,5 +1,4 @@
-//Paso 1:
-
+//Paso 1: Definimos la Clase(ActorRepositoryImpl) y la Herencia(ActorsRepository).
 import 'package:cinemapedia/domain/repositories/actors_repository.dart';
 class ActorRepositoryImpl extends ActorsRepository {}
 
