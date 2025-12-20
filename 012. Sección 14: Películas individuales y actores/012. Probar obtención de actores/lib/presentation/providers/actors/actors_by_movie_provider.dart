@@ -18,9 +18,12 @@ class ActorsByMovieNotifier extends StateNotifier<Map<String, List<Actor>>>{
     }): super({});
 
     Future<void> loadActors(String movieId) async{
-      if(state[movieId] != null) return;
-      final List<Actor> actors= await getActors(movieId);
+      if(state[movieId] != null) return;// Validación de Caché
 
+
+      final List<Actor> actors= await getActors(movieId);// Petición HTTP
+
+      // ---> BREAKPOINT AQUÍ <---
       state = { ...state, movieId: actors }; 
     }
 }
