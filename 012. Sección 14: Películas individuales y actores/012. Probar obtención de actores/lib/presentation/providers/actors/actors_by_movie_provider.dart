@@ -8,14 +8,6 @@ final actorsByMovieProvider = StateNotifierProvider<ActorsByMovieNotifier, Map<S
   return ActorsByMovieNotifier(getActors: actorsRepository.getActorsByMovie);
 });
 
-/*
-  Quiero que tome en cuenta lo que está haciendo en este código
-
-  '505642': <Actor>[],
-  '505643': <Actor>[],
-  '505645': <Actor>[],
-  '501231': <Actor>[],
-*/
 typedef GetActorsCallback = Future<List<Actor>>Function(String movieId);
 
 class ActorsByMovieNotifier extends StateNotifier<Map<String, List<Actor>>>{
