@@ -1,4 +1,4 @@
-//Paso 1: 
+//Paso 1: El disparo inicial en el ciclo de vida del widget
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -25,7 +25,9 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
   void initState() {
     super.initState();
       ref.read(movieInfoProvider.notifier).loadMovie(widget.movieId);
-      ref.read(actorsByMovieProvider.notifier).loadActors(widget.movieId); //Paso 1.1:
+      
+      // Paso 1.1: Cargar actores de la película (Nueva línea)
+      ref.read(actorsByMovieProvider.notifier).loadActors(widget.movieId);
       
   }
 
