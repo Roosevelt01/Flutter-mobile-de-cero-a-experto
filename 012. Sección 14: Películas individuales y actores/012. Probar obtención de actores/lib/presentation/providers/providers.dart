@@ -1,5 +1,3 @@
-
-
 // Nuevas exportaciones para Actores
 export 'actors/actors_resporitory_provider.dart';
 export 'actors/actors_by_movie_provider.dart';
