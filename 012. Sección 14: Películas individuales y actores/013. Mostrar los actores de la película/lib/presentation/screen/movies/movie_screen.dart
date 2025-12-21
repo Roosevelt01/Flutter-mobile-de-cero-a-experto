@@ -1290,7 +1290,7 @@ class _ActorsByMovie extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             width: 135,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start, // Paso 8.1:
+              crossAxisAlignment: CrossAxisAlignment.start, 
               children: [
                 
                 ClipRRect(
