@@ -1,4 +1,4 @@
-//Paso 1: 
+//Paso 1: Creamos el esquelet del widget _actorsByMovie
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
