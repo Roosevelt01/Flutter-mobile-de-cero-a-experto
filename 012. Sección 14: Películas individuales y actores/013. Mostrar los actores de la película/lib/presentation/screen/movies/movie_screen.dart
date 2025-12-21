@@ -1,5 +1,5 @@
 //Paso 1: 
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -206,10 +206,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 2: 
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -416,10 +416,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 3:
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -637,10 +637,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 4:
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -877,10 +877,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 5:
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -1131,10 +1131,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 6:
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -1386,10 +1386,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 7:
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -1645,7 +1645,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 8:
 import 'package:cinemapedia/domain/entities/movie.dart';
