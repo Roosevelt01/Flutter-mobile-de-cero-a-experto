@@ -208,7 +208,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   }
 }
 
-//Paso 2: 
+//Paso 2: Pasamos el ID convertido a String para que coincida con la clave del Map en el Provider
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -328,6 +328,7 @@ class _MovieDetails extends StatelessWidget {
           )
         ),
              
+        //Paso 2.1: Integración en _MovieDetails
         _ActorsByMovie(movieId: movie.id.toString()), 
         const SizedBox(height: 50)
 
@@ -336,7 +337,6 @@ class _MovieDetails extends StatelessWidget {
   }
 }
 
-//Paso 2.1: Cambiamos StatelessWidget a ConsumerWidget
 class _ActorsByMovie extends ConsumerWidget {
   
   final String movieId; 
@@ -346,7 +346,7 @@ class _ActorsByMovie extends ConsumerWidget {
   });
   
   @override
-  Widget build(BuildContext context, ref) { // Se agrega ref
+  Widget build(BuildContext context, ref) { 
     return const Placeholder();
   }
 }
