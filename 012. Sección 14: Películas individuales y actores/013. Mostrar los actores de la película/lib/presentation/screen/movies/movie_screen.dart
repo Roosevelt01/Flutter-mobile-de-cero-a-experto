@@ -118,7 +118,6 @@ class _MovieDetails extends StatelessWidget {
           )
         ),
              
-        _ActorsByMovie(movieId: movie.id.toString()), //Paso 1.2:
         const SizedBox(height: 50)
 
       ],
@@ -126,18 +125,19 @@ class _MovieDetails extends StatelessWidget {
   }
 }
 
-//Paso 1.2: 
-class _ActorsByMovie extends StatelessWidget {
+//Paso 1.1: Definir el Widget _ActorsByMovie (Estructura Básica)
+class _ActorsByMovie extends StatelessWidget { // Cambiamos a ConsumerWidget para usar Riverpod
   
-  final String movieId; 
+  final String movieId; // Paso crítico: Definirlo como String, no int.
   
   const _ActorsByMovie({
     required this.movieId, 
   });
   
   @override
+  // Al ser ConsumerWidget, necesitamos recibir 'ref' en el build
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Placeholder(); // Retorno temporal
   }
 }
 
