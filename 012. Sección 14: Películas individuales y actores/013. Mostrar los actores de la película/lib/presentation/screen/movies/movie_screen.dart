@@ -419,7 +419,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   }
 }
 
-//Paso 3:
+//Paso 3: Conectamos los datos con Riverpod
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
