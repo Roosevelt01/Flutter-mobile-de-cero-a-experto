@@ -557,15 +557,16 @@ class _ActorsByMovie extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) { 
 
-    //Paso 3.1: 
+    //Paso 3.1: Escuchamos el provider completo (Mapa de actores)
     final actorsByMovie = ref.watch(actorsByMovieProvider);
 
-    //Paso 3.2: 
+    //Paso 3.2: Verificamos si ya existen datos para esta película específica.
+    // Si es null, significa que se está realizando la petición HTTP.
     if( actorsByMovie[movieId] == null){
       return const CircularProgressIndicator(strokeWidth: 2);
     }
 
-    //Paso 3.3: 
+    //Paso 3.3: Si no es null, obtenemos la lista segura de actores (!)
     final actors = actorsByMovie[movieId]!;
 
     return const Placeholder();
