@@ -883,7 +883,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   }
 }
 
-//Paso 5:
+//Paso 5: Renderizar la Foto (ClipRRect)
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -1043,29 +1043,23 @@ class _ActorsByMovie extends ConsumerWidget {
             child: Column(
               children: [
                 
-                //Paso 5.1:
+                //Paso 5.1: Damos vida al carrusel con las imágenes
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20), // Bordes redondeados
                   child: Image.network(
-                    actor.profilePath, // Agrega comentario
-                    height: 180,  // Agrega comentario
-                    width: 135,  // Agrega comentario,
-                    fit: BoxFit.cover,  // Agrega comentario
+                    actor.profilePath, // URL (Ya validada en el Mapper)
+                    height: 180,  
+                    width: 135,  
+                    fit: BoxFit.cover, // La imagen cubre todo el espacio disponible
                   ), // Cierre de Image.network
                 
                 ), // Cierre de ClipRRect
 
-                
-
               ]   
             )
-          
           ); 
-
         } 
-
       ),
-
     ); 
   }
 }
