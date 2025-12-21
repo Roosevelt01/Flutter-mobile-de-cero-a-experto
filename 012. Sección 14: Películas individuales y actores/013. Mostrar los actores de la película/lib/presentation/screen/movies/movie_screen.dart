@@ -641,7 +641,7 @@ class _CustomSliverAppBar extends StatelessWidget {
   }
 }
 
-//Paso 4:
+//Paso 4: Construismos la estructura del carrusel
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -788,20 +788,22 @@ class _ActorsByMovie extends ConsumerWidget {
 
     final actors = actorsByMovie[movieId]!;
 
-    //Paso 4.1:
+    //Paso 4.1: Configurar el ListView Horizontal
     return SizedBox(
-      height: 300,
+      height: 300, // Altura fija del carrusel 
       child: ListView.builder(
-        itemCount: actors.length, //agrega comentario
+        scrollDirection: Axis.horizontal, // Desplazamiento lateral
+        itemCount: actors.length, // Cantidad de actores a renderizar
         itemBuilder: (context, index) {
           final actor = actors[index]; // agrega comentario
           
+          // Retornamos el diseño de cada actor individual
           return Container(
-            padding: const EdgeInsets.all(8),  // Agrega comentario
-            width: 135,  // Agrega comentario
+            padding: const EdgeInsets.all(8), // Espacio entre items
+            width: 135,  // Ancho fijo de cada tarjeta de actor
             child: Column(
               children: [
-                
+                // Ancho fijo de cada tarjeta de actor
               ]   
             ) // Cierre de Column
           ); // Cierre de Container
