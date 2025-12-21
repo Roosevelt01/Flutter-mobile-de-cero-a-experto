@@ -330,6 +330,7 @@ class _MovieDetails extends StatelessWidget {
              
         //Paso 2.1: Integración en _MovieDetails
         _ActorsByMovie(movieId: movie.id.toString()), 
+        
         const SizedBox(height: 50)
 
       ],
