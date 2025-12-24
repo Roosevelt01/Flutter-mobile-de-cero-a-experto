@@ -1,5 +1,5 @@
 //Paso 1: Para evitar parpadeos al cargar imagenes usamos loadingBuilder en Image.network
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/providers/movies/movie_info_provider.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -260,10 +260,10 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 2: Usar la libreria animate_do para una transicion suave al cargar imagenes, es improtante el uso de la libreria porque Flutter no tiene una animacion de fade-in nativa
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:animate_do/animate_do.dart'; // Importamos el paquete animate_do
 
@@ -525,7 +525,7 @@ class _CustomSliverAppBar extends StatelessWidget {
 
     );
   }
-}*/
+}
 
 //Paso 3: Usar la libreria animate_do para una transicion suave al cargar imagenes de actores
 import 'package:flutter/material.dart';
