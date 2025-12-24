@@ -216,10 +216,15 @@ class _CustomSliverAppBar extends StatelessWidget {
                 child: Image.network( 
                   movie.posterPath, 
                   fit: BoxFit.cover, 
+
                   //Paso 1.1: Usar loadingBuilder para evitar parpadeos
                   loadingBuilder: (context, child, loadingProgress) { 
-                    if (loadingProgress != null) return const SizedBox(); //Si sigue cargando, no mostrar nada
-                    return child; //Si ya cargo, mostrar la imagen
+                    // Si loadingProgress tiene datos, la imagen se está descargando
+                    if (loadingProgress != null) return const SizedBox();
+                    
+                    // Si loadingProgress es null, la imagen ya bajó.
+                    // Retornamos la imagen (child).
+                    return child; 
                   },
                 ),
             ), 
