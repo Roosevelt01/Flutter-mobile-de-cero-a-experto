@@ -1,5 +1,5 @@
 //Paso 1: Se agrega <Movie?> para indicar que el SearchDelegate puede devolver una Movie o null
-/*import 'package:cinemapedia/domain/entities/movie.dart'; // Importar la entidad Movie
+import 'package:cinemapedia/domain/entities/movie.dart'; // Importar la entidad Movie
 import 'package:flutter/material.dart'; 
 
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
@@ -27,10 +27,10 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   Widget buildSuggestions(BuildContext context) {
     return const Text("buildSuggestions");
   }
-}*/
+}
 
 //Paso 2: Modificamos el botón leading para cerrar el SearchDelegate
-/*import 'package:cinemapedia/domain/entities/movie.dart'; // Importar la entidad Movie
+import 'package:cinemapedia/domain/entities/movie.dart'; // Importar la entidad Movie
 import 'package:flutter/material.dart'; 
 
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
@@ -62,10 +62,10 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   Widget buildSuggestions(BuildContext context) {
     return const Text("buildSuggestions");
   }
-}*/
+}
 
 //Paso 3: Agregamos un botón para limpiar la búsqueda
-/*import 'package:cinemapedia/domain/entities/movie.dart'; 
+import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
 
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
@@ -100,7 +100,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   Widget buildSuggestions(BuildContext context) {
     return const Text("buildSuggestions");
   }
-}*/
+}
 
 //Paso 4: Agregamos animaciones al botón de limpiar búsqueda
 import 'package:animate_do/animate_do.dart'; //Paso 4.1: Importar animate_do para usar animaciones
