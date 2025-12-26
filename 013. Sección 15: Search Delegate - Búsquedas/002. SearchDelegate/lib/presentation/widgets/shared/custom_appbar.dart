@@ -27,10 +27,12 @@ class CustomAppBar extends StatelessWidget {
                 const Spacer(),
         
                  IconButton(onPressed: (){
-                    //Paso 1.2: Usar el showSearch para abrir el SearchDelegate
+                    //Paso 1.2: Llamar a la función nativa showSearch
+                    // showSearch se encarga de empujar la pantalla de búsqueda al stack de navegación.
+                    // final searchedMovies = */
                     showSearch(
                       context: context, 
-                      delegate: SearchMovieDelegate()//Paso 1.3: Pasar el SearchDelegate
+                      delegate: SearchMovieDelegate()//Paso 1.3: Pasar una nueva instancia de nuestro SearchMovieDelegate
                       );
                  },
 
