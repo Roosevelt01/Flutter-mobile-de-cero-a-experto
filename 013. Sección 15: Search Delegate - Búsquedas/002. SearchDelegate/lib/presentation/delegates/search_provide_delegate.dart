@@ -1,12 +1,12 @@
 //Paso 1: Crear el archivo search_provide_delegate.dart en la carpeta lib/presentation/delegates/
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class SearchMovieDelegate extends SearchDelegate{
  
-}*/
+}
 
 //Paso 2: Implementar los métodos 4 abstractos de SearchDelegate
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class SearchMovieDelegate extends SearchDelegate{
   
@@ -38,10 +38,10 @@ class SearchMovieDelegate extends SearchDelegate{
   }
 
  
-}*/
+}
 
 //Paso 3: Implementar la lógica básica de cada método
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class searchMovieDelegate extends SearchDelegate{
   
@@ -73,7 +73,7 @@ class searchMovieDelegate extends SearchDelegate{
     // Paso 3.4: Retornar las sugerencias de búsqueda
     return const Text("buildSuggestions");
   }
-}*/
+}
 
 //Paso 4: Personalizar el SearchDelegate
 import 'package:flutter/material.dart';
