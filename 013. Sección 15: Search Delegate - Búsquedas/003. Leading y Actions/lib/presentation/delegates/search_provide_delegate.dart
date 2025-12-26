@@ -116,7 +116,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
            
     return [
 
-        FadeIn( //Paso 4.3: Usar FadeIn para animar la aparición del botón
+        FadeIn( //Paso 4.2: Usar FadeIn para animar la aparición del botón
           animate: query.isNotEmpty, //Solo animar si el query no está vacío
           duration: const Duration(milliseconds: 200), //Duración de la animación
           child: IconButton(
