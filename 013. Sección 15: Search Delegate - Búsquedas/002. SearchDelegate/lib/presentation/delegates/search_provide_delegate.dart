@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class SearchMovieDelegate extends SearchDelegate{
- 
+  // Al extender de SearchDelegate, Flutter nos pedirá implementar 4 métodos obligatorios.
 }
 
 //Paso 2: Implementar los métodos 4 abstractos de SearchDelegate
