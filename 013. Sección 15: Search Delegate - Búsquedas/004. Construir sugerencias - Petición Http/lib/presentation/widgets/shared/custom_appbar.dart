@@ -29,10 +29,9 @@ class CustomAppBar extends ConsumerWidget {
                 const Spacer(),
         
                  IconButton(onPressed: (){
-                    //Paso 1.2: Usar el showSearch para abrir el SearchDelegate
                     showSearch(
                       context: context, 
-                      delegate: SearchMovieDelegate()//Paso 1.3: Pasar el SearchDelegate
+                      delegate: SearchMovieDelegate()
                       );
                  },
 
