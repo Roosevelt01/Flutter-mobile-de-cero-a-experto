@@ -1,5 +1,5 @@
 //Paso 1: Con SearchMoviesCallback permitimos que el SearchDelegate pueda buscar películas usando un callback
-/*import 'package:animate_do/animate_do.dart'; 
+import 'package:animate_do/animate_do.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
 
@@ -53,10 +53,10 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   Widget buildSuggestions(BuildContext context) {
     return const Text("buildSuggestions");
   }
-}*/
+}
 
 //Paso 2: Modificar el SearchDelegate para usar el callback para buscar películas
-/*import 'package:animate_do/animate_do.dart'; 
+import 'package:animate_do/animate_do.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
 
@@ -114,7 +114,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
       },
     );
   }
-}*/
+}
 
 //Paso 3: Completar el FutureBuilder para mostrar las películas sugeridas
 import 'package:animate_do/animate_do.dart'; 

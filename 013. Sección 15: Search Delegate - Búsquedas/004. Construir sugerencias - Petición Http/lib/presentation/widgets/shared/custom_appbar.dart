@@ -1,5 +1,5 @@
 //Paso 1: Cambiamos de StatelessWidget a ConsumerWidget para poder usar Riverpod
-/*import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
+import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart'; // Paso 1.1: Importar flutter_riverpod
 
@@ -44,7 +44,7 @@ class CustomAppBar extends ConsumerWidget {
         ),
     );
   }
-}*/
+}
 
 //Paso 2: 
 import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
@@ -100,4 +100,3 @@ class CustomAppBar extends ConsumerWidget {
     );
   }
 }
-
