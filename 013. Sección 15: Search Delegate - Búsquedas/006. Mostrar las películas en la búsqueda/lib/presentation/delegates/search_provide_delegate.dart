@@ -1,5 +1,5 @@
 //Paso 1: _MovieItem es un widget que representa cada película en la lista de sugerencias.
-/*import 'package:animate_do/animate_do.dart'; 
+import 'package:animate_do/animate_do.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
 
@@ -77,7 +77,7 @@ class _MovieItem extends StatelessWidget {
 }*/
 
 //Paso 2: Implementar el widget _MovieItem para mostrar la información de la película.
-/*import 'package:animate_do/animate_do.dart'; 
+import 'package:animate_do/animate_do.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
 
@@ -178,7 +178,7 @@ class _MovieItem extends StatelessWidget {
 
     ); //Cierre del Padding
   }
-}*/
+}
 
 //Paso 3: 
 import 'package:animate_do/animate_do.dart'; 
