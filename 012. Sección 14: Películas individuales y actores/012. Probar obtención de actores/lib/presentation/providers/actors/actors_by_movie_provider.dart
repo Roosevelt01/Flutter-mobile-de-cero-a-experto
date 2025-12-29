@@ -27,5 +27,3 @@ class ActorsByMovieNotifier extends StateNotifier<Map<String, List<Actor>>>{
       state = { ...state, movieId: actors }; 
     }
 }
-
-//Redactame el paso a paso del breackpoint en state = { ...state, movieId: actors }; y para que sirve 
