@@ -180,7 +180,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 3: 
+//Paso 3: Completar la implementación del widget _MovieItem para mostrar el título y la descripción de la película.
 import 'package:animate_do/animate_do.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
