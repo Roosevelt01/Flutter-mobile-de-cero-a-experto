@@ -45,7 +45,7 @@ class CustomAppBar extends ConsumerWidget {
   }
 }
 
-//Paso 2: 
+//Paso 2: El Momento Clave: Inyectando la Dependencia
 import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
