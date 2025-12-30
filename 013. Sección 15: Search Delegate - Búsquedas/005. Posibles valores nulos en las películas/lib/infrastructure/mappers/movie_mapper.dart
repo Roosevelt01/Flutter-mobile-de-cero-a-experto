@@ -19,7 +19,14 @@ class MovieMapper {
         (moviedb.posterPath != '')
             ? 'https://image.tmdb.org/t/p/w500${moviedb.posterPath}'
             : 'no-poster',
-    releaseDate: moviedb.releaseDate != null? moviedb.releaseDate! : DateTime.now(),// Asigna la fecha actual si releaseDate es nulo
+    // Manejo de nulos para la Entidad
+    // Preguntamos: ¿releaseDate es diferente de null?
+    // - SÍ: Usamos moviedb.releaseDate! (el '!' asegura a Dart que ya revisamos).
+    // - NO: Asignamos DateTime.now(). Esto evita que la app se rompa, 
+    //       aunque la fecha no sea real (es una decisión de negocio).            
+    releaseDate: moviedb.releaseDate != null
+        ? moviedb.releaseDate! 
+        : DateTime.now(),
     title: moviedb.title,
     video: moviedb.video,
     voteAverage: moviedb.voteAverage,
