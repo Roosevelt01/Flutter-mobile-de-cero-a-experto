@@ -126,7 +126,6 @@ class _MovieItem extends StatelessWidget {
             ),    
           ],
         ), 
-
     );
   }
 }
