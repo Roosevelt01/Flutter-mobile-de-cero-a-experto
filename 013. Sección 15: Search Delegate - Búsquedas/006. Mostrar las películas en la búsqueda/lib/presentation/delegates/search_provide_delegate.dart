@@ -74,7 +74,7 @@ class _MovieItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Placeholder();
   }
-}*/
+}
 
 //Paso 2: Implementar el widget _MovieItem para mostrar la información de la película.
 import 'package:animate_do/animate_do.dart'; 
@@ -147,13 +147,11 @@ class _MovieItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Paso 2.1: Obtener los estilos de texto del tema actual
-    final TextStyle = Theme.of(context).textTheme; 
 
-    //Paso 2.2: Construir el widget que muestra la información de la película
+    //Paso 2.1: Construir el widget que muestra la información de la película
     final size = MediaQuery.of(context).size;
    
-    //Paso 2.3: Retornar el widget con la información de la película
+    //Paso 2.2: Retornar el widget con la información de la película
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5), //Espaciado alrededor del ítem
         
@@ -170,9 +168,6 @@ class _MovieItem extends StatelessWidget {
               ),//Cierre del ClipRRect
 
             ),
-
-
-
           ],
         ), //Cierre del Row
 
