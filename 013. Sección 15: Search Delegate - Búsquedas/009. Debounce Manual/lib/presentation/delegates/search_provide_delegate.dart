@@ -159,11 +159,39 @@ typedef SearchMoviesCallback = Future<List<Movie>> Function(String query);
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
  
   final SearchMoviesCallback searchMovies;
-  StreamController<List<Movie>> debounceMobies = StreamController.broadcast()
+  StreamController<List<Movie>> debounceMobies = StreamController.broadcast();
+  Timer? _debounceTimer;
   
   SearchMovieDelegate({
     required this.searchMovies,
   });
+
+  // Paso 3.1: Agregamos el método _onQueryChanged.
+  // Este método gestiona la regla: "Espera a que deje de escribir".
+  void _onQueryChanged(String query) {
+    
+    // (Opcional) Log para ver cuántas veces se llama a esta función (1 por tecla).
+    print("Query String Cambió");
+
+    // LÓGICA CORE DEL DEBOUNCE:
+    // Si hay un timer activo corriendo (el usuario escribió hace poco), lo CANCELAMOS.
+    // Esto evita que se ejecute la búsqueda anterior.
+    if (_debounceTimer?.isActive ?? false) _debounceTimer!.cancel();
+
+    // Creamos un NUEVO Timer.
+    // Si el usuario NO escribe nada más durante 500 milisegundos, se ejecutará el callback.
+    _debounceTimer = Timer(const Duration(milliseconds: 500), () async {
+      
+      // Aquí es donde, en la próxima clase, haremos la petición HTTP.
+      // Por ahora, solo imprimimos para verificar que el debounce funciona.
+      print("Buscando película");
+      
+      // Futuro: final movies = await searchMovies(query);
+      // Futuro: debouncedMovies.add(movies);
+    });
+
+  }
+
 
   @override
   String get searchFieldLabel => 'Buscar película';
