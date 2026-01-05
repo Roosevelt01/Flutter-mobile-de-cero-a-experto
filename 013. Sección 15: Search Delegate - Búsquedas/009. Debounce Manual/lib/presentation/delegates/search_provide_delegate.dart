@@ -316,7 +316,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 3:  
+//Paso 3:  Integración en la UI (buildSuggestions).
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -336,17 +336,12 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
     required this.searchMovies,
   });
 
-  
-  //Paso 3.2: Agregamos el metodo _onQueryChanged que se ejecutará cada vez que el query cambie y el String este inactivo por 500ms
   void _onQueryChanged(String query) {
 
-        //Lanzamos un nuevo Timer cada vez que el query cambia
     print("Query String Cambió");
   
-   //Si el Timer esta activo, lo cancelamos y si no, lo creamos uno nuevo
     if(_debounceTimer?.isActive ?? false) _debounceTimer!.cancel();
 
-    //Creamos un nuevo Timer que se ejecutará despues de 500ms
     _debounceTimer = Timer(const Duration(milliseconds: 500), () async {
       print("Buscando película");
 
@@ -389,11 +384,12 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   @override
   Widget buildSuggestions(BuildContext context) {
 
-        //Paso 3.3: Llamamos al metodo _onQueryChanged cada vez que el query cambia
-        _onQueryChanged(query);
+    // Paso 3.3: Llamamos al método _onQueryChanged cada vez que el query cambia.
+    // Flutter llama a buildSuggestions cada vez que se presiona una tecla.
+    _onQueryChanged(query);
 
     return StreamBuilder(
-      stream: debounceMobies.stream,
+      stream: debouncedMovies.stream, // Suscripción al stream
       builder: (context, snapshot) {
        
         final movies = snapshot.data ?? []; 
