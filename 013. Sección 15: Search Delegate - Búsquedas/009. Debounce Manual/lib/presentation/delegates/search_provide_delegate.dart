@@ -165,7 +165,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
     required this.searchMovies,
   });
 
-  // Paso 3.1: Agregamos el método _onQueryChanged.
+  // Paso 2.1: Agregamos el método _onQueryChanged.
   // Este método gestiona la regla: "Espera a que deje de escribir".
   void _onQueryChanged(String query) {
     
