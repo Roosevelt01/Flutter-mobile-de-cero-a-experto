@@ -226,9 +226,8 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   
   @override
   Widget buildSuggestions(BuildContext context) {
-    //Paso 2.1: Usamos el StreamBuilder en lugar del FutureBuilder
     return StreamBuilder(
-      stream: debounceMobies.stream, // Usamos el stream del StreamController
+      stream: debounceMobies.stream, 
       builder: (context, snapshot) {
 
         final movies = snapshot.data ?? []; 
@@ -331,7 +330,6 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
  
   final SearchMoviesCallback searchMovies;
   StreamController<List<Movie>> debounceMobies = StreamController.broadcast();
-  //Paso 3.1: Agregamos un Timer para el debounce de la busqueda para controlar el tiempo entre cada busqueda
   Timer? _debounceTimer;
   
   SearchMovieDelegate({
