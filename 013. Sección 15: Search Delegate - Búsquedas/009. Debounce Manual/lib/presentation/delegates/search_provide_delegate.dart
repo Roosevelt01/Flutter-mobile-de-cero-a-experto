@@ -145,8 +145,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 2: Implementar el StreamBuilder para la busqueda de peliculas con debounce
-//import 'dart:async'; 
+//Paso 2: Crear un método que cancele el timer anterior y cree uno nuevo
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
