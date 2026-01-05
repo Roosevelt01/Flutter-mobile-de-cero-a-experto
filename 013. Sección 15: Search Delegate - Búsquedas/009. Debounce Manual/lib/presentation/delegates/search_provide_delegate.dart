@@ -13,6 +13,10 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   //Paso 1.1 Usamos un StreamController para el debounce de la busqueda
   StreamController<List<Movie>> debounceMobies = StreamController.broadcast()
 
+  // Paso 1.2: Agregamos un Timer para controlar el tiempo de espera entre tecleos.
+  // Es opcional (?) porque al inicio no hay timer activo.
+  Timer? _debounceTimer;
+
   SearchMovieDelegate({
     required this.searchMovies,
   });
