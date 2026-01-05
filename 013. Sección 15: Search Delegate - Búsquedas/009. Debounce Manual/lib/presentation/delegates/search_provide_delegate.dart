@@ -384,7 +384,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   @override
   Widget buildSuggestions(BuildContext context) {
 
-    // Paso 3.3: Llamamos al método _onQueryChanged cada vez que el query cambia.
+    // Paso 3.1: Llamamos al método _onQueryChanged cada vez que el query cambia.
     // Flutter llama a buildSuggestions cada vez que se presiona una tecla.
     _onQueryChanged(query);
 
