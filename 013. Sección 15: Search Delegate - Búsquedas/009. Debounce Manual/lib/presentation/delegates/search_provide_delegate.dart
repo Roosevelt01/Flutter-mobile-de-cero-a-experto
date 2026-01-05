@@ -1,5 +1,5 @@
 //Paso 1: Implementar el debounce en la busqueda de peliculas
-/*import 'dart:async'; // Importamos dart:async para usar StreamController
+import 'dart:async'; // Importamos dart:async para usar StreamController
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
@@ -139,11 +139,11 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Implementar el StreamBuilder para la busqueda de peliculas con debounce
 //import 'dart:async'; 
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart'; 
@@ -284,7 +284,7 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3:  
 import 'dart:async';
