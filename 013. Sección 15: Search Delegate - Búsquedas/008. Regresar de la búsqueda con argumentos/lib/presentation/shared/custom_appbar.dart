@@ -1,5 +1,5 @@
 //Paso 1: Modificamos el IconButton para que abra el SearchDelegate y capture la película seleccionada
-/*import 'package:cinemapedia/domain/entities/movie.dart'; // Importamos la entidad Movie
+import 'package:cinemapedia/domain/entities/movie.dart'; // Importamos la entidad Movie
 import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';

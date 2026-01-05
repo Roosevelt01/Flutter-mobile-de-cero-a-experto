@@ -1,5 +1,5 @@
 //Paso 1: Agregamos la función onMovieSelected para manejar la selección de la película
-/*import 'package:animate_do/animate_do.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart'; 
 import 'package:cinemapedia/domain/entities/movie.dart'; 
 import 'package:flutter/material.dart'; 
@@ -135,7 +135,7 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Modificar el código para pasar close como onMovieSelected
 import 'package:animate_do/animate_do.dart';
