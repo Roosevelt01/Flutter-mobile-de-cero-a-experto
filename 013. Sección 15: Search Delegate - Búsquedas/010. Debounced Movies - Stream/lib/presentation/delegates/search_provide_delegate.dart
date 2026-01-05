@@ -1,6 +1,6 @@
 //Paso 1: usamos el if para query.isEmpty en el método _onQueryChanged
 
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart'; 
@@ -166,7 +166,6 @@ class _MovieItem extends StatelessWidget {
     );
   }
 }
-*/
 
 //Paso 2: añadimos el método clearStreams y lo llamamos en los lugares adecuados
 import 'dart:async';
@@ -339,8 +338,7 @@ class _MovieItem extends StatelessWidget {
                 ),
               ),    
             ],
-          ), 
-      
+          ),      
       ),
     );
   }
