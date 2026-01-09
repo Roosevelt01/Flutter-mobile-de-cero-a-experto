@@ -1,5 +1,5 @@
 //Paso 1: Modificamos el showSearch para que inicie con un valor de búsqueda
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -59,10 +59,10 @@ class CustomAppBar extends ConsumerWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Mpodificamos el showSearch para que inicie con un valor de búsqueda desde un provider
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/delegates/search_provide_delegate.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
@@ -123,7 +123,7 @@ class CustomAppBar extends ConsumerWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: 
 import 'package:cinemapedia/domain/entities/movie.dart';
@@ -192,4 +192,4 @@ class CustomAppBar extends ConsumerWidget {
       ),
     );
   }
-}
+} 
