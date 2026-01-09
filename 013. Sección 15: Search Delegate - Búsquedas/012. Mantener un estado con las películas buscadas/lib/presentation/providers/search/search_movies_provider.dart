@@ -1,5 +1,5 @@
 //Paso 1: Comenzamos creando el provider para el valor de búsqueda inicial
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/legacy.dart'; // Importamos Riverpod
 
@@ -11,12 +11,10 @@ class SearchedMoviesProvicer extends StateNotifier<List<Movie>> {
   // Constructor que inicializa el estado con una lista vacía  
   SearchedMoviesProvicer(): super([]);
 
-
-
-}*/
+}
 
 //Paso 2: con searchMoviesByQuery añadido podemos buscar películas por query
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart'; // Importamos Riverpod
 
 final searchQueryProvider = StateProvider<String>((ref) => '');
@@ -31,10 +29,10 @@ class SearchedMoviesProvicer extends StateNotifier<List<Movie>> {
     return [];
 
   }
-}*/
+}
 
 //Paso 3: Añadimos la funcionalidad de búsqueda real usando un callback
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/legacy.dart'; // Importamos Riverpod
 
 final searchQueryProvider = StateProvider<String>((ref) => '');
@@ -64,10 +62,10 @@ class SearchedMoviesProvicer extends StateNotifier<List<Movie>> {
     return movies;
 
   }
-}*/
+}
 
 //Paso 4: Usamos Ref para actualizar el valor del provider de búsqueda
-/*import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart'; // Importamos Riverpod
 
@@ -97,7 +95,7 @@ class SearchedMoviesProvicer extends StateNotifier<List<Movie>> {
     return movies;
 
   }
-}*/
+}
 
 //Paso 5: Definimos el provider para el StateNotifier 
 import 'package:cinemapedia/domain/entities/movie.dart';
