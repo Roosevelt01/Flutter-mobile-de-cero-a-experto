@@ -117,27 +117,3 @@ final searchedMoviesProvider = StateNotifierProvider<SearchedMoviesProvicer, Lis
     );
   }
 );
-
-
-typedef SearchMoviesCallback = Future<List<Movie>> Function(String query);
-
-class SearchedMoviesProvicer extends StateNotifier<List<Movie>> {
-  
-  final SearchMoviesCallback searchMovies;
-  final Ref ref;
-
-  SearchedMoviesProvicer( {
-    required this.searchMovies
-    , required this.ref 
-    }): super([]);
-
-  Future<List<Movie>> searchMoviesByQuery(String query) async {
-    
-    final List<Movie> movies = await searchMovies(query);
-    ref.read(searchQueryProvider.notifier).update((state) => query); 
- 
-    state = movies;
-
-    return movies;
-  }
-}
