@@ -1,5 +1,5 @@
 //Paso 1: modificamos el buildSuggestions para usar StreamBuilder
-/*
+
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -70,7 +70,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
     );
   }
 
-  // Paso 1: Creamos el StreamBuilder para escuchar los cambios en la búsqueda
+  // Paso 1.1: Creamos el StreamBuilder para escuchar los cambios en la búsqueda
   @override
   Widget buildResults(BuildContext context) {
     return StreamBuilder(
@@ -186,7 +186,7 @@ class _MovieItem extends StatelessWidget {
 }*/
 
 //Paso 2: 
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
@@ -371,7 +371,7 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: 
 import 'dart:async';
