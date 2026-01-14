@@ -381,7 +381,7 @@ class _MovieItem extends StatelessWidget {
 }
 
 
-//Paso 3:
+//Paso 3: Configuración del Delegate (super)
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
