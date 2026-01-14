@@ -185,7 +185,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 2: Personalizar el SearchFieldLabel Acción
+//Paso 2: Modificar initialMovies y actualizarla Acción: Quitamos final de initialMovies, actualizamos su valor dentro del callback del debounce y la usamos en ambos builders.
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -198,18 +198,18 @@ typedef SearchMoviesCallback = Future<List<Movie>> Function(String query);
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
   final SearchMoviesCallback searchMovies;
 
-  final List<Movie> initialMovies;
+  //Paso 2.1:  Eliminamos el final ya que esto permite que esta lista actúe como una memoria caché local dentro de la vida del delegate.
+  List<Movie> initialMovies;
 
   StreamController<List<Movie>> debounceMovies = StreamController.broadcast();
 
   Timer? _debounceTimer;
 
-  //Paso 2.1: Agregamos super para usar searchFieldLabel 
   SearchMovieDelegate({
     required this.searchMovies,
     required this.initialMovies,
   }):super(
-    searchFieldLabel: 'Buscar película', // Agregamos searchFieldLabel para 
+    searchFieldLabel: 'Buscar película', 
   );
 
   void clearStreams() {
@@ -227,7 +227,12 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
 
       final movies = await searchMovies(query);
 
+      //Paso 2.2: Actualizamos la caché local y de esta forma guardamos las películas recién traídas. Si el usuario da
+      //Enter después de esto, buildResults usará esta lista como data inicial.
+      initialMovies = movies;
+
       debounceMovies.add(movies);
+
     });
   } 
 
@@ -259,6 +264,8 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   @override
   Widget buildResults(BuildContext context) {
     return StreamBuilder(
+      initialData: initialMovies, //Paso 2.3: Usamos initialMovies como initialData
+      // Al dar Enter, si ya teníamos datos en suggestions, se muestran de inmediato aquí.
       stream: debounceMovies.stream,
       builder: (context, snapshot) {
 
@@ -373,7 +380,8 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 3: Modificar initialMovies y actualizarla Acción: Quitamos final de initialMovies, actualizamos su valor dentro del callback del debounce y la usamos en ambos builders.
+
+//Paso 3:
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -386,7 +394,6 @@ typedef SearchMoviesCallback = Future<List<Movie>> Function(String query);
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
   final SearchMoviesCallback searchMovies;
 
-  //Paso 3.1:  Eliminamos el final ya que esto permite que esta lista actúe como una memoria caché local dentro de la vida del delegate.
   List<Movie> initialMovies;
 
   StreamController<List<Movie>> debounceMovies = StreamController.broadcast();
@@ -415,8 +422,6 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
 
       final movies = await searchMovies(query);
 
-      //Paso 3.2: Actualizamos la caché local y de esta forma guardamos las películas recién traídas. Si el usuario da
-      //Enter después de esto, buildResults usará esta lista como data inicial.
       initialMovies = movies;
 
       debounceMovies.add(movies);
@@ -452,8 +457,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   @override
   Widget buildResults(BuildContext context) {
     return StreamBuilder(
-      initialData: initialMovies, //Paso 3.3: Usamos initialMovies como initialData
-      // Al dar Enter, si ya teníamos datos en suggestions, se muestran de inmediato aquí.
+      initialData: initialMovies, 
       stream: debounceMovies.stream,
       builder: (context, snapshot) {
 
