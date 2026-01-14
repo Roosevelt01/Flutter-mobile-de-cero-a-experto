@@ -452,7 +452,8 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   @override
   Widget buildResults(BuildContext context) {
     return StreamBuilder(
-      initialData: initialMovies, //Paso 3.3: 
+      initialData: initialMovies, //Paso 3.3: Usamos initialMovies como initialData
+      // Al dar Enter, si ya teníamos datos en suggestions, se muestran de inmediato aquí.
       stream: debounceMovies.stream,
       builder: (context, snapshot) {
 
