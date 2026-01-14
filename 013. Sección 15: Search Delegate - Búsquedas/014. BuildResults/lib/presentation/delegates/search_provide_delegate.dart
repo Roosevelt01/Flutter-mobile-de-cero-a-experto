@@ -183,9 +183,9 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
-//Paso 2: 
+//Paso 2: Personalizar el SearchFieldLabel Acción
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -373,7 +373,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 3: 
+//Paso 3: Modificar initialMovies y actualizarla Acción: Quitamos final de initialMovies, actualizamos su valor dentro del callback del debounce y la usamos en ambos builders.
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
