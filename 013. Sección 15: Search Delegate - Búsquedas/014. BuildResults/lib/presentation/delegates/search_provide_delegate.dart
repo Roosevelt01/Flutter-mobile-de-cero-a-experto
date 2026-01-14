@@ -386,7 +386,7 @@ typedef SearchMoviesCallback = Future<List<Movie>> Function(String query);
 class SearchMovieDelegate extends SearchDelegate<Movie?> {
   final SearchMoviesCallback searchMovies;
 
-  //Paso 3.1: Eliminamos el final
+  //Paso 3.1:  Eliminamos el final ya que esto permite que esta lista actúe como una memoria caché local dentro de la vida del delegate.
   List<Movie> initialMovies;
 
   StreamController<List<Movie>> debounceMovies = StreamController.broadcast();
@@ -415,7 +415,10 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
 
       final movies = await searchMovies(query);
 
-      initialMovies = movies;//Paso 3.2: 
+      //Paso 3.2: Actualizamos la caché local y de esta forma guardamos las películas recién traídas. Si el usuario da
+      //Enter después de esto, buildResults usará esta lista como data inicial.
+      initialMovies = movies;
+
       debounceMovies.add(movies);
 
     });
