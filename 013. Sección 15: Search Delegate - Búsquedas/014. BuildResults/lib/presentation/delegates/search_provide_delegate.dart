@@ -404,6 +404,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
     required this.searchMovies,
     required this.initialMovies,
   }):super(
+    // Paso 3.1: Agregamos super para usar searchFieldLabel
     searchFieldLabel: 'Buscar película', 
   );
 
