@@ -1,4 +1,4 @@
-//Paso 1: 
+//Paso 1: Definición del Stream de carga Acción: Declaramos un StreamController de tipo booleano en el SearchMovieDelegate.
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
