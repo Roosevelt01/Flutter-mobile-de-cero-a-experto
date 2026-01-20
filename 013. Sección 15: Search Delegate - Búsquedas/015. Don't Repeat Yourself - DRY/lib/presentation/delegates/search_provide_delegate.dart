@@ -391,7 +391,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 3: 
+//Paso 3: Integración Final (Limpieza)
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -490,15 +490,17 @@ Widget buildResultsAndSuggestions() {
 
   @override
   Widget buildResults(BuildContext context) {
-  //Paso 3.1: (Agregale comentario gemini)
-  return buildResultsAndSuggestions();
+    // Paso 3.1: Uso del método centralizado en Resultados
+    // Cuando el usuario da Enter, simplemente construimos la vista común.
+    return buildResultsAndSuggestions();
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
     _onQueryChanged(query);
 
-      //Paso 3.2: (Agregale comentario gemini)
+      //Paso 3.2: Uso del método centralizado en Sugerencias
+      // Delegamos la construcción visual al método compartido.
       return buildResultsAndSuggestions();
   }
 }
