@@ -1,7 +1,7 @@
 //Paso 1: 
 // Aquí establecemos la lógica base para manejar la búsqueda, incluyendo el temporizador (debounce)
 // para evitar peticiones excesivas a la API mientras el usuario escribe.
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
@@ -192,12 +192,12 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 2: Implementación de la lógica visual en buildResultsAndSuggestions
 // En esta etapa, rellenamos el método creado anteriormente con el StreamBuilder y el ListView
 // para mostrar los resultados dinámicamente basados en el stream 'debounceMovies'.
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
@@ -385,12 +385,12 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: Gestión del estado de carga (Loading)
 // Se introduce un nuevo StreamController (isLoadingStream) para manejar específicamente
 // cuándo mostrar el spinner de carga en la barra de acciones.
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
@@ -581,7 +581,7 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 4: Lógica final y optimización
 // Versión final del código donde se integran todos los pasos anteriores y se asegura
