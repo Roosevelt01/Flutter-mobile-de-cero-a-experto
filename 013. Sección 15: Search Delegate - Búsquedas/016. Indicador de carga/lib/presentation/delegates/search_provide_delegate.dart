@@ -230,7 +230,9 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
 
       initialMovies = movies;
       debounceMovies.add(movies);
-
+      // Paso 2.2: Fin de la carga
+      // Ya tenemos los datos y los enviamos a la lista. Apagamos el spinner.
+      isLoadingStream.add(false);
     });
   } 
 
