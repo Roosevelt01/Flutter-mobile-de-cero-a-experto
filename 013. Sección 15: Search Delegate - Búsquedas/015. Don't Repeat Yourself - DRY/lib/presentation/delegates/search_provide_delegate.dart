@@ -194,7 +194,7 @@ class _MovieItem extends StatelessWidget {
   }
 }*/
 
-//Paso 2: (Agregale comentario gemini)
+//Paso 2: Implementación de la Lógica Visual, movemos el código del StreamBuilder al nuevo método.
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -242,7 +242,9 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
   } 
 
 Widget buildResultsAndSuggestions() {
-  //Paso 2: (Agregale comentario gemini)
+  //Paso 2.1: Implementación del StreamBuilder
+    // Escuchamos el stream de películas (debounceMovies).
+    // Usamos 'initialMovies' para mostrar datos inmediatos si existen.
   return StreamBuilder(
       initialData: initialMovies, 
       stream: debounceMovies.stream,
@@ -389,7 +391,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 3: (Agregale comentario gemini)
+//Paso 3: 
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
