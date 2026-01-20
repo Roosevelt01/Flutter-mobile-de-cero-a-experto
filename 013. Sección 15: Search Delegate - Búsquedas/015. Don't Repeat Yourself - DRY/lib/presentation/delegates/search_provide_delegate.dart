@@ -1,4 +1,4 @@
-//Paso 1: buildResultsAndSuggestions
+//Paso 1: Definición inicial del buildResultsAndSuggestions Acción: Declaramos el nuevo método dentro de la clase SearchMovieDelegate.
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
@@ -47,7 +47,8 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
 
 //Paso 1.1: Creamos buildResultsAndSuggestions(Mejora el comentario)
 Widget buildResultsAndSuggestions() {
-  
+    // Aquí irá la lógica del StreamBuilder
+    return Container(); // Placeholder temporal
 }
 
   @override
@@ -194,7 +195,7 @@ class _MovieItem extends StatelessWidget {
 }*/
 
 //Paso 2: (Agregale comentario gemini)
-/*import 'dart:async';
+import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/config/helpers/human_formats.dart';
@@ -386,7 +387,7 @@ class _MovieItem extends StatelessWidget {
       ),
     );
   }
-}*/
+}
 
 //Paso 3: (Agregale comentario gemini)
 import 'dart:async';
