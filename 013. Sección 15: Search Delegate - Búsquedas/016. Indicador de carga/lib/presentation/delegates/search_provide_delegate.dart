@@ -15,7 +15,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
 
   StreamController<List<Movie>> debounceMovies = StreamController.broadcast();
 
-  //Paso 3.1: Definición del Stream de carga
+  //Paso 1.1: Definición del Stream de carga
   // Este stream emitirá true cuando se esté buscando y false cuando termine.
   StreamController<bool> isLoadingStream = StreamController.broadcast();
 
