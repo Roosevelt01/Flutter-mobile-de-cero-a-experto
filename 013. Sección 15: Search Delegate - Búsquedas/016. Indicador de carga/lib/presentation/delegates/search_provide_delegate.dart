@@ -179,7 +179,7 @@ class _MovieItem extends StatelessWidget {
   }
 }
 
-//Paso 2:
+//Paso 2: Ahora debemos inyectar la lógica en el ciclo de vida de la búsqueda (Debounce).
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
