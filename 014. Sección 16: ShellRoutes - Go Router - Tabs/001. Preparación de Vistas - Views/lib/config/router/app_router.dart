@@ -10,7 +10,9 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/',
       name: HomeScreen.name,
-      builder: (context, state) => const HomeScreen( childView: HomeView(), ), // Agregando HomeView como childView
+      builder: (context, state) => const HomeScreen(
+        // Paso 1: Inyectar HomeView dentro de HomeScreen
+        childView: HomeView(), ), 
     ),
 
     GoRoute(
