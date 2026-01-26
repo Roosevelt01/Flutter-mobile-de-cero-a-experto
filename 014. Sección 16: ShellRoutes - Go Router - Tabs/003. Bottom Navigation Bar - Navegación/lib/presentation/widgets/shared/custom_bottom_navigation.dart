@@ -1,38 +1,4 @@
-//Paso 1: usar onTap para detectar taps en los items del BottomNavigationBar
-import 'package:flutter/material.dart';
-
-class CustomBottomNavigation extends StatelessWidget {
-  const CustomBottomNavigation({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      elevation: 0, 
-      //Paso 1.1: Agregamos el onTap para detectar taps en los items
-      onTap(value){
-        print('$value');
-      },
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_max),
-          label: 'Inicio',
-        ),
-        
-        BottomNavigationBarItem(
-          icon: Icon(Icons.label_outline),
-          label: 'Categorías', 
-        ),
-        
-        BottomNavigationBarItem(
-          icon: Icon(Icons.favorite_outline),
-          label: 'Favoritos',
-        ),
-      ],
-    );
-  }
-}
-
-//Paso 2: Creamos la función onItemTapped para manejar la navegación
+//Paso 1: Creamos la función onItemTapped para manejar la navegación
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
