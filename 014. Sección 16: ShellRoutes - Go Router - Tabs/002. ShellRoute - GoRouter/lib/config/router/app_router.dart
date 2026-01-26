@@ -1,5 +1,5 @@
 //Paso 1: Se agrega ShellRoute para manejar la navegacion de las pantallas principales
-/*import 'package:cinemapedia/presentation/screen/movies/home_screen.dart';
+import 'package:cinemapedia/presentation/screen/movies/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -15,10 +15,10 @@ final appRouter = GoRouter(
 
 
   ],
-);*/
+);
 
 //Paso 2: Iniciamos la configuracion de las rutas hijas dentro del ShellRoute
-/*import 'package:cinemapedia/presentation/Views/home_views/home_view.dart';
+import 'package:cinemapedia/presentation/Views/home_views/home_view.dart';
 import 'package:cinemapedia/presentation/screen/movies/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -40,10 +40,10 @@ final appRouter = GoRouter(
       ],
     ),
   ],
-);*/
+);
 
 //Paso 3: Agregamos la ruta para la pantalla de favoritos
-/*import 'package:cinemapedia/presentation/Views/home_views/favorites_view.dart';
+import 'package:cinemapedia/presentation/Views/home_views/favorites_view.dart';
 import 'package:cinemapedia/presentation/Views/home_views/home_view.dart';
 import 'package:cinemapedia/presentation/screen/movies/home_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -71,7 +71,7 @@ final appRouter = GoRouter(
       ],
     ),
   ],
-);*/
+);
 
 //Paso 4: Agregamos la ruta para la pantalla de detalles de la pelicula
 import 'package:cinemapedia/presentation/Views/home_views/favorites_view.dart';
