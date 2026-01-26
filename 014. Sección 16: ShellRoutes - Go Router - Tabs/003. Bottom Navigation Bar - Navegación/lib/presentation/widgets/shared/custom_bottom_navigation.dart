@@ -57,8 +57,8 @@ class CustomBottomNavigation extends StatelessWidget {
 
   //Paso 3.1: Crear una función para obtener el índice actual según la ruta
   int currentIndex(BuildContext context) {
-    //Paso 3.2: Obtener la ubicación actual usando GoRouterState
-    final String location = GoRouterState.of(context).matchedLocation;
+    //Paso 3.2: Obtenemos la ubicación actual (ej: '/favorites') desde el Router
+    final String location = GoRouterState.of(context).uri.path;
 
   //Paso 3.3: Usar un switch para retornar el índice según la ruta
     switch (location) {
