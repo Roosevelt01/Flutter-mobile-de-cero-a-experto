@@ -8,12 +8,11 @@ final appRouter = GoRouter(
 
     //Paso 1.1:  Dentro del ShellRoute se agrega el HomeScreen como contenedor de las pantallas principales
     ShellRoute(
+      // El builder recibe el 'child', que es la vista hija correspondiente a la ruta actual.
       builder: (context, state, child) {
         return HomeScreen(childView: child);
       },
     ),
-
-
   ],
 );
 
