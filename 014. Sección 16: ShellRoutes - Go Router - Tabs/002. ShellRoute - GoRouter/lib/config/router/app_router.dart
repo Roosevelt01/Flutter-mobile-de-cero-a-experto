@@ -12,6 +12,8 @@ final appRouter = GoRouter(
       builder: (context, state, child) {
         return HomeScreen(childView: child);
       },
+      // Aquí definiremos las rutas hijas...
+      routes: [],
     ),
   ],
 );
