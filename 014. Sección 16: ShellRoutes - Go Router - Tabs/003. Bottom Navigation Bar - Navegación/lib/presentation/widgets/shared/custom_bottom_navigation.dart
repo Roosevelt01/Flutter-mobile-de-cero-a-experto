@@ -1,5 +1,5 @@
 //Paso 1: usar onTap para detectar taps en los items del BottomNavigationBar
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
   const CustomBottomNavigation({super.key});
@@ -30,10 +30,10 @@ class CustomBottomNavigation extends StatelessWidget {
       ],
     );
   }
-}*/
+}
 
 //Paso 2: Creamos la función onItemTapped para manejar la navegación
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
@@ -80,10 +80,10 @@ class CustomBottomNavigation extends StatelessWidget {
       ],
     );
   }
-}*/
+}
 
 //Paso 3: En onTap llamamos a la función onItemTapped
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
@@ -126,9 +126,9 @@ class CustomBottomNavigation extends StatelessWidget {
       ],
     );
   }
-}*/
+}
 
-//Paso 4: 
+//Paso 4: Creamos currentIndex para resaltar el item seleccionado(Código final)
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
